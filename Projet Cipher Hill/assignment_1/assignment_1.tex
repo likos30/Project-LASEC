@@ -159,12 +159,13 @@ Indeed , if you take the following text : $thisisatest$ , with n = 5 , you get t
 We get the same thing for \#(str in plain) = len(plain text) - n +1 , with n the string size.\\
 Then we define the good mathcings : segments are equals before and after modulo 2 , and bad matching segment are not equal but they are equal modulo 2.\\
 We use Rényi entropy to get the good matching and all matching as it find the collision , with the following formula :\\
-$H_{\alpha}(X) = \frac{1}{1-\alpha}log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{\alpha})$ , then when alpha has the value 2 , we just get $-log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{2})$ that gives us the probability that a segment equals another one.\\
+$H_{\alpha}(X) = \frac{1}{1-\alpha}log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{\alpha}})$ , then when alpha has the value 2 , we just get $-log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{2}})$ that gives us the probability that a segment equals another one.\\
 For good matchings , we have E(\# good matchings) = (\# segments in reference) x (\#segment in plaintext) x $2^{-H_{2}(X)}$ , as the number of good matching is actually the collision between segment in plaintext and segment in reference text time the entropy of rényi where two segments are the same.\\
 Then you do the same for  E(\# all matchings) , the difference is that you do it this way : E(\# good matchings) = (\# segments in reference) x (\#segment in plaintext) x $2^{-H_{2}(X mod 2)}$  . And indeed you understand that if X modulo 2 are equals the X are not always equals.\\
-The previous part assumed that $H_{2}(X mod 2)}$ was equals to n , but i did these maths again and it seems good.\\
+The previous part assumed that $H_{2}(X mod 2)$ was equals to n , but i did these maths again and it seems good.\\
 Then to have an idea of the complexity , you do the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ , you generaly found $\frac{1}{8^n}$\\
 In the following parts , I did the calculation again to check if it's really correct\\
+But to have a better complexity , we need to increase this ratio : E(\# all matchings) can't be changed so we can only try on E(\# good matchings) , with different assumptions and calculations.\\
 
 \section{Experiment}
 from wiki :\\
@@ -242,6 +243,16 @@ proba sum squared 1 = 0.4342 0.18852964\\
 Ration of good matching and all matchings=0.12996168115565054\\
 Donc 7,69457
 
+\section{Enhancement good matching's ratio}
+
+This section will be to increase the ratio found which is actually $\frac{1}{8^n}$\\
+To do so , I'll now consider instead of independent letters , independent blocks of letter.
+With the help of a Java programm , i'm doing an heuristic search over a very very long text , with different block size.\\
+With the program , we clearly see that there is no way to improve it considering that they are independent.\\
+
+\section{Study of Faster Fourrier Transform for Algorithm 1}
+lololo\\
+
 \section{Algorithm}
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1 , find plain text in $\mathbb{Z}/2\mathbb{Z}$ , and create an array.\\
@@ -250,10 +261,31 @@ repeat\\
 select d matching form list (you'll get a dxd key matrix)\\
 for each of these matchings ($seg_{i}$, $str_{i}$)\\
 extract $block_{i}$ from $seg_{i}$ and $str'_{i}$ from $str_{i}$,\\
-then find $ciphertext_{i}$ such that K^{-1} x $ciphertext_{i}$ mod 2 = $block_{i}$\\
-solve $ciphertext_{i}$ = K * $str'_{i}$ for i=1 to d\\
-compute K^{-1} x ciphertext\\
+then find $ciphertext_{i}$ such that $K^{-1}$ x $ciphertext_{i}$ mod 2 = $block_{i}$\\
+solve $ciphertext_{i} = K * str'_{i}$ for i=1 to d\\
+compute $K^{-1} * $ciphertext\\
 until it makes sense\\
-
-
+number of iteration is $ \frac{1}{ratio^{nd}} = 8^{nd}$
+\\
+\\
+The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$\\
+Part1:\\
+\\
+You require Ciphertext $Y_1,Y_2,...,Y_n$\\
+for all $\mu$ do
+compute $S_n(\mu) = \sum_{k=1}^{n}{(-1)^{\mu.y} \times n_y}$ where $n_y=\#\{k;Y_k=y\}$\\
+endfor\\
+set all $\mu$ to the d values of $\mu$ with largest $S_n(\mu)=bias(\mu.Y)$\\
+\\
+Part2:\\
+\\
+for all (i,i') do\\
+compute $n_{00}(i,i')=\#\{k<n:(\mu_i .Y_k,\mu_i'.Y_{k+1})=(0,0)\}$
+endfor\\
+set $(i_d,i_1)$ to the first pair with lowest $n_{00}$\\
+\\
+Part3:\\
+\\
+Here to be faster we store $n_y$ in a table and we do a FFT on this table to get $S_n$. With this operation the total complexity drop from $O(d^2 \times 2^d)$ to $O(d \times 2^d)$
+But it seems with some other techniques we could do better
 \end{document}

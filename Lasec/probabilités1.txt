@@ -1,0 +1,34 @@
+proba from http://www.apprendre-en-ligne.net/crypto/stat/anglais.html
+
+Probabilite de la 1ieme lettre de l'aphabet 0.0808
+Probabilite de la 2ieme lettre de l'aphabet 0.0167
+Probabilite de la 3ieme lettre de l'aphabet 0.0318
+Probabilite de la 4ieme lettre de l'aphabet 0.0399
+Probabilite de la 5ieme lettre de l'aphabet 0.1256
+Probabilite de la 6ieme lettre de l'aphabet 0.0217
+Probabilite de la 7ieme lettre de l'aphabet 0.018
+Probabilite de la 8ieme lettre de l'aphabet 0.0527
+Probabilite de la 9ieme lettre de l'aphabet 0.0724
+Probabilite de la 10ieme lettre de l'aphabet 0.0014
+Probabilite de la 11ieme lettre de l'aphabet 0.0063
+Probabilite de la 12ieme lettre de l'aphabet 0.0404
+Probabilite de la 13ieme lettre de l'aphabet 0.026
+Probabilite de la 14ieme lettre de l'aphabet 0.0738
+Probabilite de la 15ieme lettre de l'aphabet 0.0747
+Probabilite de la 16ieme lettre de l'aphabet 0.0191
+Probabilite de la 17ieme lettre de l'aphabet 9.0E-4
+Probabilite de la 18ieme lettre de l'aphabet 0.0642
+Probabilite de la 19ieme lettre de l'aphabet 0.0659
+Probabilite de la 20ieme lettre de l'aphabet 0.0915
+Probabilite de la 21ieme lettre de l'aphabet 0.0279
+Probabilite de la 22ieme lettre de l'aphabet 0.01
+Probabilite de la 23ieme lettre de l'aphabet 0.0189
+Probabilite de la 24ieme lettre de l'aphabet 0.0021
+Probabilite de la 25ieme lettre de l'aphabet 0.0165
+Probabilite de la 26ieme lettre de l'aphabet 7.0E-4
+proba sum = 0.9999000000000001
+proba sum squared = 0.06609151
+proba sum squared 0 = 0.5657 0.32001649
+proba sum squared 1 = 0.4342 0.18852964
+Ration of good matching and all matchings=0.12996168115565054
+Donc 7,69457

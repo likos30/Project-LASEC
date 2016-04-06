@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.18)  20 MAR 2016 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.18)  5 APR 2016 21:30
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -235,128 +235,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--150
 
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
-! Missing } inserted.
-<inserted text> 
-                }
-l.162 ...log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{\alpha})$
-                                                   , then when alpha has the...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.162 ...et $-log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{2})$
-                                                   that gives us the probabi...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
-! Extra }, or forgotten $.
-l.165 ...evious part assumed that $H_{2}(X mod 2)}
-                                                  $ was equals to n , but i ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-
-Overfull \hbox (2.21404pt too wide) in paragraph at lines 153--168
+Overfull \hbox (2.21404pt too wide) in paragraph at lines 153--169
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 ) = []\O
-ML/cmm/m/it/10 log[]\OT1/cmr/m/n/10 ([][] []$ , then when al-pha has the value 
-2 , we just get $\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 log[]\OT1/cmr/m/n/10 ([][] 
-[]$
+ML/cmm/m/it/10 log[]\OT1/cmr/m/n/10 ([][] [])$ , then when al-pha has the value
+ 2 , we just get $\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 log[]\OT1/cmr/m/n/10 ([][]
+ [])$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--168
+Underfull \hbox (badness 10000) in paragraph at lines 153--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--244
+Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
 [4]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.253 then find $ciphertext_{i}$ such that K^
-                                             {-1} x $ciphertext_{i}$ mod 2 =...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.253 ...text_{i}$ such that K^{-1} x $ciphertext_
-                                                  {i}$ mod 2 = $block_{i}$\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.255 compute K^
-                {-1} x ciphertext\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.257 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--257
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
 AED: lastpage setting LastPage
-[5] (assignment_1.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--287
+
+ []
+
+[5] [6] (assignment_1.aux) ) 
 Here is how much of TeX's memory you used:
  3064 strings out of 493634
  38930 string characters out of 3151066
@@ -365,19 +336,19 @@ Here is how much of TeX's memory you used:
  17367 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  33i,11n,43p,325b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D
-:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/MiKT
-eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (5 pages, 161577 bytes).
+<D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/
+MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on assignment_1.pdf (6 pages, 169646 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

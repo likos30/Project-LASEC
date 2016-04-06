@@ -1,0 +1,31 @@
+Probabilite de la 1ieme lettre de l'aphabet 0.08167
+Probabilite de la 2ieme lettre de l'aphabet 0.01492
+Probabilite de la 3ieme lettre de l'aphabet 0.02782
+Probabilite de la 4ieme lettre de l'aphabet 0.04253
+Probabilite de la 5ieme lettre de l'aphabet 0.12702
+Probabilite de la 6ieme lettre de l'aphabet 0.02228
+Probabilite de la 7ieme lettre de l'aphabet 0.02015
+Probabilite de la 8ieme lettre de l'aphabet 0.06094
+Probabilite de la 9ieme lettre de l'aphabet 0.06966
+Probabilite de la 10ieme lettre de l'aphabet 0.00153
+Probabilite de la 11ieme lettre de l'aphabet 0.00772
+Probabilite de la 12ieme lettre de l'aphabet 0.04025
+Probabilite de la 13ieme lettre de l'aphabet 0.02406
+Probabilite de la 14ieme lettre de l'aphabet 0.06749
+Probabilite de la 15ieme lettre de l'aphabet 0.07507
+Probabilite de la 16ieme lettre de l'aphabet 0.01929
+Probabilite de la 17ieme lettre de l'aphabet 9.5E-4
+Probabilite de la 18ieme lettre de l'aphabet 0.05987
+Probabilite de la 19ieme lettre de l'aphabet 0.06327
+Probabilite de la 20ieme lettre de l'aphabet 0.09056
+Probabilite de la 21ieme lettre de l'aphabet 0.02758
+Probabilite de la 22ieme lettre de l'aphabet 0.00978
+Probabilite de la 23ieme lettre de l'aphabet 0.02361
+Probabilite de la 24ieme lettre de l'aphabet 0.0015
+Probabilite de la 25ieme lettre de l'aphabet 0.01974
+Probabilite de la 26ieme lettre de l'aphabet 7.4E-4
+proba sum = 0.9999999999999999
+proba sum squared = 0.06549717159999999
+proba sum squared 0 = 0.56832 0.32298762240000006
+proba sum squared 1 = 0.43167999999999995 0.18634762239999997
+Ration of good matching and all matchings=0.1285934407027314

@@ -251,8 +251,12 @@ With the help of a Java programm , i'm doing an heuristic search over a very ver
 With the program , we clearly see that there is no way to improve it considering that they are independent.\\
 
 \section{Study of Faster Fourrier Transform for Algorithm 1}
-lololo\\
-
+With a fast fourrier Transform ( FFT ) the complexity is $O(NlogN)$ for N the input size\\
+\subsection{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
+If we only want to have the few significant Fourrier Coefficient , we can use this.\\
+Here if we gave a threshold $\tau$ and an oracle access to a function f , it outputs the $\tau$-significant Fourrier Coefficient. This is called SFT and runs in $log(N) ,\frac{1}{\tau}$\\
+\subsection{Nearly optimal Sparse Fourier Transform}
+eol\\
 \section{Algorithm}
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1 , find plain text in $\mathbb{Z}/2\mathbb{Z}$ , and create an array.\\
@@ -286,6 +290,15 @@ set $(i_d,i_1)$ to the first pair with lowest $n_{00}$\\
 \\
 Part3:\\
 \\
+for all $t=2$ to $d-1$ do\\
+for all i $\notin \{i_1,i_2,..,i_{t-1},i_d\}$ do\\
+compute $n_{00}(i,i')=\#\{k:(\mu^{T}_i_{t-1}Y_k,\mu^{T}_iY_k)=(0,0)\}$\\
+endfor\\
+take i such that $n_{00}$ is minimum and set $i_t=i$\\
+endfor\\
+set $\mu = (\mu_{i1},\mu_{i1},...,\mu_{id})$ and $K=(\mu^-1)^T$
+output K\\
+\\
 Here to be faster we store $n_y$ in a table and we do a FFT on this table to get $S_n$. With this operation the total complexity drop from $O(d^2 \times 2^d)$ to $O(d \times 2^d)$
-But it seems with some other techniques we could do better
+But it seems with some other techniques we could do better.
 \end{document}

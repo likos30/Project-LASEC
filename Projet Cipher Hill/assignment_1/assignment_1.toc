@@ -3,4 +3,6 @@
 \contentsline {section}{Experiment}{4}
 \contentsline {section}{Enhancement good matching's ratio}{5}
 \contentsline {section}{Study of Faster Fourrier Transform for Algorithm 1}{5}
-\contentsline {section}{Algorithm}{5}
+\contentsline {subsection}{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{5}
+\contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{6}
+\contentsline {section}{Algorithm}{6}

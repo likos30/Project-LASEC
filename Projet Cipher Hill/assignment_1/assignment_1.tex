@@ -254,9 +254,22 @@ With the program , we clearly see that there is no way to improve it considering
 With a fast fourrier Transform ( FFT ) the complexity is $O(NlogN)$ for N the input size\\
 \subsection{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
 If we only want to have the few significant Fourrier Coefficient , we can use this.\\
-Here if we gave a threshold $\tau$ and an oracle access to a function f , it outputs the $\tau$-significant Fourrier Coefficient. This is called SFT and runs in $log(N) ,\frac{1}{\tau}$\\
+Here if we gave a threshold $\tau$ and an oracle access to a function f , it outputs the $\tau$-significant Fourier Coefficient. This is called SFT and runs in $log(N) ,\frac{1}{\tau}$\\
+An oracle access to a function take as input x and return the f(x) of the function f.\\
+This algorithm is robust to random noise and local ( mean polynomial time)\\
+It's based on partition of set by binary search , you have at the beginning 4 intervals , you test for the two first if the norm of f's Fourier Transform squared is equals to the $set_i$ oracle ouput squared\\
+Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass , it will output yes , and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
+The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on J , exceeds significant threshold $\tau$ , NO if J larger.
 \subsection{Nearly optimal Sparse Fourier Transform}
-eol\\
+We want here to compute the k-sparse approximation to the discrete Fourier transform of an n-dimensional signal.\\
+There is to time in function of the number of input has at most k non-zero Fourier Coefficient.\\
+In this case , we got $O(k.log(n))$ time , else we have $O(k.log(n).log(\frac{n}{k}))$\\
+The basis is still the same, if a signal has a small number $k$ of non-zero Fourier , the output of this DFT can be represented succinctly using only $k$ coefficient.\\
+What is required , is that the input size n is a power of 2.\\
+This algorithm seems to restrictive and also perform the same in the worst case.\\
+\subsection{Combinatorial sub linear-Time Fourier Algorithm}
+Here same thinking , SFT , and getting polynomial time $(k,log(n))$
+
 \section{Algorithm}
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1 , find plain text in $\mathbb{Z}/2\mathbb{Z}$ , and create an array.\\
@@ -292,7 +305,7 @@ Part3:\\
 \\
 for all $t=2$ to $d-1$ do\\
 for all i $\notin \{i_1,i_2,..,i_{t-1},i_d\}$ do\\
-compute $n_{00}(i,i')=\#\{k:(\mu^{T}_i_{t-1}Y_k,\mu^{T}_iY_k)=(0,0)\}$\\
+compute $n_{00}(i,i{'})=\#\{k:(\mu^{T}_{i_{t-1}}Y_{k},\mu^{T}_{i}Y_{k})=(0,0)\}$\\
 endfor\\
 take i such that $n_{00}$ is minimum and set $i_t=i$\\
 endfor\\

@@ -5,4 +5,7 @@
 \contentsline {section}{Study of Faster Fourrier Transform for Algorithm 1}{5}
 \contentsline {subsection}{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{5}
 \contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{6}
+\contentsline {subsection}{Combinatorial sub linear-Time Fourier Algorithm}{6}
 \contentsline {section}{Algorithm}{6}
+\contentsline {subsection}{Recover key matrix dxd in Z modulo 26}{6}
+\contentsline {subsection}{Recover the key matrix in Z modulo 2}{6}

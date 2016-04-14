@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  7 APR 2016 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  13 APR 2016 10:34
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -231,11 +231,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `assignment_1.toc'.
 
-
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 133.
-
-[2]
+ [2]
 Underfull \hbox (badness 10000) in paragraph at lines 142--150
 
  []
@@ -260,9 +256,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--169
 Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 173.
 
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 173--245
@@ -294,9 +287,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--245
 
  []
 
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 245.
-
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
@@ -307,90 +297,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 263.
-
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 264--268
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
 
  []
 
 
-Package lastpage Warning: Rerun to get the references right on input line 313.
+Underfull \hbox (badness 10000) in paragraph at lines 275--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--289
+
+ []
 
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
+Underfull \hbox (badness 10000) in paragraph at lines 290--318
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--313
-
- []
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 313.
-
-[6]
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 313.
-
-[7] (assignment_1.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[6] [7] (assignment_1.aux) ) 
 Here is how much of TeX's memory you used:
  3064 strings out of 493634
  41328 string characters out of 3134832
- 203836 words of memory out of 3000000
+ 204848 words of memory out of 3000000
  6407 multiletter control sequences out of 15000+200000
  17367 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,11n,43p,325b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Max-Pc/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-
-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/User
-s/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Max-Pc/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Max-Pc/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (7 pages, 184635 bytes).
+ 33i,11n,43p,325b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/M
+ax-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on assignment_1.pdf (7 pages, 185762 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

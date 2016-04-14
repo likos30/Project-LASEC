@@ -203,7 +203,7 @@ proba sum squared = 0.06549717159999999\\
 proba sum squared 0 = 0.56832 0.32298762240000006\\
 proba sum squared 1 = 0.43167999999999995 0.18634762239999997\\
 Ration of good matching and all matchings=0.1285934407027314\\
-Donc 7,77644
+So $\frac{1}{matching} = 7,77644$
 \\
 \\
 \\
@@ -241,7 +241,7 @@ proba sum squared = 0.06609151\\
 proba sum squared 0 = 0.5657 0.32001649\\
 proba sum squared 1 = 0.4342 0.18852964\\
 Ration of good matching and all matchings=0.12996168115565054\\
-Donc 7,69457
+So $\frac{1}{matching} = 7,69457 $
 
 \section{Enhancement good matching's ratio}
 
@@ -271,9 +271,10 @@ This algorithm seems to restrictive and also perform the same in the worst case.
 Here same thinking , SFT , and getting polynomial time $(k,log(n))$
 
 \section{Algorithm}
+\subsection{Recover key matrix dxd in Z modulo 26} 
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1 , find plain text in $\mathbb{Z}/2\mathbb{Z}$ , and create an array.\\
-find the list of all matchings : find all pairs(seg,str) such that seg is a segment of plaintext modulo 2 and str $\in hash(seg)$ and save it in a list.\\
+find the list of all matching : find all pairs(seg,str) such that seg is a segment of plaintext modulo 2 and str $\in hash(seg)$ and save it in a list.\\
 repeat\\
 select d matching form list (you'll get a dxd key matrix)\\
 for each of these matchings ($seg_{i}$, $str_{i}$)\\
@@ -285,7 +286,7 @@ until it makes sense\\
 number of iteration is $ \frac{1}{ratio^{nd}} = 8^{nd}$
 \\
 \\
-The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$\\
+\subsection{Recover the key matrix in Z modulo 2}
 Part1:\\
 \\
 You require Ciphertext $Y_1,Y_2,...,Y_n$\\

@@ -2,9 +2,9 @@
 \contentsline {section}{Introduction}{4}
 \contentsline {section}{Key recovery modulo 26}{4}
 \contentsline {section}{Experiment}{5}
-\contentsline {section}{Enhancement good matching's ratio}{6}
-\contentsline {section}{Study of Faster Fourrier Transform for Algorithm 1}{6}
-\contentsline {subsection}{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{6}
-\contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{7}
-\contentsline {subsection}{Combinatorial sub linear-Time Fourier Algorithm}{7}
-\contentsline {section}{Algorithm}{7}
+\contentsline {section}{Enhancement good matching's ratio}{5}
+\contentsline {section}{Study of Faster Fourrier Transform for Algorithm 1}{5}
+\contentsline {subsection}{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{5}
+\contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{6}
+\contentsline {subsection}{Combinatorial sub linear-Time Fourier Algorithm}{6}
+\contentsline {section}{Algorithm}{6}

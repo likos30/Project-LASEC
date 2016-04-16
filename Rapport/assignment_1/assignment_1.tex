@@ -126,10 +126,10 @@
 \newpage
 \section{Abstract}
 This Hill cipher is a polygraphic substitution cipher based on linear algebra , invented by 
-Lester S. in 1929. Each letter is represented by a number modulo 26 , and break the plaintext into blocks of size $d$ and then applies a matrix $d \times d $ to this matrix to yield ciphertext. As it's a linear encryption, it can be simply broken with Know PlainText Attacks.
+Lester S. in 1929. Each letter is represented by a number modulo 26, it breaks the plaintext into blocks of size $d$ and then applies a matrix $d \times d $ to thiese blocks to yield ciphertext blocks. As it's a linear encryption, it can be simply broken with Know PlainText Attacks.
 The author takes the previous paper about a new Ciphertext-only Attacks on Hill , and try to improve it's complexity to get a better result that $O(d13^d)$.\\
-${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the matrix modulo 26 and then to improve the algorithm to get the key matrix modulo 2.\\
-${}$\hspace{1em}The project is organized as follows:
+${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the key matrix modulo 26 and then to improve the algorithm to get the key matrix modulo 2.\\
+${}$\hspace{1em}The project report is organized as follows: Section1 presents the Hill cipher and the work done in the previous repor. In section2 , the author studies the complexity and try to improve the algorithm to get the key matrix modulo 26 . Section 3 presents the possible enhancement of the FFT of algorithm 1. Experimental results and algorithm are presented at the end.
 \newpage
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -174,99 +174,27 @@ Indeed , if you take the following text : $thisisatest$ , with n = 5 , you get t
  $ thisi , hisis , isisa , sisat , isate , sates , atest $ which is 7 segments $ 11 - 5 + 1 = 7 $\\
 ${}$\hspace{1em}We get the same thing for $\#(str in plain) = len(plain text) - n +1$ , with n the string size.\\
 Then we define the good matching : segments are equals before and after modulo 2 , and bad matching segment which are not equal but equal modulo 2.\\
-We use Rényi entropy to get the good matching and all matching as it find the collision , with the following formula :\\
-$H_{\alpha}(X) = \frac{1}{1-\alpha}log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{\alpha}})$ , then when alpha has the value 2 , we just get $-log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{2}})$ that gives us the probability that a segment equals another one.\\
-${}$\hspace{1em}For good matching , we have $E(\# good matching) = (\# segments in reference) x (\#segment in plaintext) x 2^{-H_{2}(X)}$ , as the number of good matching is actually the collision between segment in plaintext and segment in reference text time the entropy of rényi where two segments are the same.\\
+We use R\'enyi entropy to get the good matching and all matching as it find the collision , with the following formula :\\
+$$H_{\alpha}(X) = \frac{1}{1-\alpha}log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{\alpha}})$$ 
+When alpha has the value 2 , we just get the following :
+$$-log_{2}(\sum_{i=1}^{n}{Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one.\\
+${}$\hspace{1em}For good matching , we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$ , as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the entropy of r\'enyi of this segment (which represents the rate of collision for a given block X).\\
 Then you do the same for  $E(\# all matching)$ , the difference is that you do it this way : $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X mod 2)}$ . And indeed you understand that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
-${}$\hspace{1em}For the $E(\# all matching)$ the calculation is really simple , you must take $(\# segments in reference) x (\#segment in plaintext) x 2^{-H_{2}(X mod 2)}$ as we do all the possibles matching.\\
+${}$\hspace{1em}For the $E(\# all matching)$ the calculation is really simple , you must take $(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X mod 2)}$ as we do all the possibles matching.\\
 $H_{2}(X mod 2) = -log_2(\sum_{i=1}^{n}{Pr(X=i)^2})$, where $Pr(X=i)$ declined in $Pr(X=0)$ and $Pr(X=1)$\\
 From diverse calculation we always get $0.5^n$ so E(\# all matching) is always equals to $(\# segments in reference) x (\#segment in plaintext) \times 0.5^n$
 Then to have an idea of the complexity , you do the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ , you generaly found $\frac{1}{8^n}$\\
 In the following parts , the calculation of $E(\# all matchings)$ are done again thanks to a Java programm.
 But to have a better complexity , we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed so we can only try on $E(\# good matchings)$, with different assumptions and calculations.\\
 
-\section{Experiment}
-from wiki :\\
-
-Probabilite de la 1ieme lettre de l'aphabet 0.08167\\
-Probabilite de la 2ieme lettre de l'aphabet 0.01492\\
-Probabilite de la 3ieme lettre de l'aphabet 0.02782\\
-Probabilite de la 4ieme lettre de l'aphabet 0.04253\\
-Probabilite de la 5ieme lettre de l'aphabet 0.12702\\
-Probabilite de la 6ieme lettre de l'aphabet 0.02228\\
-Probabilite de la 7ieme lettre de l'aphabet 0.02015\\
-Probabilite de la 8ieme lettre de l'aphabet 0.06094\\
-Probabilite de la 9ieme lettre de l'aphabet 0.06966\\
-Probabilite de la 10ieme lettre de l'aphabet 0.00153\\
-Probabilite de la 11ieme lettre de l'aphabet 0.00772\\
-Probabilite de la 12ieme lettre de l'aphabet 0.04025\\
-Probabilite de la 13ieme lettre de l'aphabet 0.02406\\
-Probabilite de la 14ieme lettre de l'aphabet 0.06749\\
-Probabilite de la 15ieme lettre de l'aphabet 0.07507\\
-Probabilite de la 16ieme lettre de l'aphabet 0.01929\\
-Probabilite de la 17ieme lettre de l'aphabet 9.5E-4\\
-Probabilite de la 18ieme lettre de l'aphabet 0.05987\\
-Probabilite de la 19ieme lettre de l'aphabet 0.06327\\
-Probabilite de la 20ieme lettre de l'aphabet 0.09056\\
-Probabilite de la 21ieme lettre de l'aphabet 0.02758\\
-Probabilite de la 22ieme lettre de l'aphabet 0.00978\\
-Probabilite de la 23ieme lettre de l'aphabet 0.02361\\
-Probabilite de la 24ieme lettre de l'aphabet 0.0015\\
-Probabilite de la 25ieme lettre de l'aphabet 0.01974\\
-Probabilite de la 26ieme lettre de l'aphabet 7.4E-4\\
-\\
-\\
-proba sum = 0.9999999999999999\\
-proba sum squared = 0.06549717159999999\\
-proba sum squared 0 = 0.56832 0.32298762240000006\\
-proba sum squared 1 = 0.43167999999999995 0.18634762239999997\\
-Ration of good matching and all matchings=0.1285934407027314\\
-Donc 7,77644
-\\
-\\
-\\
-Another site :\\
-Probabilite de la 1ieme lettre de l'aphabet 0.0808\\
-Probabilite de la 2ieme lettre de l'aphabet 0.0167\\
-Probabilite de la 3ieme lettre de l'aphabet 0.0318\\
-Probabilite de la 4ieme lettre de l'aphabet 0.0399\\
-Probabilite de la 5ieme lettre de l'aphabet 0.1256\\
-Probabilite de la 6ieme lettre de l'aphabet 0.0217\\
-Probabilite de la 7ieme lettre de l'aphabet 0.018\\
-Probabilite de la 8ieme lettre de l'aphabet 0.0527\\
-Probabilite de la 9ieme lettre de l'aphabet 0.0724\\
-Probabilite de la 10ieme lettre de l'aphabet 0.0014\\
-Probabilite de la 11ieme lettre de l'aphabet 0.0063\\
-Probabilite de la 12ieme lettre de l'aphabet 0.0404\\
-Probabilite de la 13ieme lettre de l'aphabet 0.026\\
-Probabilite de la 14ieme lettre de l'aphabet 0.0738\\
-Probabilite de la 15ieme lettre de l'aphabet 0.0747\\
-Probabilite de la 16ieme lettre de l'aphabet 0.0191\\
-Probabilite de la 17ieme lettre de l'aphabet 9.0E-4\\
-Probabilite de la 18ieme lettre de l'aphabet 0.0642\\
-Probabilite de la 19ieme lettre de l'aphabet 0.0659\\
-Probabilite de la 20ieme lettre de l'aphabet 0.0915\\
-Probabilite de la 21ieme lettre de l'aphabet 0.0279\\
-Probabilite de la 22ieme lettre de l'aphabet 0.01\\
-Probabilite de la 23ieme lettre de l'aphabet 0.0189\\
-Probabilite de la 24ieme lettre de l'aphabet 0.0021\\
-Probabilite de la 25ieme lettre de l'aphabet 0.0165\\
-Probabilite de la 26ieme lettre de l'aphabet 7.0E-4\\
-\\
-\\
-proba sum = 0.9999000000000001\\
-proba sum squared = 0.06609151\\
-proba sum squared 0 = 0.5657 0.32001649\\
-proba sum squared 1 = 0.4342 0.18852964\\
-Ration of good matching and all matchings=0.12996168115565054\\
-So 7,69457
 
 \section{Enhancement good matching's ratio}
 
 This section will be to increase the ratio found which is actually $\frac{1}{8^n}$\\
-To do so , I'll now consider instead of independent letters , independent blocks of letter.
-With the help of a Java programm , i'm doing an heuristic search over a very very long text , with different block size.\\
-With the program , we clearly see that there is no way to improve it considering that they are independent.\\
+To do so , it'll now be considered instead of independent letters , independent blocks of letter.
+With the help of a Java programm , we're doing an heuristic search over a very very long text , with different block size.\\
+Then we get the probability that a block is equal to anoter , but also the number of good matching and the number of all matching.\\
+\\
 
 \section{Study of Faster Fourrier Transform for Algorithm 1}
 With a fast fourrier Transform ( FFT ) the complexity is $O(NlogN)$ for N the input size\\
@@ -287,6 +215,25 @@ What is required , is that the input size n is a power of 2.\\
 This algorithm seems to restrictive and also perform the same in the worst case.\\
 \subsection{Combinatorial sub linear-Time Fourier Algorithm}
 Here same thinking , SFT , and getting polynomial time $(k,log(n))$
+
+\section{Experiment}
+from the frequency letter given by Wikipédia , in english we got the following result :\\
+proba sum = 0.9999999999999999\\
+sum of probability squared = 0.06549717159999999 , which corresponds to $(\sum_{i=0}^{26}{Pr(i=y)^2})^n, y \in \{alphabet\} $\\
+sum of probability that gives 0 modulo 2 squared  = 0.32298762240000006 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=0)^2})^n, i \in \{alphabet modulo 2\} $\\
+sum of probability that gives 1 modulo 2 squared = 0.18634762239999997 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=1)^2})^n, i \in \{alphabet modulo 2\} $\\
+Ration of good matching and all matching=$0.1285934407027314^n$\\
+So $\frac{1}{7,77644^n}$
+\\
+\\
+Another site :\\
+\\
+proba sum = 0.9999000000000001\\
+sum of probability squared = 0.06609151 which corresponds to $(\sum_{i=0}^{26}{Pr(i=y)^2})^n, y \in \{alphabet\} $\\
+sum of probability that gives 0 modulo 2 squared = 0.32001649 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=0)^2})^n, i \in \{alphabet modulo 2\} $\\
+sum of probability that gives 1 modulo 2 squared = 0.18852964 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=1)^2})^n, i \in \{alphabet modulo 2\} $\\
+Ration of good matching and all matching=$0.12996168115565054^n$\\
+So $\frac{1}{7,69457^n}$
 
 \section{Algorithm}
 You hash a reference text.\\

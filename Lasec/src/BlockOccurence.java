@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class BlockOccurence {
 	
 	public static void main(String[] args) throws IOException, IOException {
-		for(int i=1;i<15;i++){
+		for(int i=0;i<25;i++){
 		calculateBlocks(i);
 	}
 }
@@ -59,11 +59,11 @@ public class BlockOccurence {
 		//the arraylist that will contains all the different blocks
 		ArrayList<String> letter = new ArrayList<String>();
 		//the counter linked to the arraylist , at each poisition you get the number of time the block at position i in the arraylist appears
-		int bufferCounter[] = new int[N];
+		int bufferCounter[] = new int[numberOfBlock];
 		//the arraylist that will contains the blocks modulo 2
 		ArrayList<String> letterMod2 = new ArrayList<String>();
 		// the counter  at each poisition you get the number of time the block at position i in the arraylist appears.
-		int counterBinary[] = new int[N];
+		int counterBinary[] = new int[numberOfBlock];
 		for(int i=0;i<(textNoSpace.length()-blockSize+1);i++){
 			//get the block of the size you want
 			String select = textNoSpace.substring(i,i+blockSize);
@@ -80,7 +80,7 @@ public class BlockOccurence {
 				counterBinary[letterMod2.indexOf(mod2)]++;
 			}else { //else add it and put counter to 1
 				letterMod2.add(mod2);
-				bufferCounter[letterMod2.indexOf(mod2)]=1;
+				counterBinary[letterMod2.indexOf(mod2)]=1;
 			}
 			//for block modulo 26
 			//if in list , increment counter too
@@ -97,6 +97,7 @@ public class BlockOccurence {
 		System.out.println("finish to fill");
 		
 		PrintWriter writer = new PrintWriter("occurenceblocks"+blockSize+".txt","UTF-8");
+		PrintWriter ratio = new PrintWriter("Ratio.txt","UTF-8");
 		double sumBadMatching=0;
 		double sumGoodMatching=0;
 		int numberOfBadMatching = 0;
@@ -104,20 +105,22 @@ public class BlockOccurence {
 		
 		// computation for good matching
 		for(int i=0;i<letter.size();i++){
-			writer.println("le block " + letter.get(i) + " apparait "+ bufferCounter[i] + "fois");
+			//writer.println("le block " + letter.get(i) + " apparait "+ bufferCounter[i] + "fois");
 			double proba = (double)bufferCounter[i]/numberOfBlock;
 			numberOfGoodMatching+=bufferCounter[i]-1; // 		
 			sumGoodMatching+=(Math.pow(proba, 2));
 		}
 		//computation for bad matching
 		for(int i=0;i<letterMod2.size();i++){
-			writer.println("le block " + letterMod2.get(i) + " apparait "+ counterBinary[i] + "fois");
+			//writer.println("le block " + letterMod2.get(i) + " apparait "+ counterBinary[i] + "fois");
 			numberOfBadMatching+=counterBinary[i]-1;
 			double probaBadMatching = (double)counterBinary[i]/numberOfBlock;
 			sumBadMatching+=Math.pow(probaBadMatching, 2);
 		}
 		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +", thus the probabilty that 2 blocks are equals mod 2 is "+ sumBadMatching + " and modulo 26 is "+sumGoodMatching);
 		writer.println("There are "+numberOfGoodMatching+ "good matching and they are " +numberOfBadMatching + " bad matching , the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
+		ratio.println("the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching)+ "for block size " + blockSize);
+		ratio.close();
 		writer.close();
 		System.out.println("FINISH");
 		}

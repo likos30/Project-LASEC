@@ -1,0 +1,2 @@
+For Block Size 19, we have 847428, thus the probabilty that 2 blocks are equals mod 2 is 5.794354191749198E-6 and modulo 26 is 1.2613463901847364E-6
+There are 10544good matching and they are 570651 bad matching , the ratio is 0.01814193170966715

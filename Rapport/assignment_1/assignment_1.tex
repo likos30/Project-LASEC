@@ -159,8 +159,8 @@ ${}$\hspace{1em}The project report is organized as follows: Section1 presents th
 \section{Introduction}
 	The motivation of this project is first and foremost to improve the Linear attack on the Hill cipher , by changing the recovery of the key modulo 26 and then see the possible algorithm to improve the FFT.\\
 Let's briefly recall how this attack works.\\
-You get the plaintext modulo 2 , then with the aid of vectors , and bias(X)= $\varphi_{X}(\frac{2\pi}{p})$ in $\mathbb{Z}/26\mathbb{Z}$, we found correspondence between $\lambda$ and $\mu$ (which is the same vector but for the cipher text). Wa actually get $ \mu = (K^T)^{-1} \times\lambda $\\
-Then with this formula and the approximation of all the vector $\mu$ , we get the vectors column of the key matrix.\\
+You get the plaintext modulo 2 , then with the aid of vectors , and bias(X)= $\varphi_{X}(\frac{2\pi}{p})$ in $\mathbb{Z}/26\mathbb{Z}$, we found correspondence between $\lambda$ and $\mu$ (the last is the same vector but for the cipher text). We actually get $ \mu = (K^T)^{-1} \times\lambda $\\
+Then with this formula and the approximation of all the vector $\mu$ , we get the vectors column of the key matrix in ${Z}/2\mathbb{Z}$.\\
 You just need to reorder them with the correlation , you find the last one and first one easily, and you do it recursively to find all the vectors in the correct order.\\
 All this process is described by algorithm 1 at the end of the page.\\
 
@@ -188,24 +188,19 @@ In the following parts , the calculation of $E(\# all matchings)$ are done again
 But to have a better complexity , we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed so we can only try on $E(\# good matchings)$, with different assumptions and calculations.\\
 
 
-\section{Enhancement good matching's ratio}
-
-This section will be to increase the ratio found which is actually $\frac{1}{8^n}$\\
-To do so , it'll now be considered instead of independent letters , independent blocks of letter.
-With the help of a Java programm , we're doing an heuristic search over a very very long text , with different block size.\\
-Then we get the probability that a block is equal to anoter , but also the number of good matching and the number of all matching.\\
-\\
-
 \section{Study of Faster Fourrier Transform for Algorithm 1}
 With a fast fourrier Transform ( FFT ) the complexity is $O(NlogN)$ for N the input size\\
+
 \subsection{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
 If we only want to have the few significant Fourrier Coefficient , we can use this.\\
-Here if we gave a threshold $\tau$ and an oracle access to a function f , it outputs the $\tau$-significant Fourier Coefficient. This is called SFT and runs in $log(N) ,\frac{1}{\tau}$\\
+Here if we gave a threshold $\tau \in (0,1]$ and an oracle access to a function f , it outputs the $\tau$-significant Fourier Coefficient. This is called SFT and runs in $log(N) ,\frac{1}{\tau}$\\
 An oracle access to a function take as input x and return the f(x) of the function f.\\
 This algorithm is robust to random noise and local ( mean polynomial time)\\
 It's based on partition of set by binary search , you have at the beginning 4 intervals , you test for the two first if the norm of f's Fourier Transform squared is equals to the $set_i$ oracle ouput squared\\
 Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass , it will output yes , and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
-The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on J , exceeds significant threshold $\tau$ , NO if J larger.
+The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on J , exceeds significant threshold $\tau$ , NO if J larger.\\
+The threshold $\tau$ can be chosen , with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{alpha} = e^{2\pi i \alpha x/N}$
+
 \subsection{Nearly optimal Sparse Fourier Transform}
 We want here to compute the k-sparse approximation to the discrete Fourier transform of an n-dimensional signal.\\
 There is to time in function of the number of input has at most k non-zero Fourier Coefficient.\\
@@ -213,20 +208,27 @@ In this case , we got $O(k.log(n))$ time , else we have $O(k.log(n).log(\frac{n}
 The basis is still the same, if a signal has a small number $k$ of non-zero Fourier , the output of this DFT can be represented succinctly using only $k$ coefficient.\\
 What is required , is that the input size n is a power of 2.\\
 This algorithm seems to restrictive and also perform the same in the worst case.\\
+
 \subsection{Combinatorial sub linear-Time Fourier Algorithm}
-Here same thinking , SFT , and getting polynomial time $(k,log(n))$
+You have a vector A of length $n >> k$ you identify the k largest frequencies of the transform of A , getting polynomial time $(k,log(n))$ for the algorithm.\\
+
+\subsection{Simple and practical algorithm for sparse Fourier transform}
+Here you consider a complex vector $x$ of length n
+This algorithm compute the k-sparse Fourier transform in $O(\sqrt{kn}log^{3/2}n)$ , if x is sparse then you find it in exactly $O(klog^{2}n)$ , but in general estimate x is approximately $O(\sqrt{nk})$\\
+So this algorithm is better if the ratio $\frac{n}{k} \in [2 \times 10^3 , 10^6]$ , but it's clearly not the best one as those before are supposed to find it in a lower complexity ($klog(n)$).\\
 
 \section{Experiment}
-from the frequency letter given by Wikipédia , in english we got the following result :\\
-proba sum = 0.9999999999999999\\
-sum of probability squared = 0.06549717159999999 , which corresponds to $(\sum_{i=0}^{26}{Pr(i=y)^2})^n, y \in \{alphabet\} $\\
-sum of probability that gives 0 modulo 2 squared  = 0.32298762240000006 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=0)^2})^n, i \in \{alphabet modulo 2\} $\\
-sum of probability that gives 1 modulo 2 squared = 0.18634762239999997 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=1)^2})^n, i \in \{alphabet modulo 2\} $\\
+\subsection{Probability of the independent English letters}
+From the frequency letter given by Wikip\'edia , in english we got the following result :\\
+Proba sum = 0.9999999999999999\\
+Sum of probability squared = 0.06549717159999999 , which corresponds to $(\sum_{i=0}^{26}{Pr(i=y)^2})^n, y \in \{alphabet\} $\\
+Sum of probability that gives 0 modulo 2 squared  = 0.32298762240000006 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=0)^2})^n, i \in \{alphabet modulo 2\} $\\
+Sum of probability that gives 1 modulo 2 squared = 0.18634762239999997 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=1)^2})^n, i \in \{alphabet modulo 2\} $\\
 Ration of good matching and all matching=$0.1285934407027314^n$\\
 So $\frac{1}{7,77644^n}$
 \\
 \\
-Another site :\\
+Another site , with some novel and book from Edgar Poe , and articles from encyclopedia :\\
 \\
 proba sum = 0.9999000000000001\\
 sum of probability squared = 0.06609151 which corresponds to $(\sum_{i=0}^{26}{Pr(i=y)^2})^n, y \in \{alphabet\} $\\
@@ -234,6 +236,12 @@ sum of probability that gives 0 modulo 2 squared = 0.32001649 which corresponds 
 sum of probability that gives 1 modulo 2 squared = 0.18852964 which corresponds to which $(\sum_{i=0}^{26}{Pr(i=1)^2})^n, i \in \{alphabet modulo 2\} $\\
 Ration of good matching and all matching=$0.12996168115565054^n$\\
 So $\frac{1}{7,69457^n}$
+
+\subsection{Probability if you consider blocks of size d}
+So calculation are done on a text of approximately $860000$ characters to see the evolution of the ratio good matching\/bad matching.\\
+A program is ran to see the evolution for a block size between 1 and 25 , and give the ratio , and also the probability that a block appears.It is completely heuristic as I'm just counting the number of block that appears and do some manipulation with it. For more look at : BlockOccurence.java which is commented so everything is clear.\\
+With this , the evolution of the ratio in function of the block size looks like this:\\
+
 
 \section{Algorithm}
 You hash a reference text.\\

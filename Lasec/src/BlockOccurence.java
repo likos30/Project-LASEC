@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 public class BlockOccurence {
 	
 	public static void main(String[] args) throws IOException, IOException {
-		for(int i=0;i<25;i++){
+		for(int i=1;i<25;i++){
 		calculateBlocks(i);
 	}
 }
@@ -40,7 +41,7 @@ public class BlockOccurence {
 		return text;
 		}
 	
-	public static void calculateBlocks(int block) throws FileNotFoundException, UnsupportedEncodingException {
+	public static void calculateBlocks(int block) throws IOException {
 		int N = 1024*1024;
 		
 		//take a text with only lower case letters
@@ -92,12 +93,12 @@ public class BlockOccurence {
 				bufferCounter[letter.indexOf(select)]=1;
 			}
 			// just here to give the progression of the work
-			System.out.println((double)i/(textNoSpace.length()-blockSize+1)+  "% " + i + " block");
+			//System.out.println((double)i/(textNoSpace.length()-blockSize+1)+  "% " + i + " block");
 		}
 		System.out.println("finish to fill");
 		
 		PrintWriter writer = new PrintWriter("occurenceblocks"+blockSize+".txt","UTF-8");
-		PrintWriter ratio = new PrintWriter("Ratio.txt","UTF-8");
+		FileWriter ratio = new FileWriter("Ratio.csv",true);
 		double sumBadMatching=0;
 		double sumGoodMatching=0;
 		int numberOfBadMatching = 0;
@@ -117,12 +118,19 @@ public class BlockOccurence {
 			double probaBadMatching = (double)counterBinary[i]/numberOfBlock;
 			sumBadMatching+=Math.pow(probaBadMatching, 2);
 		}
-		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +", thus the probabilty that 2 blocks are equals mod 2 is "+ sumBadMatching + " and modulo 26 is "+sumGoodMatching);
-		writer.println("There are "+numberOfGoodMatching+ "good matching and they are " +numberOfBadMatching + " bad matching , the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
-		ratio.println("the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching)+ "for block size " + blockSize);
-		ratio.close();
+		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +" blocks, thus the probabilty that 2 blocks are equals mod 2 is "+ sumBadMatching + " and modulo 26 is "+sumGoodMatching);
+		writer.println("There are "+numberOfGoodMatching+ " good matching and they are " +numberOfBadMatching + " bad matching , the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
+		try {
+			ratio.append(blockSize+","+(double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
+			ratio.append("\n");
+			ratio.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		writer.close();
 		System.out.println("FINISH");
 		}
+	
 }
+
 

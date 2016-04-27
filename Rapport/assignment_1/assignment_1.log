@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.18)  16 APR 2016 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.18)  26 APR 2016 22:30
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -238,28 +238,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--178
 
  []
 
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
 
-Overfull \hbox (26.34117pt too wide) in paragraph at lines 178--187
-[]$ \OT1/cmr/m/n/10 For good match-ing , we have $\OML/cmm/m/it/10 E\OT1/cmr/m/
-n/10 (#\OML/cmm/m/it/10 goodmatching\OT1/cmr/m/n/10 ) = (#\OML/cmm/m/it/10 segm
-entsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (#\OML/cmm/m/
-it/10 segmentinplaintext\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 2[]$
-
- []
-
-
-Overfull \hbox (133.73636pt too wide) in paragraph at lines 178--187
-[]$ \OT1/cmr/m/n/10 For the $\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (#\OML/cmm/m/it/
-10 allmatching\OT1/cmr/m/n/10 )$ the cal-cu-la-tion is re-ally sim-ple , you mu
-st take $(#\OML/cmm/m/it/10 segmentsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/1
-0 x\OT1/cmr/m/n/10 (#\OML/cmm/m/it/10 segmentinplaintext\OT1/cmr/m/n/10 )\OML/c
-mm/m/it/10 x\OT1/cmr/m/n/10 2[]$
- []
-
-
-Overfull \hbox (118.79807pt too wide) in paragraph at lines 178--187
+Overfull \hbox (118.79807pt too wide) in paragraph at lines 180--189
 \OT1/cmr/m/n/10 From di-verse cal-cu-la-tion we al-ways get $0\OML/cmm/m/it/10 
 :\OT1/cmr/m/n/10 5[]$ so E(# all match-ing) is al-ways equals to $(#\OML/cmm/m/
 it/10 segmentsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (#\
@@ -267,93 +247,100 @@ OML/cmm/m/it/10 segmentinplaintext\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--187
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 [4]
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
-Overfull \hbox (3.96689pt too wide) in paragraph at lines 189--206
-\OT1/cmr/m/n/10 sum of prob-a-bil-ity squared = 0.06549717159999999 , which cor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
+
+ []
+
+[5]
+Overfull \hbox (5.57802pt too wide) in paragraph at lines 222--239
+\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999 , which cor
 -re-sponds to $([][] [])[]\OML/cmm/m/it/10 ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/i
 t/10 alphabet\OMS/cmsy/m/n/10 g$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--206
+Underfull \hbox (badness 10000) in paragraph at lines 222--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--206
+Underfull \hbox (badness 10000) in paragraph at lines 222--239
 
  []
 
 
-Overfull \hbox (22.39584pt too wide) in paragraph at lines 189--206
+Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
 \OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.320016
 49 which cor-re-sponds to which $([][] [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/
 10 2
  []
 
 
-Overfull \hbox (22.39584pt too wide) in paragraph at lines 189--206
+Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
 \OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.188529
 64 which cor-re-sponds to which $([][] [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/
 10 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--278
+Underfull \hbox (badness 10000) in paragraph at lines 247--290
 
  []
 
@@ -361,11 +348,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--278
 Here is how much of TeX's memory you used:
  3065 strings out of 493634
  38938 string characters out of 3151066
- 204833 words of memory out of 3000000
+ 206833 words of memory out of 3000000
  6408 multiletter control sequences out of 15000+200000
  17367 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,10n,43p,403b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,10n,43p,412b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
@@ -377,7 +364,7 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmsy5.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/MiKTeX/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (7 pages, 187568 bytes).
+Output written on assignment_1.pdf (7 pages, 191324 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

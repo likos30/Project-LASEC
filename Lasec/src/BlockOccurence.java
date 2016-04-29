@@ -99,29 +99,25 @@ public class BlockOccurence {
 		
 		PrintWriter writer = new PrintWriter("occurenceblocks"+blockSize+".txt","UTF-8");
 		FileWriter ratio = new FileWriter("Ratio.csv",true);
-		double sumBadMatching=0;
+		double sumAllMatching=0;
 		double sumGoodMatching=0;
-		int numberOfBadMatching = 0;
-		int numberOfGoodMatching = 0;
 		
 		// computation for good matching
 		for(int i=0;i<letter.size();i++){
 			//writer.println("le block " + letter.get(i) + " apparait "+ bufferCounter[i] + "fois");
-			double proba = (double)bufferCounter[i]/numberOfBlock;
-			numberOfGoodMatching+=bufferCounter[i]-1; // 		
+			double proba = (double)(bufferCounter[i]-1)/numberOfBlock;
 			sumGoodMatching+=(Math.pow(proba, 2));
 		}
-		//computation for bad matching
+		//computation for all matching
 		for(int i=0;i<letterMod2.size();i++){
 			//writer.println("le block " + letterMod2.get(i) + " apparait "+ counterBinary[i] + "fois");
-			numberOfBadMatching+=counterBinary[i]-1;
-			double probaBadMatching = (double)counterBinary[i]/numberOfBlock;
-			sumBadMatching+=Math.pow(probaBadMatching, 2);
+			double probaBadMatching = (double)(counterBinary[i]-1)/numberOfBlock;
+			sumAllMatching+=Math.pow(probaBadMatching, 2);
 		}
-		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +" blocks, thus the probabilty that 2 blocks are equals mod 2 is "+ sumBadMatching + " and modulo 26 is "+sumGoodMatching);
-		writer.println("There are "+numberOfGoodMatching+ " good matching and they are " +numberOfBadMatching + " bad matching , the ratio is "+ (double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
+		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +" blocks, thus the probabilty that 2 blocks are equals mod 2 is "+ sumAllMatching + " and modulo 26 is "+sumGoodMatching);
+		writer.println( "The ratio is "+ (double)(double)sumGoodMatching/(sumAllMatching));
 		try {
-			ratio.append(blockSize+","+(double)numberOfGoodMatching/(numberOfBadMatching+numberOfGoodMatching));
+			ratio.append(blockSize+","+(double)sumGoodMatching/(sumAllMatching));
 			ratio.append("\n");
 			ratio.close();
 		} catch (IOException e) {

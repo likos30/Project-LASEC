@@ -199,7 +199,7 @@ This algorithm is robust to random noise and local ( mean polynomial time)\\
 It's based on partition of set by binary search , you have at the beginning 4 intervals , you test for the two first if the norm of f's Fourier Transform squared is equals to the $set_i$ oracle ouput squared\\
 Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass , it will output yes , and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
 The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on J , exceeds significant threshold $\tau$ , NO if J larger.\\
-The threshold $\tau$ can be chosen , with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{alpha} = e^{2\pi i \alpha x/N}$
+The threshold $\tau$ can be chosen , with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$
 
 \subsection{Nearly optimal Sparse Fourier Transform}
 We want here to compute the k-sparse approximation to the discrete Fourier transform of an n-dimensional signal.\\
@@ -239,8 +239,15 @@ So $\frac{1}{7,69457^n}$
 
 \subsection{Probability if you consider blocks of size d}
 So calculation are done on a text of approximately $860000$ characters to see the evolution of the ratio good matching\/bad matching.\\
-A program is ran to see the evolution for a block size between 1 and 25 , and give the ratio , and also the probability that a block appears.It is completely heuristic as I'm just counting the number of block that appears and do some manipulation with it. For more look at : BlockOccurence.java which is commented so everything is clear.\\
+A program is ran to see the evolution for a block size between 1 and 25 , and give the ratio , thanks to the probability that a block appears.It is completely heuristic as it's just counting the number of block that appears and do some manipulation with it.
+So the basic is to choose a block size , then it'll count every different blocks that appears modulo 26 and modulo 2.
+Then it'll compute the probability that a good matching happen with the following : $\sum_{X \in block}({\frac{\#X -1}{\#block -1}})^2 $\\
+You do the exact same thing with X in modulo 2 , to get the probability of all matching , and then you compute the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$\\
 With this , the evolution of the ratio in function of the block size looks like this:\\
+
+\section{Study of Algorithm to get $K_{26}$}
+So in initialization , there is list of "all matching" done to have all the decryption possible from modulo 2 to modulo 26. Meaning all the couple $(seg,str)$ such that $seg$ is a segment of the plaintext modulo 2 and $str$ is one of the possible translation of $seg$ to modulo 26.\\
+What is possible is to reduce this list , as tou take a big enough segment and then just select sub string of this segment. But for example if the block in modulo 2 is 000 , it cannot be yyy , as no block could possibly end this way and another begin with y or yy , and no word exist with 3 yy in it.\\
 
 
 \section{Algorithm}

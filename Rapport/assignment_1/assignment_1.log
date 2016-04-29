@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.18)  26 APR 2016 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  29 APR 2016 13:07
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-(D:\MiKTeX\tex\latex\base\article.cls
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(D:\MiKTeX\tex\latex\base\size10.clo
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,7 +21,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(D:\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -32,37 +32,37 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-(D:\MiKTeX\tex\latex\lastpage\lastpage.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-(D:\MiKTeX\tex\latex\fancyhdr\extramarks.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\extramarks.sty"
 \@temptokenb=\toks14
 )
-(D:\MiKTeX\tex\latex\graphics\graphicx.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(D:\MiKTeX\tex\latex\graphics\keyval.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(D:\MiKTeX\tex\latex\graphics\graphics.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(D:\MiKTeX\tex\latex\graphics\trig.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(D:\MiKTeX\tex\latex\00miktex\graphics.cfg
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(D:\MiKTeX\tex\latex\pdftex-def\pdftex.def
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(D:\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(D:\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -70,14 +70,14 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(D:\MiKTeX\tex\latex\lipsum\lipsum.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count88
 )
-(D:\MiKTeX\tex\latex\mathtools\mathtools.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(D:\MiKTeX\tex\latex\tools\calc.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count89
 \calc@Bcount=\count90
@@ -89,26 +89,28 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count91
 \calc@Cskip=\skip54
-) (D:\MiKTeX\tex\latex\mathtools\mhsetup.sty
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
-) (D:\MiKTeX\tex\latex\amsmath\amsmath.sty
+)
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(D:\MiKTeX\tex\latex\amsmath\amstext.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(D:\MiKTeX\tex\latex\amsmath\amsgen.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen107
 ))
-(D:\MiKTeX\tex\latex\amsmath\amsbsy.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen108
 )
-(D:\MiKTeX\tex\latex\amsmath\amsopn.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
@@ -162,7 +164,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen120
 \l_MT_above_shortintertext_sep=\dimen121
 \l_MT_below_shortintertext_sep=\dimen122
-) (D:\MiKTeX\tex\latex\tools\bm.sty
+)
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty"
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
@@ -170,10 +173,10 @@ Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
 )
-(D:\MiKTeX\tex\latex\amsfonts\amssymb.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(D:\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup7
 \symAMSb=\mathgroup8
@@ -200,7 +203,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 121.
 
-(D:\MiKTeX\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen123
@@ -215,16 +218,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 \everyMPtoPDFconversion=\toks22
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 123.
- (D:\MiKTeX\tex\latex\amsfonts\umsa.fd
+ ("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 123.
- (D:\MiKTeX\tex\latex\amsfonts\umsb.fd
+
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/max/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(assignment_1.toc)
+{C:/Users/Max-Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (assignment_1.toc)
 \tf@toc=\write3
 \openout3 = `assignment_1.toc'.
 
@@ -240,10 +243,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--178
 
 
 Overfull \hbox (118.79807pt too wide) in paragraph at lines 180--189
-\OT1/cmr/m/n/10 From di-verse cal-cu-la-tion we al-ways get $0\OML/cmm/m/it/10 
-:\OT1/cmr/m/n/10 5[]$ so E(# all match-ing) is al-ways equals to $(#\OML/cmm/m/
-it/10 segmentsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (#\
-OML/cmm/m/it/10 segmentinplaintext\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
+\OT1/cmr/m/n/10 From di-verse cal-cu-la-tion we al-ways get $0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[]$ so E(# all match-in
+g) is al-ways equals to $(#\OML/cmm/m/it/10 segmentsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (#\OML
+/cmm/m/it/10 segmentinplaintext\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
  []
 
 
@@ -273,9 +275,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--219
 
 [5]
 Overfull \hbox (5.57802pt too wide) in paragraph at lines 222--239
-\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999 , which cor
--re-sponds to $([][] [])[]\OML/cmm/m/it/10 ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/i
-t/10 alphabet\OMS/cmsy/m/n/10 g$ 
+\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999 , which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/1
+0 ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
  []
 
 
@@ -290,81 +291,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--239
 
 
 Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
-\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.320016
-49 which cor-re-sponds to which $([][] [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/
-10 2
+\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32001649 which cor-re-sponds to which $([][] []
+)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
 Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
-\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.188529
-64 which cor-re-sponds to which $([][] [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/
-10 2
+\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18852964 which cor-re-sponds to which $([][] []
+)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--246
 
  []
 
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--290
+Underfull \hbox (badness 10000) in paragraph at lines 249--292
 
  []
 
 [6] [7] (assignment_1.aux) ) 
 Here is how much of TeX's memory you used:
  3065 strings out of 493634
- 38938 string characters out of 3151066
- 206833 words of memory out of 3000000
+ 41336 string characters out of 3134832
+ 207833 words of memory out of 3000000
  6408 multiletter control sequences out of 15000+200000
  17367 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  33i,10n,43p,412b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy5.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/MiKTeX/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (7 pages, 191324 bytes).
+<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/M
+ax-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on assignment_1.pdf (7 pages, 191738 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

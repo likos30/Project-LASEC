@@ -9,4 +9,4 @@
 \contentsline {section}{Experiment}{6}
 \contentsline {subsection}{Probability of the independent English letters}{6}
 \contentsline {subsection}{Probability if you consider blocks of size d}{6}
-\contentsline {section}{Algorithm}{6}
+\contentsline {section}{Algorithm}{7}

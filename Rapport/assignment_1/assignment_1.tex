@@ -126,11 +126,10 @@
 \newpage
 \section{Abstract}
 This Hill cipher is a polygraphic substitution cipher based on linear algebra, invented by 
-Lester S. in 1929. Each letter is represented by a number modulo 26, it breaks the plaintext into blocks of size $d$ and then applies a matrix $d \times d $ to thiese blocks to yield ciphertext blocks. As it's a linear encryption, it can be simply broken with Know PlainText Attacks.
+Lester S. in 1929. Each letter is represented by a number modulo 26, from A=0 to Z=25. The algorithm breaks the plaintext into blocks of size $d$ and then applies a matrix $d \times d $ to these blocks to yield ciphertext blocks. As it's a linear encryption, it can be simply broken with Know PlainText Attacks.
 The author takes the previous paper about a new Ciphertext-only Attacks on Hill, and try to improve it's complexity to get a better result that $O(d13^d)$.\\
-${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the key matrix modulo 26 and then to improve the algorithm to get the key matrix modulo 2.\\
-${}$\hspace{1em}The project report is organized as follows: Section1 presents the Hill cipher and the work done in the previous report. In section2, the author studies the complexity and try to improve the algorithm to get the key matrix modulo 26 . Section 3 presents the possible enhancement of the FFT of algorithm 1. Experimental results and algorithm are presented at the end.
-\newpage
+${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the key matrix modulo 2 and then to improve the algorithm to get the key matrix modulo 26.\\
+${}$\hspace{1em}The project report is organized as follows: Section1 presents the Hill cipher and the work done in the previous report. In section2, the author studies the complexity and try to improve the algorithm to get the key matrix modulo 26 . Section 3 presents the possible enhancement of the FFT of algorithm 1. Section 4 present the possible improvement of the algorithm to recover the matrix key modulo 26. Experimental results and algorithm are presented at the end.
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
@@ -157,27 +156,38 @@ ${}$\hspace{1em}The project report is organized as follows: Section1 presents th
 % To have just one problem per page, simply put a \clearpage after each problem
 
 \section{Introduction}
-	The motivation of this project is first and foremost to improve the Linear attack on the Hill cipher, by changing the recovery of the key modulo 26 and then see the possible algorithm to improve the FFT.\\
-Let's briefly recall how this attack works.\\
+The motivation of this project is, first and foremost, to improve the Linear attack on the Hill cipher, by changing the recovering of the key modulo 26 and then see the possible algorithm to improve the FFT in recovery of matrix key modulo 2.\\
+\\
+Indeed, it is known that a brute force attack can be done on the Hill cipher, as it is a Linear cipher, but to have a better complexity and less restrictive resources, improvement have been made.\\
+It is now possible to get a matrix key with minimum length required on ciphertext of $n =8.96d^2 -O(\log d)$.\\
+This method has been then improved [2] using the divide-and-conquer technique, and eliminating repeated calculation while doing matrix multiplication, and have led to a ciphertext required length of $n=8,96d^2$. Eventually, using the Chinese Reminder Theorem [2], the legnth has been brought to $n=12.5d^2$, and the complexity to $O(d13^d)$.\\
+By this same Chinese Reminder theorem, it is believed that we can find the key matrix modulo 2 first and then recover from it, the matrix modulo 26 with a lower complexity [1].\\
+It is shown that this matrix modulo 2 can be found in $O(d2^d)$.\\
+\\
+Let's briefly describe how this attack works.\\
 You get the plaintext modulo 2, then with the aid of vectors, and bias(X)= $\varphi_{X}(\frac{2\pi}{p})$ in $\mathbb{Z}/26\mathbb{Z}$, we found correspondence between $\lambda$ and $\mu$ (the last is the same vector but for the cipher text). We actually get $ \mu = (K^T)^{-1} \times\lambda $\\
 Then with this formula and the approximation of all the vector $\mu$, we get the vectors column of the key matrix in ${Z}/2\mathbb{Z}$.\\
 You just need to reorder them with the correlation, you find the last one and first one easily, and you do it recursively to find all the vectors in the correct order.\\
-All this process is described by algorithm 1 in the Annexe.\\
+All this process is described by algorithm 1 in the Annexe, and is done in a time $O(d 2^d)$\\
+\\
+This project will present possible improvement of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. Then, a possible enhancement to get the key matrix in modulo 26 will be discussed, as the one presented in the previous paper runs in $O(8^nd)$.\\
 
 
 \section{Key recovery modulo 26}
 So now that we have the key matrix in $\mathbb{Z}/2\mathbb{Z}$, we can have the plain text in $\mathbb{Z}/2\mathbb{Z}$ using the linearity of the cipher.\\
 To get the key matrix in $\mathbb{Z}/26\mathbb{Z}$, we can use the Chinese Reminder Theorem, but we would get a complexity of $O(13^d)$. In the previous paper, it was believed that it's possible to get the key matrix in $\mathbb{Z}/26\mathbb{Z}$ without considering $\mathbb{Z}/13\mathbb{Z}$.\\
-First of all, we create a hash table using long text, and search mapping between segments of reference text and plain text modulo 2\\
+First of all, we create a hash table using long text, and search mapping between segments of reference text and plain text modulo 2.\\
 \#(seg in reference) = len(reference text) - n +1, with n the segment size.\\
-Indeed, if you take the following text : $thisisatest$, with n = 5, you get the following segment:\\
+Indeed, if you take the following text: $thisisatest$, with n = 5, you get the following segment:\\
  $ thisi, hisis, isisa, sisat, isate, sates, atest $ which is 7 segments $ 11 - 5 + 1 = 7 $\\
-${}$\hspace{1em}We get the same thing for $\#(seg in plain) = len(plain text) - n +1$, with n the segment size.\\
-Then we define the good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
-We use R\'enyi entropy to get the good matching and all matching as it finds the collision, with the following formula:\\
+We get the same thing for $\#(seg in plain) = len(plain text) - n +1$, with $n$ the segment size.\\
+We use R\'enyi entropy, with the following formula:\\
 $$H_{\alpha}(X) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{\alpha}})$$ 
 When alpha has the value 2, we just get the following:
-$$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one.\\
+$$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one as $\sum_{i=1}^{n}{\Pr(X=i)^{2}} = \sum{\Pr(a=b)^{2}}$.\\
+R\'enyi entropy represent more generally the quantity of information in the probability of colision of a random variable.\\
+\\
+Then we define the good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
 ${}$\hspace{1em}For good matching, we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the entropy of r\'enyi of this segment (which represents the rate of collision for a given block X).\\
 Then you do the same for  $E(\# all matching)$, the difference is that you do it this way : $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ . And indeed you understand that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
 ${}$\hspace{1em}For the $E(\# all matching)$ the calculation is really simple, you must take $(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ as we do all the possibles matching.\\
@@ -190,8 +200,18 @@ But to have a better complexity, we need to increase the ratio of good matching 
 
 \section{Study of Faster Fourier Transform for Algorithm 1}
 With a fast Fourier Transform (FFT) the complexity is $O(N\log N)$ for N the input size.\\
+But generally, most of the coefficient of a FFT are small or equal to zero, meaning the output of the FFT is sparse. If a signal has a small number $k$ of non-zero Fourier coefficients the output of the Fourier transform can be represented succinctly using only $k$ coefficients. Hence, we can find Fourier Transform algorithm whose run time is sub-linear in the signal size $n$.\\
+what we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times $k$ where each cipher $y$ appears. So it is a table containing numbers $\in \mathbb{R} $.
 
-\subsection{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
+\subsection{Simple and practical algorithm for sparse Fourier transform}
+
+This algorithm considers a complex vector $x$ of length $n$.\\
+It computes the $k$-sparse Fourier transform in $O(\sqrt{kn}\log^{3/2}n)$, if $x$ is sparse then you find it in exactly $O(klog^{2}n)$, but in general estimate $x$ is approximately $O(\sqrt{nk})$\\
+So this algorithm is better if the ratio $\frac{n}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as recently found are supposed to find it in a lower complexity ($k\log(n)$).\\
+If you suppose all our entries in $n_y$ are non null and the , 
+
+\subsection{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
+
 If we only want to have the few significant Fourier Coefficient, we can use this.\\
 Here if we gave a threshold $\tau \in (0,1]$ and an oracle access to a function f, it outputs the $\tau$-significant Fourier Coefficient. This is called SFT and runs in $\log(N),\frac{1}{\tau}$.\\
 An oracle access to a function take as input $x$ and return the $f(x)$ of the function $f$.\\
@@ -202,6 +222,7 @@ The heart of the code is actually to decide which intervals potentially contain 
 The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.
 
 \subsection{Nearly optimal Sparse Fourier Transform}
+
 We want here to compute the $k$-sparse approximation to the discrete Fourier transform of an $n$-dimensional signal.\\
 There is to time in function of the number of input has at most $k$ non-zero Fourier Coefficient.\\
 In this case, we got $O(k.\log(n))$ time, else we have $O(k.\log(n).\log(\frac{n}{k}))$\\
@@ -210,14 +231,11 @@ What is required, is that the input size $n$ is a power of 2.\\
 This algorithm seems to restrictive and also perform the same in the worst case.\\
 
 \subsection{Combinatorial sub linear-Time Fourier Algorithm}
+
 You have a vector A of length $n \gg k$ you identify the $k$ largest frequencies of the transform of A, getting polynomial time $(k,\log(n))$ for the algorithm.\\
 
-\subsection{Simple and practical algorithm for sparse Fourier transform}
-Here you consider a complex vector $x$ of length $n$.\\
-This algorithm compute the $k$-sparse Fourier transform in $O(\sqrt{kn}\log^{3/2}n)$, if x is sparse then you find it in exactly $O(klog^{2}n)$, but in general estimate $x$ is approximately $O(\sqrt{nk})$\\
-So this algorithm is better if the ratio $\frac{n}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as those before are supposed to find it in a lower complexity ($k\log(n)$).\\
-
 \section{Experiment}
+
 \subsection{Probability of the independent English letters}
 From the frequency letter given by Wikip\'edia, in english we got the following result :\\
 Proba sum = 0.9999999999999999\\
@@ -238,6 +256,7 @@ Ration of good matching and all matching=$0.12996168115565054^n$\\
 So $\frac{1}{7,69457^n}$
 
 \subsection{Probability if you consider blocks of size $d$}
+
 So calculation are done on a text of approximately $860000$ characters to see the evolution of the ratio good matching/bad matching.\\
 A program is ran to see the evolution for a block size between 1 and 25, and give the ratio, thanks to the probability that a block appears. It is completely heuristic as it's just counting the number of block that appears and do some manipulation with it.
 So the basic is to choose a block size, then it'll count every different blocks that appears modulo 26 and modulo 2.
@@ -246,54 +265,74 @@ You do the exact same thing with X in modulo 2, to get the probability of all ma
 With this, the evolution of the ratio in function of the block size looks like this:\\
 
 \section{Study of Algorithm to get $K_{26}$}
-So in initialization, there is list of "all matching" done to have all the decryption possible from modulo 2 to modulo 26. Meaning all the couple $(seg,str)$ such that $seg$ is a segment of the plaintext modulo 2 and $str$ is one of the possible translation of $seg$ to modulo 26.\\
-What is possible is to reduce this list, as tou take a big enough segment and then just select sub string of this segment. But for example if the block in modulo 2 is 000, it cannot be yyy, as no block could possibly end this way and another begin with y or yy, and no word exist with 3 yy in it.\\
 
+fuykg
 
+\appendix
+\newpage
 \section{Algorithm}
+
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1, find plain text in $\mathbb{Z}/2\mathbb{Z}$, and create an array.\\
 find the list of all matching: find all pairs $(seg,str)$ such that $seg$ is a segment of plaintext modulo 2 and $str$ $\in hash(seg)$ and save it in a list.\\
 \begin{algorithmic}[1]
-\REPEAT
-	\STATE select d matching form list (you'll get a $d\times d$ key matrix)
-for each of these matchings ($seg_{i}$, $str_{i}$)\\
-extract $block_{i}$ from $seg_{i}$ and $str'_{i}$ from $str_{i}$,\\
-then find $ciphertext_{i}$ such that $K^{-1}$ x $ciphertext_{i}$ mod 2 = $block_{i}$\\
-solve $ciphertext_{i} = K * str'_{i}$ for i=1 to d\\
-compute $K^{-1} * $ciphertext\\
-until it makes sense\\
+	\REPEAT
+\STATE select d matching form list (you'll get a $d\times d$ key matrix)
+\FOR{each of these matchings ($seg_{i}$, $str_{i}$)}
+	\STATE extract $block_{i}$ from $seg_{i}$ and $str'_{i}$ from $str_{i}$,
+	\STATE then find $ciphertext_{i}$ such that $K^{-1}$ x $ciphertext_{i}$ mod 2 = $block_{i}$
+\ENDFOR
+\STATE solve $ciphertext_{i} = K * str'_{i}$ for i=1 to d
+\STATE compute $K^{-1} * $ciphertext
+\UNTIL decryption make sense
 \end{algorithmic}
 number of iteration is $ \frac{1}{ratio^{nd}} = 8^{nd}$
 \\
 \\
 The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$\\
-Part1:\\
+\begin{algorithmic}[1]
+\STATE Part1:\\
+\REQUIRE{Ciphertext $Y_1,Y_2,...,Y_n$}\\
+\ENSURE{K($\bmod 2$)}\\
+\FORALL{$\mu$}
+	\STATE compute $S_n(\mu) = \sum_{k=1}^{n}{(-1)^{\mu.y} \times n_y}$ where $n_y=\#\{k;Y_k=y\}$
+\ENDFOR
+\STATE set all $\mu$ to the d values of $\mu$ with largest $S_n(\mu)=bias(\mu.Y)$
+\STATE Part2:\\
+\FORALL{$(i,i')$}
+	\STATE compute $n_{00}(i,i')=\#\{k<n:(\mu_i .Y_k,\mu_i'.Y_{k+1})=(0,0)\}$
+\ENDFOR
+\STATE set $(i_d,i_1)$ to the first pair with lowest $n_{00}$
 \\
-You require Ciphertext $Y_1,Y_2,...,Y_n$\\
-for all $\mu$ do
-compute $S_n(\mu) = \sum_{k=1}^{n}{(-1)^{\mu.y} \times n_y}$ where $n_y=\#\{k;Y_k=y\}$\\
-endfor\\
-set all $\mu$ to the d values of $\mu$ with largest $S_n(\mu)=bias(\mu.Y)$\\
-\\
-Part2:\\
-\\
-for all (i,i') do\\
-compute $n_{00}(i,i')=\#\{k<n:(\mu_i .Y_k,\mu_i'.Y_{k+1})=(0,0)\}$
-endfor\\
-set $(i_d,i_1)$ to the first pair with lowest $n_{00}$\\
-\\
-Part3:\\
-\\
-for all $t=2$ to $d-1$ do\\
-for all i $\notin \{i_1,i_2,..,i_{t-1},i_d\}$ do\\
-compute $n_{00}(i,i{'})=\#\{k:(\mu^{T}_{i_{t-1}}Y_{k},\mu^{T}_{i}Y_{k})=(0,0)\}$\\
-endfor\\
-take i such that $n_{00}$ is minimum and set $i_t=i$\\
-endfor\\
-set $\mu = (\mu_{i1},\mu_{i1},...,\mu_{id})$ and $K=(\mu^-1)^T$
-output K\\
-\\
+\STATE Part3:\\
+\FORALL{$t=2$ to $d-1$}
+	\FORALL{i $\notin \{i_1,i_2,..,i_{t-1},i_d\}$}
+		\STATE compute $n_{00}(i,i{'})=\#\{k:(\mu^{T}_{i_{t-1}}Y_{k},\mu^{T}_{i}Y_{k})=(0,0)\}$\\
+	\ENDFOR
+	\STATE take i such that $n_{00}$ is minimum and set $i_t=i$\\
+\ENDFOR
+\STATE set $\mu = (\mu_{i1},\mu_{i1},...,\mu_{id})$ and $K=(\mu^-1)^T$
+\STATE output K
+\end{algorithmic}
 Here to be faster we store $n_y$ in a table and we do a FFT on this table to get $S_n$. With this operation the total complexity drop from $O(d^2 \times 2^d)$ to $O(d \times 2^d)$
 But it seems with some other techniques we could do better.
+
+
+\section{References}
+
+[1] Alina, Matyukhina. \textit{Cryptanalysis of the Hill Cipher}.\\
+\\[0pt]
+[2] S. Shazaei, S. Ahmadi. \textit{Ciphertext- only attack on} $d \times d$ \textit{Hill in} $O(d13^d)$.\\
+\\[0pt]
+[3] Akavia, A. \textit{Deterministic Sparse Fourier Approximation via Fooling Arithmectic Progressions}.\\
+\\[0pt]
+[4] Akavia, A., Goldwasser, S., Safra, S. \textit{Proving Hard-Core Predicates Using List Decoding}.\\
+\\[0pt]
+[5] Hassanieh, H., Indyk, P., Katabi, D., Price, E. \textit{Nearly optimal sparse Fourier transform}.\\
+\\[0pt]
+[6] Hassanieh, H., Indyk, P., Katabi, D., Price, E. \textit{Simple and practical algorithm for sparse Fourier transform}.\\
+\\[0pt]
+[7] Iwen, M.A. \textit{Combinatorial Sublinear-Time Fourier Algorithms}.\\
+
+
 \end{document}

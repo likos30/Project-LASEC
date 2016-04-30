@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  29 APR 2016 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  30 APR 2016 11:20
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -183,7 +183,20 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\c@homeworkProblemCounter=\count105
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count105
+\c@ALC@line=\count106
+\c@ALC@rem=\count107
+\c@ALC@depth=\count108
+\ALC@tlm=\skip59
+\algorithmicindent=\skip60
+)
+\c@homeworkProblemCounter=\count109
  (assignment_1.aux)
 \openout1 = `assignment_1.aux'.
 
@@ -205,16 +218,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
+\scratchcounter=\count110
 \scratchdimen=\dimen123
 \scratchbox=\box28
-\nofMPsegments=\count107
-\nofMParguments=\count108
+\nofMPsegments=\count111
+\nofMParguments=\count112
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count109
+\MPscratchCnt=\count113
 \MPscratchDim=\dimen124
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
 \everyMPtoPDFconversion=\toks22
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 123.
@@ -242,10 +255,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--178
  []
 
 
-Overfull \hbox (118.79807pt too wide) in paragraph at lines 180--189
+Overfull \hbox (9.4631pt too wide) in paragraph at lines 180--189
 \OT1/cmr/m/n/10 From di-verse cal-cu-la-tion we al-ways get $0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[]$ so E(# all match-in
-g) is al-ways equals to $(#\OML/cmm/m/it/10 segmentsinreference\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (#\OML
-/cmm/m/it/10 segmentinplaintext\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
+g) is al-ways equals to $(#\OML/cmm/m/it/10 segmentsinreference\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
  []
 
 
@@ -274,9 +286,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--219
  []
 
 [5]
-Overfull \hbox (5.57802pt too wide) in paragraph at lines 222--239
-\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999 , which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/1
-0 ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
+Overfull \hbox (1.47964pt too wide) in paragraph at lines 222--239
+\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999, which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/10
+ ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
  []
 
 
@@ -290,83 +302,177 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--239
  []
 
 
-Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
+Overfull \hbox (20.51968pt too wide) in paragraph at lines 222--239
 \OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32001649 which cor-re-sponds to which $([][] []
 )[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (22.39584pt too wide) in paragraph at lines 222--239
+Overfull \hbox (20.51968pt too wide) in paragraph at lines 222--239
 \OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18852964 which cor-re-sponds to which $([][] []
 )[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--246
+Underfull \hbox (badness 10000) in paragraph at lines 241--247
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.271 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.277 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.279 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.284 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 AED: lastpage setting LastPage
+[7]
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
+! LaTeX Error: \begin{list} on input line 259 ended by \end{document}.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
+(assignment_1.aux)
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- []
+ )
+(\end occurred inside a group at level 5)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--292
-
- []
-
-[6] [7] (assignment_1.aux) ) 
+### semi simple group (level 5) entered at line 259 (\begingroup)
+### semi simple group (level 4) entered at line 259 (\begingroup)
+### semi simple group (level 3) entered at line 259 (\begingroup)
+### semi simple group (level 2) entered at line 257 (\begingroup)
+### semi simple group (level 1) entered at line 257 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 3065 strings out of 493634
- 41336 string characters out of 3134832
- 207833 words of memory out of 3000000
- 6408 multiletter control sequences out of 15000+200000
- 17367 words of font info for 64 fonts, out of 3000000 for 9000
+ 3254 strings out of 493634
+ 43596 string characters out of 3134832
+ 207655 words of memory out of 3000000
+ 6590 multiletter control sequences out of 15000+200000
+ 19227 words of font info for 71 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,10n,43p,412b,210s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/M
-ax-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (7 pages, 191738 bytes).
+ 33i,10n,43p,410b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/M
+ax-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-Pc/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-
+Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on assignment_1.pdf (7 pages, 211126 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

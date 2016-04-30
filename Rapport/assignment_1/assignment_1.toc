@@ -1,12 +1,13 @@
 \contentsline {section}{Abstract}{2}
 \contentsline {section}{Introduction}{4}
 \contentsline {section}{Key recovery modulo 26}{4}
-\contentsline {section}{Study of Faster Fourrier Transform for Algorithm 1}{5}
+\contentsline {section}{Study of Faster Fourier Transform for Algorithm 1}{5}
 \contentsline {subsection}{Deteministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{5}
 \contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{5}
 \contentsline {subsection}{Combinatorial sub linear-Time Fourier Algorithm}{5}
 \contentsline {subsection}{Simple and practical algorithm for sparse Fourier transform}{6}
 \contentsline {section}{Experiment}{6}
 \contentsline {subsection}{Probability of the independent English letters}{6}
-\contentsline {subsection}{Probability if you consider blocks of size d}{6}
+\contentsline {subsection}{Probability if you consider blocks of size $d$}{6}
+\contentsline {section}{Study of Algorithm to get $K_{26}$}{7}
 \contentsline {section}{Algorithm}{7}

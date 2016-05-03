@@ -93,7 +93,9 @@ public class BlockOccurence {
 				bufferCounter[letter.indexOf(select)]=1;
 			}
 			// just here to give the progression of the work
-			//System.out.println((double)i/(textNoSpace.length()-blockSize+1)+  "% " + i + " block");
+			if(i%1000==0){
+			System.out.println((double)i/(textNoSpace.length()-blockSize+1)+  "% " + i + " block");
+			}
 		}
 		System.out.println("finish to fill");
 		
@@ -105,13 +107,13 @@ public class BlockOccurence {
 		// computation for good matching
 		for(int i=0;i<letter.size();i++){
 			//writer.println("le block " + letter.get(i) + " apparait "+ bufferCounter[i] + "fois");
-			double proba = (double)(bufferCounter[i]-1)/numberOfBlock;
+			double proba = (double)(bufferCounter[i]-1)/(numberOfBlock-1);
 			sumGoodMatching+=(Math.pow(proba, 2));
 		}
 		//computation for all matching
 		for(int i=0;i<letterMod2.size();i++){
 			//writer.println("le block " + letterMod2.get(i) + " apparait "+ counterBinary[i] + "fois");
-			double probaBadMatching = (double)(counterBinary[i]-1)/numberOfBlock;
+			double probaBadMatching = (double)(counterBinary[i]-1)/(numberOfBlock-1);
 			sumAllMatching+=Math.pow(probaBadMatching, 2);
 		}
 		writer.println("For Block Size "+ blockSize + ", we have "+ numberOfBlock +" blocks, thus the probabilty that 2 blocks are equals mod 2 is "+ sumAllMatching + " and modulo 26 is "+sumGoodMatching);

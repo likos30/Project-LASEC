@@ -2,13 +2,14 @@
 \contentsline {section}{Introduction}{4}
 \contentsline {section}{Key recovery modulo 26}{4}
 \contentsline {section}{Study of Faster Fourier Transform for Algorithm 1}{5}
-\contentsline {subsection}{Simple and practical algorithm for sparse Fourier transform}{5}
+\contentsline {subsection}{Simple and practical algorithm for sparse Fourier transform}{6}
 \contentsline {subsection}{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{6}
 \contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{6}
 \contentsline {subsection}{Combinatorial sub linear-Time Fourier Algorithm}{6}
-\contentsline {section}{Experiment}{6}
-\contentsline {subsection}{Probability of the independent English letters}{6}
-\contentsline {subsection}{Probability if you consider blocks of size $d$}{7}
+\contentsline {section}{Experiment}{7}
+\contentsline {subsection}{Experiment 1:Probability of the independent English letters}{7}
+\contentsline {subsection}{Experiment 2:Probability if you consider blocks of size $d$}{7}
+\contentsline {subsection}{Experiment 3:Blocksize and diffence of block in n ciphers}{7}
 \contentsline {section}{Study of Algorithm to get $K_{26}$}{7}
 \contentsline {section}{Algorithm}{8}
 \contentsline {section}{References}{9}

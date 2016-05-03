@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  1 MAY 2016 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  3 MAY 2016 13:48
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -200,21 +200,21 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
  (assignment_1.aux)
 \openout1 = `assignment_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 121.
+(lastpage)             ! on input line 122.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -230,198 +230,157 @@ Package lastpage Info: Please have a look at the pageslts package at
 \makeMPintoPDFobject=\count115
 \everyMPtoPDFconversion=\toks22
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 124.
  ("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 123.
+LaTeX Font Info:    Try loading font information for U+msb on input line 124.
 
 ("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Max-Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 140.
-
-[2] (assignment_1.toc)
+{C:/Users/Max-Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (assignment_1.toc)
 \tf@toc=\write3
 \openout3 = `assignment_1.toc'.
 
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 142.
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 159--174
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--174
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--174
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--174
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--185
+Underfull \hbox (badness 10000) in paragraph at lines 178--186
 
  []
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 187.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 187--199
+Underfull \hbox (badness 10000) in paragraph at lines 188--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
-
- []
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 218.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 220--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-
-Overfull \hbox (1.47964pt too wide) in paragraph at lines 246--263
-\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999, which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/10
- ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--263
-
- []
-
-
-Overfull \hbox (20.51968pt too wide) in paragraph at lines 246--263
-\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32001649 which cor-re-sponds to which $([][] []
-)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
- []
-
-
-Overfull \hbox (20.51968pt too wide) in paragraph at lines 246--263
-\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18852964 which cor-re-sponds to which $([][] []
-)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
- []
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 263.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 266--272
+Underfull \hbox (badness 10000) in paragraph at lines 188--201
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 281.
+(amsmath)                 on input line 208.
 
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 284.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--305
+Underfull \hbox (badness 10000) in paragraph at lines 246--252
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--305
+Overfull \hbox (1.47964pt too wide) in paragraph at lines 260--277
+\OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999, which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/10
+ ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--348
+Underfull \hbox (badness 10000) in paragraph at lines 260--277
 
  []
 
 
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 348.
+Overfull \hbox (20.51968pt too wide) in paragraph at lines 260--277
+\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32001649 which cor-re-sponds to which $([][] []
+)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
+ []
 
-[8]
 
-Package lastpage Warning: Rerun to get the references right on input line 350.
+Overfull \hbox (20.51968pt too wide) in paragraph at lines 260--277
+\OT1/cmr/m/n/10 sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18852964 which cor-re-sponds to which $([][] []
+)[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
+ []
+
+<ratio.jpg, id=35, 423.83344pt x 382.42876pt>
+File: ratio.jpg Graphic file (type jpg)
+ <use ratio.jpg>
+Package pdftex.def Info: ratio.jpg used on input line 286.
+(pdftex.def)             Requested size: 256.0748pt x 231.06375pt.
+ [7] [8 <./ratio.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 298--301
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 312--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--359
+
+ []
+
+[9] 
 AED: lastpage setting LastPage
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 350.
-
-[9] (assignment_1.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[10] (assignment_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3256 strings out of 493634
- 43617 string characters out of 3134832
- 210643 words of memory out of 3000000
- 6591 multiletter control sequences out of 15000+200000
+ 3261 strings out of 493634
+ 43680 string characters out of 3134832
+ 209657 words of memory out of 3000000
+ 6595 multiletter control sequences out of 15000+200000
  19573 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,11n,43p,500b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Max-Pc/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Max
--Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
-ers/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mti12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (9 pages, 238391 bytes).
+ 33i,11n,43p,500b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C
+:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-Pc/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ma
+x-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max-Pc/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
+sers/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on assignment_1.pdf (10 pages, 286328 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

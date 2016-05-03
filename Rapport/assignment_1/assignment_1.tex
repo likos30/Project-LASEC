@@ -28,6 +28,7 @@
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage{mathtools, bm}
 \usepackage{amssymb, bm}
+\usepackage{graphicx}
 \usepackage{algorithmic}
 
 % Margins
@@ -170,7 +171,7 @@ Then with this formula and the approximation of all the vector $\mu$, we get the
 You just need to reorder them with the correlation, you find the last one and first one easily, and you do it recursively to find all the vectors in the correct order.\\
 All this process is described by algorithm 1 in the Annexe, and is done in a time $O(d 2^d)$\\
 \\
-This project will present possible improvement of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. Then, a possible enhancement to get the key matrix in modulo 26 will be discussed, as the one presented in the previous paper runs in $O(8^nd)$.\\
+This project will present possible improvement of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. Then, a possible enhancement to get the key matrix in modulo 26 will be discussed, as the one presented in the previous paper runs in $O(8^{nd})$.\\
 
 
 \section{Key recovery modulo 26}
@@ -188,7 +189,7 @@ $$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a
 R\'enyi entropy represent more generally the quantity of information in the probability of colision of a random variable.\\
 \\
 Then we define the good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
-${}$\hspace{1em}For good matching, we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the entropy of r\'enyi of this segment (which represents the rate of collision for a given block X).\\
+${}$\hspace{1em}For good matching, we 1have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the entropy of r\'enyi of this segment (which represents the rate of collision for a given block X).\\
 Then you do the same for  $E(\# all matching)$, the difference is that you do it this way : $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ . And indeed you understand that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
 ${}$\hspace{1em}For the $E(\# all matching)$ the calculation is really simple, you must take $(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ as we do all the possibles matching.\\
 $H_{2}(X \bmod 2) = -\log_2(\sum_{i=0}^{1}{\Pr(X=i)^2})$, where $\Pr(X \bmod 2=i)$ declined in $\Pr(X \bmod 2=0)$ and $\Pr(X \bmod 2 =1)$\\
@@ -196,6 +197,17 @@ From the experiment, we always get $0.5^n$ so E(\# all matching) is always equal
 Then to have an idea of the complexity, you do the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$, you generaly found $\frac{1}{8^n}$\\
 In the following parts, the calculation of $E(\# all matchings)$ are done again thanks to a Java program.
 To have a better complexity, we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed so we can only try different assumptions and calculations.\\
+We finally conclude that it's possible to have a correct ratio for large size block, but that the actual algorithm depends too much on the blocksize, so we are going to look at other approaches possible to resolve this problem.\\
+
+
+\section{Study of Algorithm to get $K_{26}$}
+We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$.\\
+We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption, try to found the number of good matching we need so that an algorithm can find all this matching and find only one matrix possible.\\
+So we can see the problem as a set of possible equation(which represent the vector column of the matrix), with size $n$ and you want to find $m$ good equation that represent the good vector column of the key matrix.\\
+The question is how many $m$ do you need in $n$ so that you can find only one matrix.\\
+$\Pr$(to have at least $m$ good equation)$=\sum_{i=m}^{n}{{n \choose i}(\frac{1}{13^d})^i (1-\frac{1}{13^d})^{n-i}}$\\
+With the assumption
+
 
 
 \section{Study of Faster Fourier Transform for Algorithm 1}
@@ -204,17 +216,18 @@ But generally, most of the coefficient of a FFT are small or equal to zero, mean
 what we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times $k$ where each cipher $y$ appears. So it is a table containing numbers $\in \mathbb{N}$.\\
 The actual probability that all vectors are different is:
 $$\prod_{n=0}^{k-1}{(26^{-d})(26^d -n)}$$\\
-With this formula the bigger the size of block is, the more ciphers we can get and are different for sure. You can see Experiment 2 to look the probability with some blocksize.\\
-
+\textbf{If we suppose that they actually are $26^d$ ciphers}.\\
+With this formula the bigger the size of block is, the more ciphers we can get and are different for sure. You can see Experiment 3 to look the probability with some blocksize.\\
 
 \subsection{Simple and practical algorithm for sparse Fourier transform}
 This algorithm considers a complex vector $x$ of length $n$.\\
 It computes the $k$-sparse Fourier transform in $O(\sqrt{kn}\log^{3/2}n)$, if $x$ is sparse then you find it in exactly $O(klog^{2}n)$, but in general estimate $x$ is approximately $O(\sqrt{nk})$\\
 So this algorithm is better if the ratio $\frac{n}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as recently found are supposed to find it in a lower complexity ($k\log(n)$).\\
-But it can still be used with correct results.
-So we will assume all ciphers are different, and we get all non null component in $n_y$, of size $n$, meaning $n$ given ciphers. We find that the Fourier transform only get small pikes at the beginning.\\
-In particular if we pick the example of the previous paper, with $d=10$ and $k=6200$, we obtain a probability to get all distinct vetors of: $0.99999987$.\\
-So we get a complexity of  $O(k\log^2(n))$ with $k$ near 1, instead of $O(n\log n)$
+But it can still be used and gives correct results.
+So we will assume all ciphers are different, and we get all non null component in $n_y$, of size $n$, meaning $n$ given ciphers. We find that the Fourier transform only get high picks at the extremities.\\
+So if we consider that the middle are null, we can reduce the complexity. \textbf{Need to look at this}\\
+Also this only works if we have all different ciphers.
+
 \subsection{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
 
 If we only want to have the few significant Fourier Coefficient, we can use this.\\
@@ -225,7 +238,8 @@ It's based on partition of set by binary search, you have at the beginning 4 int
 Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass, it will output yes, and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
 The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on $J$, exceeds significant threshold $\tau$, NO if J larger.\\
 The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.\\
-If you consider the table $n_y$ of size $n$ with all non-null entries, we get $\tau||f||^{2}_2 < \tau \times n^2$\\
+If you consider the table $n_y$ of size $n$ with all entries=1, we get $\tau||f||^{2}_2 < \tau \times n^2$\\
+And as $\hat{f}$ got lot of small coefficient and large one on the extremities, they will be some coefficient that will satisfy this equation for small $\tau$. So the complexity will depends on $\frac{1}{\tau}$ and it'll clearly to big.
 
 \subsection{Nearly optimal Sparse Fourier Transform}
 
@@ -242,7 +256,7 @@ You have a vector A of length $n \gg k$ you identify the $k$ largest frequencies
 
 \section{Experiment}
 
-\subsection{Experiment 1:Probability of the independent English letters}
+\subsection{Experiment 1:Probability of independent English letters}
 From the frequency letter given by Wikip\'edia, in english we got the following result :\\
 Proba sum = 0.9999999999999999\\
 Sum of probability squared = 0.06549717159999999, which corresponds to $(\sum_{i=0}^{25}{\Pr(i=y)^2})^n, y \in \{alphabet\} $\\
@@ -269,16 +283,13 @@ So the basic is to choose a block size, then it'll count every different blocks 
 Then it'll compute the probability that a good matching happen with the following : $\sum_{X \in block}({\frac{\#X -1}{\#block -1}})^2 $\\
 You do the exact same thing with X in modulo 2, to get the probability of all matching, and then you compute the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$\\
 With this, the evolution of the ratio in function of the block size looks like this:\\
+\includegraphics[width=90mm]{ratio.jpg}\\
+So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15 , then it goes up again to almost match 1/8 for blocksize 24. With the current algorithm and this size of block the number of iteration would be $8^d$ and as $d = 24$ is really large it's still not effective.\\
+Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if you go in higher blocksize, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
 
 \subsection{Experiment 3:Blocksize and diffence of block in n ciphers}
 
 to do here
-
-\section{Study of Algorithm to get $K_{26}$}
-We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$.
-So we can see the problem as a set of possible equation(which represent the vector column of the matrix), with size $n$ and you want to find $m$ good equation that represent the good vector column of the key matrix.\\
-The question is how many $m$ do you need in $n$ so that you can find only one matrix.\\
-$\Pr$(to have at least $m$ good equation)$=\sum_{i=m}^{n}{{n \choose i}(\frac{1}{13^d})^i (1-\frac{1}{13^d})^{n-i}}$
 
 \appendix
 \newpage

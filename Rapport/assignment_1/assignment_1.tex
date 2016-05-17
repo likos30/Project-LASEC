@@ -128,7 +128,7 @@
 \section{Abstract}
 This Hill cipher is a polygraphic substitution cipher based on linear algebra, invented by 
 Lester S. in 1929. Each letter is represented by a number modulo 26, from $A=0$ to $Z=25$. The algorithm breaks the plaintext into blocks of size $d$ and then applies a matrix $d \times d $ to these blocks to yield ciphertext blocks. As it's a linear encryption, it can be simply broken with Know PlainText Attacks.
-The author takes the previous paper about a new Ciphertext-only Attacks on Hill, and try to improve it's complexity to get a better result that $O(d13^d)$.\\
+The author takes the previous paper about a new Ciphertext-only Attacks on Cipher Hill, and try to improve it's complexity to get a better result that $O(d13^d)$.\\
 ${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the key matrix modulo 2 and then to improve the algorithm to get the key matrix modulo 26.\\
 ${}$\hspace{1em}The project report is organized as follows: Section1 presents the Hill cipher and the work done in the previous report. In section2, the author studies the complexity and try to improve the algorithm to get the key matrix modulo 26 . Section 3 presents the possible enhancement of the FFT of algorithm 1. Experimental results and algorithm are presented at the end.
 %----------------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ ${}$\hspace{1em}The project report is organized as follows: Section1 presents th
 % To have just one problem per page, simply put a \clearpage after each problem
 
 \section{Introduction}
-The motivation of this project is, first and foremost, to improve the Linear attack on the Hill cipher, by changing the recovering of the key modulo 26 and then see the possible algorithm to improve the FFT in recovery of matrix key modulo 2.\\
+The motivation of this project is, first and foremost, to improve the Linear Cipher only attack on the Hill cipher, by changing the recovering of the key modulo 26 and then see the possible algorithm to improve the FFT in recovery of matrix key modulo 2.\\
 \\
 Indeed, it is known that a brute force attack can be done on the Hill cipher, as it is a Linear cipher, but to have a better complexity and less restrictive resources, improvement have been made.\\
 It is now possible to get a matrix key with minimum length required on ciphertext of $n =8.96d^2 -O(\log d)$.\\
@@ -166,10 +166,10 @@ By this same Chinese Reminder theorem, it is believed that we can find the key m
 It is shown in the previous paper that this matrix modulo 2 can be found in $O(d2^d)$.\\
 \\
 Let's briefly describe how this attack works:\\
-If you consider $X$ a random vector constituted of $d$ letters, you can pick a fixed vector $\lambda \in \{0,1\}^*$ and consider the dot-product $\lambda . X$ in $\mathbb{Z}/2\mathbb{Z}$.\\
-Then with the aid of the bias(X)= $\varphi_{X}(\frac{2\pi}{p})$ in $\mathbb{Z}/26\mathbb{Z}$, we found correspondence between $\lambda$ and $\mu$ (the last is the same vector but for the cipher text). We are searching $bias(\lambda . X)$ and we found $ \mu = (K^T)^{-1} \times\lambda $.\\
+Let's consider $X$ a random vector constituted of $d$ letters, we can pick a fixed vector $\lambda \in \{0,1\}^*$ and consider the dot-product $\lambda . X$ in $\mathbb{Z}/2\mathbb{Z}$.\\
+Then with the aid of the bias(X)= $\varphi_{X}(\frac{2\pi}{p})$ in $\mathbb{Z}/26\mathbb{Z}$, we found correspondence between $\lambda$ and $\mu$ (the last is the same vector but for the cipher text). It is needed to search $bias(\lambda . X)$ and we found $ \mu = (K^T)^{-1} \times\lambda $.\\
 Then with this formula and the approximation of all the vector $\mu$, we get the vectors column of the key matrix in ${Z}/2\mathbb{Z}$.\\
-You just need to reorder them with the correlation, to find the last one and first one easily, and then recursively find all the vectors in the correct order.\\
+An algorithm to reorder them with the correlation, to find the last one and first one easily, and then recursively find all the vectors in the correct order.\\
 All this process is described by algorithm 1 in the Annexe, and is done in a time $O(d 2^d)$\\
 \\
 This project will present possible improvement of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. Then, a possible enhancement to get the key matrix in modulo 26 will be discussed, as the one presented in the previous paper runs in $O(8^{nd})$.\\
@@ -180,39 +180,34 @@ So now that we have the key matrix in $\mathbb{Z}/2\mathbb{Z}$, we can have the 
 To get the key matrix in $\mathbb{Z}/26\mathbb{Z}$, we can use the Chinese Reminder Theorem, but we would get a complexity proportional to $O(13^d)$. In the previous paper, it was believed that it's possible to get the key matrix in $\mathbb{Z}/26\mathbb{Z}$ without considering $\mathbb{Z}/13\mathbb{Z}$.\\
 First of all, we create a hash table using long text, and search mapping between segments of reference text and plain text modulo 2.\\
 \#(seg in reference) = len(reference text) - n +1, with n the segment size.\\
-Indeed, if you take the following text: $thisisatest$, with n = 5, you get the following segment:\\
+Indeed, if the following text is taken as an example: $thisisatest$, with n = 5, we get the following segment:\\
  $ thisi, hisis, isisa, sisat, isate, sates, atest $ which is 7 segments $ 11 - 5 + 1 = 7 $\\
-We get the same thing for $\#(seg in plain) = len(plain text) - n +1$, with $n$ the segment size.\\
+It's the same idea for \#(seg in plain) $= len(plain text) - n +1$, with $n$ the segment size.\\
 Let $a$, $b$ be random segment of length $n$ and $X$ the plaintext. We use R\'enyi entropy, with the following formula:\\
 $$H_{\alpha}(X) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{\alpha}})$$ 
-When alpha has the value 2, we just get the following:
+When alpha has the value 2, the following result is obtained:
 $$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one as $\sum_{i=1}^{n}{\Pr(X=i)^{2}} = \sum{\Pr(a=b)^{2}}$.\\
-R\'enyi entropy represent more generally the quantity of information in the probability of colision of a random variable.\\
+R\'enyi entropy represent more generally the quantity of information in the probability of a random variable's collision.\\
 \\
-Then we define the good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
-${}$\hspace{1em}For good matching, we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the entropy of r\'enyi of this segment (which represents the rate of collision for a given block X).\\
-Then you do the same for  $E(\# all matching)$, the difference is that you do it this way : $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ . And indeed you understand that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
-${}$\hspace{1em}For the $E(\# all matching)$ the calculation is really simple, you must take $(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ as we do all the possibles matching.\\
+Then we define good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
+${}$\hspace{1em}For good matching, we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the r\'enyi entropy of this segment (which represents the rate of collision for a given block X).\\
+Then the same is done for  $E(\# all matching)$, the difference is that it must be taken into account that we are in $\mathbb{Z}/2\mathbb{Z}$:$E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ . And indeed it is understandable that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
+${}$\hspace{1em}Now let's condisder $E(\# all matching)$. As we only 2 values are possible it's easier than the previous, indeed $E(\# all matching) =(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$.\\
 $H_{2}(X \bmod 2) = -\log_2(\sum_{i=0}^{1}{\Pr(X=i)^2})$, where $\Pr(X \bmod 2=i)$ declined in $\Pr(X \bmod 2=0)$ and $\Pr(X \bmod 2 =1)$\\
-From the experiment, we always get $0.5^n$ for $X \bmod 2$ so E(\# all matching) is always equals to $(\# segments in reference) \times (\#segment in plaintext) \times 0.5^n$.\\
-Then to have an idea of the complexity, you do the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$, you found a general expression:$\frac{1}{8^n}$\\
-In the Experiments part, the calculation of $E(\# all matchings)$ are done again with the help of a Java program.
-To have a better complexity, we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed so we can only try different assumptions and calculations.\\
+From the experiment, we always get $0.5^n$ for $X \bmod 2$ so E(\# all matching) is never supposed to be different than $(\# segments in reference) \times (\#segment in plaintext) \times 0.5^n$.\\
+Then to have an idea of the complexity, the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ is computed, to find a general expression to express the number of good matching in all matching:$\frac{1}{8^n}$\\
+In the Experiment part, the computation of $E(\# all matchings)$ are done again with the help of a Java program.
+To decrease the actual complexity, we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed. So the only solution left is to try different assumptions and calculations for $E(\# good matchings)$.\\
 \\
 The one that is interesting is to consider blocks of letters as being independent from each others, and look at the evolution of the ratio through the growing block size. This is done in Experiment 2.\\
 We finally conclude that it's possible to have a correct ratio for large size block, but the actual algorithm depends too much on the blocksize, and it's therefore impossible to get a correct complexity with the found curve that looks more like. For example, $blocksize=27$ gives ratio $\frac{1}{5}$ but still $\frac{1}{ratio^{blocksize}}$ is too high as $blocksize = 27$.
 Eventually, the following parts focus on other way to implement this recovery of key matrix modulo 26.\\
 
 \section{Study of Algorithm to get $K_{26}$}
-We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$.\\
-We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption, try to found the number of good matching we need so that an algorithm can find all this matching and find only one matrix possible.\\
-So we can see the problem as a set of possible equation(which represent the vector column of the matrix), with size $n$ and you want to find $m$ good equation that represent the good vector column of the key matrix.\\
-The question is how many $m$ do you need in $n$ so that you can find only one matrix.\\
-$\Pr$(to have at least $m$ good equation)$=\sum_{i=m}^{n}{{n \choose i}(\frac{1}{13^d})^i (1-\frac{1}{13^d})^{n-i}}$\\
-With this formula we actually find that $m$ must be close to $2d$. It is exactly the same condition described in the Berlekamp-Massey algorithm.\\
-The goal of this algorithm is given a sequence input $s = s_1 , s_2 , ... s_n $ of length $n$, find the shortest LFSR such that it produce $s$ in the first $n$ symbol.\\
-A Linear Feedback Shift Register is a shift register(ie an array where you shift one bit to the right each operation) whose input bit is a linear function of it's previous state. The XOR function is a LFSR. You can implement Fibonacci sequence with it.
-
+We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$ with $n$ the segment size and $d \times d$ the matrix size.\\
+We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption possible with $d$ matching, try to found the number of good matching we need so that an algorithm can find the key matrix by solving equations.\\
+So the problem can be turned like this:find the number $y$ of matching needed to have a set of linear equation of the first order, to find the matrix coefficient in $\mathbb{Z}/26\mathbb{Z}$.\\
+To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix K_{26} of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.
 
 
 \section{Study of Faster Fourier Transform for Algorithm 1}

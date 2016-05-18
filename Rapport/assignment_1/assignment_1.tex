@@ -207,9 +207,10 @@ Eventually, the following parts focus on other way to implement this recovery of
 We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$ with $n$ the segment size and $d \times d$ the matrix size.\\
 We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption possible with $d$ matching, try to found the number of good matching we need so that an algorithm can find the key matrix by solving equations.\\
 So the problem can be turned like this:find the number $y$ of matching needed to have a set of linear equation of the first order, to find the matrix coefficient in $\mathbb{Z}/26\mathbb{Z}$.\\
-To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix K_{26} of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.
-
-
+To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix $K_{26}$ of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.\\
+Let's say we want to find $2^d$ good matching so good equation in this. Thanks to previous study , it is known that we need $\frac{2d}{2d8^d}$ matching to have the number wanted. Thus the probability that there are $2d$ good equation in the matrix, if coeeficient are choosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
+From ${2d8^d \choose 2d}$ it can be said:$\frac{8^d 2d!}{2d!(8^d 2d-2d)!} = \frac{(8^d 2d)^{2d}}{2d!} = \frac{(8^d 2d)^{2d}}{2d^{d/2}}$\\
+The previous result was obtain using Striling's approximation, $n!~\sqrt{2\pi n}(\frac{n}{e})^n$.
 \section{Study of Faster Fourier Transform for Algorithm 1}
 With a fast Fourier Transform (FFT) the complexity is $O(N\log N)$ for N the input size.\\
 But generally, most of the coefficient of a FFT are small or equal to zero, meaning the output of the FFT is sparse. If a signal has a small number $k$ of non-zero Fourier coefficients the output of the Fourier transform can be represented succinctly using only $k$ coefficients. Hence, we can find Fourier Transform algorithm whose run time is sub-linear in the signal size $n$.\\
@@ -231,8 +232,6 @@ So we will assume all ciphers are different, and we get all non null component i
 So if we consider that the middle are null, we can reduce the complexity.\\
 For example, for blocksize = 10 and 6200 ciphertext , the probability that they are all different is $0.99999683297^{6200} = 0.9805$. So we assume they are all different, and find the following FFT for a vector of $100$ one and $200$ one:\\
 \\
-\includegraphics[width=90mm]{FFT100ones.jpg}
-\includegraphics[width=90mm]{FFT200ones.jpg}
 ${}$ \hspace{9em} \textit{FFT of 100 one} \hspace{18em} \textit{FFT of 200 one}
 \\
 \\
@@ -296,7 +295,6 @@ You do the exact same thing with X in modulo 2, to get the probability of all ma
 With this, the evolution of the ratio in function of the block size looks like this:\\
 \\
 \includegraphics[width=90mm]{ratio.jpg}
-\\
 So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15, then it goes up again to almost match 1/8 for blocksize 24. With the current algorithm and this size of block the number of iteration would be $8^d$ and as $d = 24$ is really large it's still not effective.\\
 Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if you go in higher blocksize, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
 

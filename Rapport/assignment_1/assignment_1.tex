@@ -160,7 +160,7 @@ ${}$\hspace{1em}The project report is organized as follows: Section1 presents th
 The motivation of this project is, first and foremost, to improve the Linear Cipher only attack on the Hill cipher, by changing the recovering of the key modulo 26 and then see the possible algorithm to improve the FFT in recovery of matrix key modulo 2.\\
 \\
 Indeed, it is known that a brute force attack can be done on the Hill cipher, as it is a Linear cipher, but to have a better complexity and less restrictive resources, improvement have been made.\\
-It is now possible to get a matrix key with minimum length required on ciphertext of $n =8.96d^2 -O(\log d)$.\\
+Considering a matrix's size of $d$, it is now possible to get a matrix key with minimum length required on ciphertext of $n =8.96d^2 -O(\log d)$.\\
 This method has been then improved [2] using the divide-and-conquer technique, and eliminating repeated calculation while doing matrix multiplication, and have led to a ciphertext required length of $n=8,96d^2$. Eventually, using the Chinese Reminder Theorem [2], the length has been brought to $n=12.5d^2$, and the complexity to $O(d13^d)$.\\
 By this same Chinese Reminder theorem, it is believed that we can find the key matrix modulo 2 first and then recover the matrix modulo 26 with a lower complexity [1].\\
 It is shown in the previous paper that this matrix modulo 2 can be found in $O(d2^d)$.\\
@@ -207,62 +207,60 @@ Eventually, the following parts focus on other way to implement this recovery of
 We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$ with $n$ the segment size and $d \times d$ the matrix size.\\
 We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption possible with $d$ matching, try to found the number of good matching we need so that an algorithm can find the key matrix by solving equations.\\
 So the problem can be turned like this:find the number $y$ of matching needed to have a set of linear equation of the first order, to find the matrix coefficient in $\mathbb{Z}/26\mathbb{Z}$.\\
-To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix $K_{26}$ of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.\\
-Let's say we want to find $2^d$ good matching so good equation in this. Thanks to previous study , it is known that we need $\frac{2d}{2d8^d}$ matching to have the number wanted. Thus the probability that there are $2d$ good equation in the matrix, if coeeficient are choosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
-From ${2d8^d \choose 2d}$ it can be said:$\frac{8^d 2d!}{2d!(8^d 2d-2d)!} = \frac{(8^d 2d)^{2d}}{2d!} = \frac{(8^d 2d)^{2d}}{2d^{d/2}}$\\
-The previous result was obtain using Striling's approximation, $n!~\sqrt{2\pi n}(\frac{n}{e})^n$.
+To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix $K_{26}^{-1}$ of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.\\
+Let's say we want to find $2d$ good matching so good equation in this. Thanks to previous study , it is known that we need $2d8^d$ matching to have the number wanted. Thus the probability that there are $2d$ good equation in the matrix, if coefficient are chosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
+$d$ is considered big enough so that $(1-\frac{1}{13^d})^{2d8^d - 2d}$ is close to 1.
+From ${2d8^d \choose 2d}$ it can be said:$\frac{8^d 2d!}{2d!(8^d 2d-2d)!} = \frac{(8^d 2d)^{2d}}{2d!} \approx \frac{(8^d 2d)^{2d}}{2d^{d}}$\\
+The previous result was obtain using Striling's approximation, $n! \simeq \sqrt{2\pi n}(\frac{n}{e})^n$.\\
+From here we multiply with other terms and find this:$(\frac{8}{13})^{2d^2} 2^{2d-1} d^d$.\\
+Let's go back to $K_{26}$ and let's take a plaintext block $X$. From the linearity of Hill, $Y$ = $K_{26} \times X$. If we pick a $Y$, we actually know from $K_{2}$ the value of plaintext in $\mathbb{Z}/2\mathbb{Z}$ with $Y = K_2 \times Y_i$. We can pick one of the given cipher in the list $ Y_1 , Y_2 , ... , Y_n$ called from now on $Y_i= (a_0,a_1,...,a_d)$  and multiply it by $K_{26}^{-1}$ and get a vector $X_i$ constituted of $d$ equations with $d^2$ unknown, $x_1, ...,x_d^{2}$ of this form:\\
+$$
+\begin{pmatrix}
+x_1 a_1 + x_2 a_2 + x_3 a_3 + ... + x_{d} a_{d} \equiv y \mod 2 \\
+...\\
+x_{d^2 - d} a_{d^2 - d} + x_{d^2 - d +1}  a_{d^2 - d+1}  + ... + x_{d^2} a_{d^2} \equiv y \mod 2\\
+\end{pmatrix}
+$$
+Moreover one theorem of linear algebra says:\\
+the congruence $x_1 a_1 + x_2 a_2 + x_3 a_3 + ... + x_{n} a_{n} \equiv b \mod m$ , with $(a_1,...,a_n,m) = c|b $ has $ c.|m|^{n-1}$ distinct solutions represented as matrix of size $n$.\\
+Brought back to our equation, the number of distinct solutions is $c.|2|^{d-1}$ with $c \in  \mathbb{Z}/26\mathbb{Z}$ it will generally be 1.\\
+We actually know the solution modulo 2 for $x_1 ,x_2 ,... , x_d^{2}$ thanks to the recovery of the matrix modulo 2.So there is only one solution modulo 2 for each equations. To get solution in $\mathbb{Z}/26\mathbb{Z}$, we need to use the matching given above to find possible value for the matrix, and verify by looking at the plaintext, meaning if it actually makes sense or not.\\
+
 \section{Study of Faster Fourier Transform for Algorithm 1}
 With a fast Fourier Transform (FFT) the complexity is $O(N\log N)$ for N the input size.\\
-But generally, most of the coefficient of a FFT are small or equal to zero, meaning the output of the FFT is sparse. If a signal has a small number $k$ of non-zero Fourier coefficients the output of the Fourier transform can be represented succinctly using only $k$ coefficients. Hence, we can find Fourier Transform algorithm whose run time is sub-linear in the signal size $n$.\\
-what we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times $k$ where each cipher $y$ appears. So it is a table containing numbers $\in \mathbb{N}$.\\
-The actual probability that all vectors are different is:
-$$\prod_{n=0}^{k-1}{(26^{-d})(26^d -n)}$$\\
-\textbf{If we suppose that they actually are $26^d$ ciphers}.\\
-But it's not the case, so from our experiment on independent block, we also computed the probability that a block equals another one. We just need to take this value for all the different blocksize, and then, as we assumed all the blocks where independent, put it at the power number of blocks.\\
-Which gives us:
-$$(1-\Pr(a=b))^{\#ciphers}$$
-With this formula the bigger the size of block is, the more ciphers we can get and are different for sure. You can see Experiment 3 to look the probability with some blocksize.\\
+A general algorithm for computing the DFT must take time proportional to its output size N. However , in some cases, most of the Fourier coefficients of a signal are small or equal to zero, meaning, the output of the DFT is sparse.\\
+For sparse signals, the n lower bound for the complexity of DFT no longer applies. If a signal has a small number k of non-zero Fourier coefficients the output of the Fourier transform can be represented succinctly using only k coefficients.\\
+Hence, we can find Fourier Transform algorithm whose run time is sub-linear in the signal size $N$.\\
+what we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times $k$ where each cipher $y$ appears. So it is a table containing numbers $\in \mathbb{N}$ of size $N=2^d$.\\
+
 
 \subsection{Simple and practical algorithm for sparse Fourier transform}
-This algorithm considers a complex vector $x$ of length $n$.\\
-It computes the $k$-sparse Fourier transform in $O(\sqrt{kn}\log^{3/2}n)$, if $x$ is sparse then you find it in exactly $O(klog^{2}n)$, but in general estimate $x$ is approximately $O(\sqrt{nk})$\\
-So this algorithm is better if the ratio $\frac{n}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as recently found are supposed to find it in a lower complexity ($k\log(n)$).\\
-But it can still be used and gives correct results.
-So we will assume all ciphers are different, and we get all non null component in $n_y$ from the result in experiment 2, of size $n$, meaning $n$ given ciphers. We find that the Fourier transform only get high picks at the extremities.\\
-So if we consider that the middle are null, we can reduce the complexity.\\
-For example, for blocksize = 10 and 6200 ciphertext , the probability that they are all different is $0.99999683297^{6200} = 0.9805$. So we assume they are all different, and find the following FFT for a vector of $100$ one and $200$ one:\\
-\\
-${}$ \hspace{9em} \textit{FFT of 100 one} \hspace{18em} \textit{FFT of 200 one}
-\\
-\\
-If we actually consider the value from $60$ to $150$ being zero for the first one, we could get the following complexity:peaks are located from $0$ to $100$ and $700$ to $800$ , so in $100$ of the $800$. The basic complexity is $O(n\log n)$ with n the number of point. So here we would get $O(800\log 800)$ and with the approximation with the algorithm we would get $O(\sqrt{kn} )\log n)^{\frac{3}{2}})$ where k is the number of location of the peaks. The $O(\sqrt{kn})$ is the approximation of the FFT to find the k-sparse peaks. If we already know it , we can do with $O(k (\log n)^2)$. And so the complexity found is better for $ k < \frac{n}{\log n} $.
+This algorithm considers a complex vector $x$ of length $l$.\\
+It computes the $k$-sparse Fourier transform in $O(\sqrt{kl}\log^{3/2}l)$, if $x$ is sparse then find it takes exactly $O(klog^{2}l)$, but in general estimate $x$ is approximately $O(\sqrt{lk})$\\
+So this algorithm is better if the ratio $\frac{l}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as recently found are supposed to find it in a lower complexity ($k\log(l)$).\\
+Now let's consider the input of this DFT to be $n_y$ with size $2^d$. This table contains integer whose the sum is equal to the number of cipher given. As a result, we can't say that the resulting DFT of this vector will be sparse or not.
 
 \subsection{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
 
-This algorithm \\
 Here if we gave a threshold $\tau \in (0,1]$ and an oracle access to a function f, it outputs the $\tau$-significant Fourier Coefficient. This is called SFT and runs in $\log(N),\frac{1}{\tau}$.\\
 An oracle access to a function take as input $x$ and return the $f(x)$ of the function $f$.\\
 This algorithm is robust to random noise and local (meaning it runs in polynomial time)\\
-It's based on partition of set by binary search, you have at the beginning 4 intervals, you test for the two first if the norm of $f$ Fourier Transform squared is equals to the $set_i$ oracle output squared.\\
+It's based on partition of set by binary search, we have at the beginning 4 intervals, then testing for the first two if the norm of $f$ Fourier Transform squared is equals to the $set_i$ oracle output squared.\\
 Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass, it will output yes, and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
 The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on $J$, exceeds significant threshold $\tau$, NO if J larger.\\
-The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = <f,X_{\alpha}>$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.\\
-If you consider the table $n_y$ of size $n$ with all entries=1, we get $\tau||f||^{2}_2 = \tau \times n$\\
-And as $\hat{f}$ got lot of small coefficient and large one on the extremities, they will be some coefficient that will satisfy this equation for small $\tau$. So the complexity will depends on $\frac{1}{\tau}$ and it'll clearly be too big.\\
-Let's take the same example as the previous subsection, the FFT with $200$ one, we get some coefficient equals $1$ (the smallest ones) and so $\tau$ needs to be inferior to $\frac{1}{800}$ , so if an input more important is taken $\frac{1}{\tau}$ will be too big to match the previous complexity.\\
+The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = \langle f,X_{\alpha} \rangle$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.\\
+Considering the table $n_y$ of size $2^d$, we get $\tau||f||^{2}_2 = \tau \times n$.\\
+There the result only depends on how much the FFT is sparse.
+The problem is that $\tau$ will need to be very big to match the previous inequality. So the complexity will depends on $\frac{1}{\tau}$ and it'll clearly be too important to be considered.\\
 
 \subsection{Nearly optimal Sparse Fourier Transform}
 
-We want here to compute the $k$-sparse approximation to the discrete Fourier transform of an $n$-dimensional signal.\\
-There is to time in function of the number of input has at most $k$ non-zero Fourier Coefficient.\\
-In this case, we got $O(k.\log(n))$ time, else we have $O(k.\log(n).\log(\frac{n}{k}))$\\
-The basis is still the same, if a signal has a small number $k$ of non-zero Fourier, the output of this DFT can be represented succinctly using only $k$ coefficient.\\
-What is required, is that the input size $n$ is a power of 2.\\
-This algorithm seems too restrictive and also perform the same in the worst case.\\
+We want here to compute the $k$-sparse approximation to the discrete Fourier transform of an $2^d$-dimensional signal.\\
+In the case where the input has at most $k$ non-zero Fourier coefficient, we got $O(k.\log(2^d))$ time, else we have $O(k.\log(2^d).\log(\frac{2^d}{k}))$\\
+The basis is still the same, if a signal has a small number $k$ of non-zero Fourier coefficient, the output of this DFT can be represented succinctly using only $k$ coefficient.\\
+What is required, is that the input size $n$ is a power of 2 which is complete in this case.\\
+This algorithm has a better performance if and only if $ k < O(\frac{2^d}{\log(2^d)}$. This won't be the case here and the formula for the $k$ superior to this limit perform too poorly for worst case:$O(\sqrt(2^d k) \log^{\frac{3}{2}}(2^d))$
 
-\subsection{Combinatorial sub linear-Time Fourier Algorithm}
-
-You have a vector A of length $n \gg k$ you identify the $k$ largest frequencies of the transform of A, getting polynomial time $(k,\log(n))$ for the algorithm.\\
 
 \section{Experiment}
 
@@ -285,18 +283,18 @@ sum of probability that gives 1 modulo 2 squared = 0.18852964 which corresponds 
 Ration of good matching and all matching=$0.12996168115565054^n$\\
 So $\frac{1}{7,69457^n}$.
 
-\subsection{Experiment 2:Probability if you consider blocks of size $d$}
+\subsection{Experiment 2:Probability considering blocks of size $d$}
 
 So calculation are done on a text of approximately $860000$ characters to see the evolution of the ratio good matching/bad matching.\\
 A program is ran to see the evolution for a block size between 1 and 25, and give the ratio, thanks to the probability that a block appears. It is completely heuristic as it's just counting the number of block that appears and do some manipulation with it.
 So the basic is to choose a block size, then it'll count every different blocks that appears modulo 26 and modulo 2.
 Then it'll compute the probability that a good matching happen with the following : $\sum_{X \in block}({\frac{\#X -1}{\#block -1}})^2 $\\
-You do the exact same thing with X in modulo 2, to get the probability of all matching, and then you compute the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$\\
+The exact same thing is done with X in modulo 2, to get the probability of all matching, and then we compute the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$\\
 With this, the evolution of the ratio in function of the block size looks like this:\\
 \\
 \includegraphics[width=90mm]{ratio.jpg}
 So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15, then it goes up again to almost match 1/8 for blocksize 24. With the current algorithm and this size of block the number of iteration would be $8^d$ and as $d = 24$ is really large it's still not effective.\\
-Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if you go in higher blocksize, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
+Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if the blocksize is increased to a certain point, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
 
 \subsection{Experiment 3:Blocksize and diffence of block in n ciphers}
 
@@ -315,7 +313,7 @@ Even if the ratio do not behave as previously thought, the complexity stay too h
 	\hline
 \end{tabular}
 
-Indeed, it's obvious that the bigger the block is, the lower is the chance that you have another one with the same value. For blocksize 1, you cannot hop to have a good probability to get another block different as there are only 26 possibilities. You just have to resolve the following:$Probability^{\#ciphers}>0.95 = n < \frac{\log(0.95}{\log(Probability)}$.
+Indeed, it's obvious that the bigger the block is, the lower is the chance that another one exist with same value. For blocksize 1, you cannot hop to have a good probability to get another block different as there are only 26 possibilities. You just have to resolve the following:$Probability^{\#ciphers}>0.95 = n < \frac{\log(0.95}{\log(Probability)}$.
 \appendix
 \newpage
 \section{Algorithm}
@@ -342,7 +340,7 @@ The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$
 \REQUIRE{Ciphertext $Y_1,Y_2,...,Y_n$}\\
 \ENSURE{K($\bmod 2$)}\\
 \FORALL{$\mu$}
-	\STATE compute $S_n(\mu) = \sum_{k=1}^{n}{(-1)^{\mu.y} \times n_y}$ where $n_y=\#\{k;Y_k=y\}$
+	\STATE compute $S_n(\mu) = \sum_{y}{(-1)^{\mu.y} \times n_y}$ where $n_y=\#\{k;Y_k=y\}$
 \ENDFOR
 \STATE set all $\mu$ to the d values of $\mu$ with largest $S_n(\mu)=bias(\mu.Y)$
 \STATE Part2:\\

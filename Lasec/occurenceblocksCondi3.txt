@@ -1,0 +1,17 @@
+proba conditional is= 0.005134162120786388
+nextclass
+proba conditional is= 0.005321053914596578
+nextclass
+proba conditional is= 0.007047506906810687
+nextclass
+proba conditional is= 0.014056990556429477
+nextclass
+proba conditional is= 0.005199039387424772
+nextclass
+proba conditional is= 0.007363042247579024
+nextclass
+proba conditional is= 0.03303078152711274
+nextclass
+proba conditional is= 0.0340764890526454
+nextclass
+best is : 0.0340764890526454 at 7

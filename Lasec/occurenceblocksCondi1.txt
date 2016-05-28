@@ -1,0 +1,5 @@
+proba conditional is= 0.1198702965957797
+nextclass
+proba conditional is= 0.13225454818971913
+nextclass
+best is : 0.13225454818971913 at 1

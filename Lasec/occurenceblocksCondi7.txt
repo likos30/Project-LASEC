@@ -1,0 +1,257 @@
+proba conditional is= 5.574166935031615E-4
+nextclass
+proba conditional is= 0.001456208028470497
+nextclass
+proba conditional is= 0.0015134275071868502
+nextclass
+proba conditional is= 0.002063363540781898
+nextclass
+proba conditional is= 0.0034580488711151
+nextclass
+proba conditional is= 8.675375102478904E-4
+nextclass
+proba conditional is= 0.00198378412119907
+nextclass
+proba conditional is= 0.0021196384502414787
+nextclass
+proba conditional is= 0.0010687982861790962
+nextclass
+proba conditional is= 8.108999043151532E-4
+nextclass
+proba conditional is= 7.356975294756717E-4
+nextclass
+proba conditional is= 0.0010407509350655285
+nextclass
+proba conditional is= 0.001033846430042271
+nextclass
+proba conditional is= 0.004230070382873961
+nextclass
+proba conditional is= 0.0034831665784225557
+nextclass
+proba conditional is= 0.030238560950759868
+nextclass
+proba conditional is= 7.542097703558331E-4
+nextclass
+proba conditional is= 8.433294173632887E-4
+nextclass
+proba conditional is= 8.021823229817121E-4
+nextclass
+proba conditional is= 0.001888636674532285
+nextclass
+proba conditional is= 5.514721226454488E-4
+nextclass
+proba conditional is= 4.620765586345058E-4
+nextclass
+proba conditional is= 8.040361289016865E-4
+nextclass
+proba conditional is= 0.003204568586602025
+nextclass
+proba conditional is= 0.0018873277426223578
+nextclass
+proba conditional is= 0.0012470483411657221
+nextclass
+proba conditional is= 0.0037856406222310864
+nextclass
+proba conditional is= 0.005118478239929624
+nextclass
+proba conditional is= 0.0014623834556635874
+nextclass
+proba conditional is= 0.0018575651851941936
+nextclass
+proba conditional is= 0.025562570686292203
+nextclass
+proba conditional is= 0.10083978046683863
+nextclass
+proba conditional is= 0.0011898056392952462
+nextclass
+proba conditional is= 0.0022386225702230866
+nextclass
+proba conditional is= 0.006972264590833643
+nextclass
+proba conditional is= 0.0013750373553718953
+nextclass
+proba conditional is= 8.661545868835433E-4
+nextclass
+proba conditional is= 7.550757724772446E-4
+nextclass
+proba conditional is= 9.713674487853457E-4
+nextclass
+proba conditional is= 0.005020490548436541
+nextclass
+proba conditional is= 6.977907169765873E-4
+nextclass
+proba conditional is= 7.600948504420175E-4
+nextclass
+proba conditional is= 4.18454492740319E-4
+nextclass
+proba conditional is= 0.0010067776202484962
+nextclass
+proba conditional is= 8.79900387208062E-4
+nextclass
+proba conditional is= 0.0012744397185057176
+nextclass
+proba conditional is= 0.0032666913914595305
+nextclass
+proba conditional is= 0.010416511381762354
+nextclass
+proba conditional is= 0.0011182011983401578
+nextclass
+proba conditional is= 0.0030015712605267622
+nextclass
+proba conditional is= 6.91745522425027E-4
+nextclass
+proba conditional is= 0.00220358093840294
+nextclass
+proba conditional is= 8.507513774493752E-4
+nextclass
+proba conditional is= 0.003071893621355074
+nextclass
+proba conditional is= 0.004126979095058857
+nextclass
+proba conditional is= 0.0021679615369238773
+nextclass
+proba conditional is= 0.0013833081320746422
+nextclass
+proba conditional is= 0.0018017292656029502
+nextclass
+proba conditional is= 0.0018784562765212479
+nextclass
+proba conditional is= 0.00438124566860115
+nextclass
+proba conditional is= 0.005410671458349342
+nextclass
+proba conditional is= 0.01893253709491584
+nextclass
+proba conditional is= 0.04235953640715545
+nextclass
+proba conditional is= 0.2664359861591695
+nextclass
+proba conditional is= 0.0014974569437150192
+nextclass
+proba conditional is= 0.001542368627459942
+nextclass
+proba conditional is= 0.0028710977918609123
+nextclass
+proba conditional is= 0.00346644587411013
+nextclass
+proba conditional is= 0.0016329613352499212
+nextclass
+proba conditional is= 9.175562677940052E-4
+nextclass
+proba conditional is= 0.0013110880799336716
+nextclass
+proba conditional is= 0.006077146141349799
+nextclass
+proba conditional is= 7.86727022976048E-4
+nextclass
+proba conditional is= 0.0017651834668486468
+nextclass
+proba conditional is= 6.631188635468423E-4
+nextclass
+proba conditional is= 0.0013800132639247144
+nextclass
+proba conditional is= 0.0011101402409108105
+nextclass
+proba conditional is= 0.005626517089328557
+nextclass
+proba conditional is= 0.00297185326158762
+nextclass
+proba conditional is= 0.035710807973039306
+nextclass
+proba conditional is= 0.0019631516419465218
+nextclass
+proba conditional is= 0.008336180458867594
+nextclass
+proba conditional is= 5.965381746603789E-4
+nextclass
+proba conditional is= 0.0013144387115660333
+nextclass
+proba conditional is= 5.827744904668098E-4
+nextclass
+proba conditional is= 5.05300991883019E-4
+nextclass
+proba conditional is= 0.0011426385281132815
+nextclass
+proba conditional is= 0.003428007319101033
+nextclass
+proba conditional is= 0.002580549987710488
+nextclass
+proba conditional is= 0.0024802781557067377
+nextclass
+proba conditional is= 0.0013888931322119452
+nextclass
+proba conditional is= 0.0018564055224347504
+nextclass
+proba conditional is= 0.0015925833087033492
+nextclass
+proba conditional is= 0.0021061600530276657
+nextclass
+proba conditional is= 0.012287675358932475
+nextclass
+proba conditional is= 0.04815051020408162
+nextclass
+proba conditional is= 0.0013342603197741966
+nextclass
+proba conditional is= 0.0023573646981022984
+nextclass
+proba conditional is= 0.0014161802182740648
+nextclass
+proba conditional is= 0.008346572524026886
+nextclass
+proba conditional is= 0.0015882612100424239
+nextclass
+proba conditional is= 0.0015729226220434424
+nextclass
+proba conditional is= 0.004482208522179266
+nextclass
+proba conditional is= 0.0040765936004030995
+nextclass
+proba conditional is= 0.005804357207179582
+nextclass
+proba conditional is= 0.0012125452944804266
+nextclass
+proba conditional is= 0.004302272072550622
+nextclass
+proba conditional is= 0.0018662768367222436
+nextclass
+proba conditional is= 0.0023116336383562663
+nextclass
+proba conditional is= 0.0015271414393900151
+nextclass
+proba conditional is= 0.00522311111111115
+nextclass
+proba conditional is= 0.008391360194699844
+nextclass
+proba conditional is= 0.0014483275199498578
+nextclass
+proba conditional is= 0.007384316114778454
+nextclass
+proba conditional is= 0.0010577918787318074
+nextclass
+proba conditional is= 0.003921652200132133
+nextclass
+proba conditional is= 0.0031891173230228853
+nextclass
+proba conditional is= 0.0012215763698342332
+nextclass
+proba conditional is= 0.006331438242130768
+nextclass
+proba conditional is= 0.006404585419762323
+nextclass
+proba conditional is= 0.006057031891462189
+nextclass
+proba conditional is= 0.004108099702927724
+nextclass
+proba conditional is= 0.007290992515287188
+nextclass
+proba conditional is= 0.01048725811023216
+nextclass
+proba conditional is= 0.026399405083829097
+nextclass
+proba conditional is= 0.08077372728238916
+nextclass
+proba conditional is= 0.10380622837370243
+nextclass
+proba conditional is= 0.0
+nextclass
+best is : 0.2664359861591695 at 63

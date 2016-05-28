@@ -1,0 +1,33 @@
+proba conditional is= 0.0023877001568258305
+nextclass
+proba conditional is= 0.0041889561000691905
+nextclass
+proba conditional is= 0.0018114246251121709
+nextclass
+proba conditional is= 0.005935769975300456
+nextclass
+proba conditional is= 0.0019194845034264927
+nextclass
+proba conditional is= 0.002376449636620522
+nextclass
+proba conditional is= 0.005348859638854403
+nextclass
+proba conditional is= 0.013941662154494343
+nextclass
+proba conditional is= 0.002806472669259693
+nextclass
+proba conditional is= 0.0024552941081594742
+nextclass
+proba conditional is= 0.0024637605243224762
+nextclass
+proba conditional is= 0.008192029729674512
+nextclass
+proba conditional is= 0.0063796334761004525
+nextclass
+proba conditional is= 0.00736305704404583
+nextclass
+proba conditional is= 0.02486952812905379
+nextclass
+proba conditional is= 0.08145851312409463
+nextclass
+best is : 0.08145851312409463 at 15

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  22 MAY 2016 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  28 MAY 2016 17:30
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -303,80 +303,87 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 211.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--217
+Underfull \hbox (badness 10000) in paragraph at lines 211--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--228
+Underfull \hbox (badness 10000) in paragraph at lines 225--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
+Overfull \hbox (21.82051pt too wide) detected at line 229
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 X []  \OT1/cmr/m/n/10 = \OML
+/cmm/m/it/10 y\OT1/cmr/m/n/10 ) = [] [][]([] [])\OML/cmm/m/it/10 ; y \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10   [][]\OT1/cmr/m/n/10 ([] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--241
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 247--257
+Underfull \hbox (badness 10000) in paragraph at lines 251--262
 
  []
 
-
-Overfull \hbox (1.47964pt too wide) in paragraph at lines 270--287
+[7]
+Overfull \hbox (1.47964pt too wide) in paragraph at lines 275--292
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999, which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/10
  ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
  []
 
 
-Overfull \hbox (39.63092pt too wide) in paragraph at lines 270--287
+Overfull \hbox (39.63092pt too wide) in paragraph at lines 275--292
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32298762240000006 which cor-re-sponds to $([][]
  [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (39.63092pt too wide) in paragraph at lines 270--287
+Overfull \hbox (39.63092pt too wide) in paragraph at lines 275--292
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18634762239999997 which cor-re-sponds to $([][]
  [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--287
+Underfull \hbox (badness 10000) in paragraph at lines 275--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--287
+Underfull \hbox (badness 10000) in paragraph at lines 275--292
 
  []
 
-[7] <ratio.jpg, id=39, 423.83344pt x 382.42876pt>
+<ratio.jpg, id=39, 423.83344pt x 382.42876pt>
 File: ratio.jpg Graphic file (type jpg)
  <use ratio.jpg>
-Package pdftex.def Info: ratio.jpg used on input line 297.
+Package pdftex.def Info: ratio.jpg used on input line 302.
 (pdftex.def)             Requested size: 256.0748pt x 231.06375pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--300
+Underfull \hbox (badness 10000) in paragraph at lines 295--305
 
  []
 
 [8] [9 <./ratio.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 322--325
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--385
+Underfull \hbox (badness 10000) in paragraph at lines 375--390
 
  []
 
@@ -406,7 +413,7 @@ sers/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on assignment_1.pdf (11 pages, 297496 bytes).
+Output written on assignment_1.pdf (11 pages, 299407 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

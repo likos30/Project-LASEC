@@ -186,7 +186,7 @@ It's the same idea for \#(seg in plain) $= len(plain text) - n +1$, with $n$ the
 Let $a$, $b$ be random segment of length $n$ and $X$ the plaintext. We use R\'enyi entropy, with the following formula:\\
 $$H_{\alpha}(X) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{\alpha}})$$ 
 When alpha has the value 2, the following result is obtained:
-$$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one as $\sum_{i=1}^{n}{\Pr(X=i)^{2}} = \sum{\Pr(a=b)^{2}}$.\\
+$$-\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one as $\sum_{i=1}^{n}{\Pr(X=i)^{2}} =Pr(a=b)$.\\
 R\'enyi entropy represent more generally the quantity of information in the probability of a random variable's collision.\\
 \\
 Then we define good matching : segments are equals before and after modulo 2, and bad matching segment which are not equal but equal modulo 2.\\
@@ -208,11 +208,13 @@ We are going to try to improve the complexity of algorithm 2 to find another com
 We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption possible with $d$ matching, try to found the number of good matching we need so that an algorithm can find the key matrix by solving equations.\\
 So the problem can be turned like this:find the number $y$ of matching needed to have a set of linear equation of the first order, to find the matrix coefficient in $\mathbb{Z}/26\mathbb{Z}$.\\
 To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix $K_{26}^{-1}$ of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.\\
-Let's say we want to find $2d$ good matching so good equation in this. Thanks to previous study , it is known that we need $2d8^d$ matching to have the number wanted. Thus the probability that there are $2d$ good equation in the matrix, if coefficient are chosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
+Let's say we want to find $2d$ good matching so good equation in this. Thanks to previous study , it is known that we need $2d8^d$ matching to have this number of good matching. Thus the probability that there are $2d$ good equation in the matrix, if coefficient are chosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
 $d$ is considered big enough so that $(1-\frac{1}{13^d})^{2d8^d - 2d}$ is close to 1.
 From ${2d8^d \choose 2d}$ it can be said:$\frac{8^d 2d!}{2d!(8^d 2d-2d)!} = \frac{(8^d 2d)^{2d}}{2d!} \approx \frac{(8^d 2d)^{2d}}{2d^{d}}$\\
 The previous result was obtain using Striling's approximation, $n! \simeq \sqrt{2\pi n}(\frac{n}{e})^n$.\\
 From here we multiply with other terms and find this:$(\frac{8}{13})^{2d^2} 2^{2d-1} d^d$.\\
+Now by theorem from theory of information , we multiply this value by the possible number and matrix and it should be inferior to 1.\\
+$13^{d^2} * (\frac{8}{13})^{2d^2} 2^{2d-1} d^d$ is not inferior to 1 for a blocksize inferior to 1.
 Let's go back to $K_{26}$ and let's take a plaintext block $X$. From the linearity of Hill, $Y$ = $K_{26} \times X$. If we pick a $Y$, we actually know from $K_{2}$ the value of plaintext in $\mathbb{Z}/2\mathbb{Z}$ with $Y = K_2 \times Y_i$. We can pick one of the given cipher in the list $ Y_1 , Y_2 , ... , Y_n$ called from now on $Y_i= (a_0,a_1,...,a_d)$  and multiply it by $K_{26}^{-1}$ and get a vector $X_i$ constituted of $d$ equations with $d^2$ unknown, $x_1, ...,x_d^{2}$ of this form:\\
 $$
 \begin{pmatrix}
@@ -221,10 +223,17 @@ x_1 a_1 + x_2 a_2 + x_3 a_3 + ... + x_{d} a_{d} \equiv y \mod 2 \\
 x_{d^2 - d} a_{d^2 - d} + x_{d^2 - d +1}  a_{d^2 - d+1}  + ... + x_{d^2} a_{d^2} \equiv y \mod 2\\
 \end{pmatrix}
 $$
-Moreover one theorem of linear algebra says:\\
-the congruence $x_1 a_1 + x_2 a_2 + x_3 a_3 + ... + x_{n} a_{n} \equiv b \mod m$ , with $(a_1,...,a_n,m) = c|b $ has $ c.|m|^{n-1}$ distinct solutions represented as matrix of size $n$.\\
 Brought back to our equation, the number of distinct solutions is $c.|2|^{d-1}$ with $c \in  \mathbb{Z}/26\mathbb{Z}$ it will generally be 1.\\
-We actually know the solution modulo 2 for $x_1 ,x_2 ,... , x_d^{2}$ thanks to the recovery of the matrix modulo 2.So there is only one solution modulo 2 for each equations. To get solution in $\mathbb{Z}/26\mathbb{Z}$, we need to use the matching given above to find possible value for the matrix, and verify by looking at the plaintext, meaning if it actually makes sense or not.\\
+We actually know the solution modulo 2 for $x_1 ,x_2 ,... , x_d^{2}$ thanks to the recovery of the matrix modulo 2.So there is only one solution modulo 2 for each equations. The classic interpretation would be to say that all equation get $13^d$ solutions so the whole matrix would have $13^{d^2}$, but we want to avoid this $13^x$ factor. To get solution in $\mathbb{Z}/26\mathbb{Z}$, we need to use another method to calculate the matchings.\\
+\\
+If the previous part is considered, it is simple to say that we can calculate entropy in another way. What one can do, is simply take the conditional entropy:$$H_{\alpha}(X \mid X \bmod = y) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i \mid X \bmod = y )^{\alpha}}) , y \in \{0,1\} $$\\
+For $\alpha = 2$, $-\log_{2}(\sum_{i=1}^{n}{(\Pr (X=i \mid X mod2 = y))^{2}}$\\
+In the case of single independent letter, the entropy declines into 2 possibilities, $H_{2}(X \mid X \bmod = 0) $ and $H_{2}(X \mid X \bmod = 1)$. The conditional probability is as following:
+$$\Pr (X=i \mid X \bmod 2 = 0 ) = \frac{\Pr(X mod 2 = 0 \mid X = i) \Pr(X=i)}{\Pr(X mod 2 =0)} $$ and of course the same for 1.\\
+Therefore, $\sum_{i=1}^{n}{(\Pr (X=i \mid X mod2 = 0))^{2}} = ((\frac{\Pr(X=A)}{Pr(X \bmod 2 = 0}))^{2} + (\frac{\Pr(X=X)}{Pr(X \bmod 2 = 0}))^{2} + ... )^{n}= 0.112^{n}$\\
+$\Pr (X=i \mid X \bmod 2 = 1) = 0.128^{n}$\\
+We can now estimate the good matching by "class" of reduction modulo 2
+Experiment 3 gives more details about the consideration of blocks instead of independent letters.
 
 \section{Study of Faster Fourier Transform for Algorithm 1}
 With a fast Fourier Transform (FFT) the complexity is $O(N\log N)$ for N the input size.\\
@@ -249,8 +258,9 @@ It's based on partition of set by binary search, we have at the beginning 4 inte
 Meaning more explicitly : $f(J_i)^2 = \sum_{\alpha \in J_i}{|f(\alpha)|^2}$ If this pass, it will output yes, and we'll be able to continue the algorithm by replacing the J and insert the $J_i$\\
 The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on $J$, exceeds significant threshold $\tau$, NO if J larger.\\
 The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = \langle f,X_{\alpha} \rangle$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.\\
-Considering the table $n_y$ of size $2^d$, we get $\tau||f||^{2}_2 = \tau \times n$.\\
-There the result only depends on how much the FFT is sparse.
+Considering the table $n_y$ of size $2^d$, we get $\tau||f||^{2}_2 < \tau \times n^2$ as all the cipher are in there and there are $n$ ciphers were $2^d <n$. So the semi-norm will be the smallest if they are all distributed equally in the "buckets". That gives approximately ${\lfloor \frac{n}{2^d} \rfloor}^{2}*2^d$ and the worst case where the semi norm is the bigger is when all are in one place meaning $n^2$.\\
+Let's take the value from the example of the previous paper: 6200 ciphers and blocksize =10. There for the best case, i.e, all equally distributed each bucket contains ${\lfloor \frac{1024}{6200} \rfloor}^2 = 6$, we get $|\hat{f}|^2 \geq \tau||f||^{2}_2 =  6144^2 \geq \tau 36864$ , where 6024 is the biggest Fourier coefficient and all the others are 0 so $ 1 = \tau$ that will be a good result but the probability that it arrives is clearly too small to be considerate.\\
+For the worst case we would get:$|\hat{f}|^2 \geq \tau||f||^{2}_2 =  \alpha \geq \tau 6200^2$ where $\alpha$ is one of the smallest coefficient but still bigger the order $10^1$  
 The problem is that $\tau$ will need to be very big to match the previous inequality. So the complexity will depends on $\frac{1}{\tau}$ and it'll clearly be too important to be considered.\\
 
 \subsection{Nearly optimal Sparse Fourier Transform}
@@ -296,16 +306,20 @@ With this, the evolution of the ratio in function of the block size looks like t
 So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15, then it goes up again to almost match 1/8 for blocksize 24. With the current algorithm and this size of block the number of iteration would be $8^d$ and as $d = 24$ is really large it's still not effective.\\
 Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if the blocksize is increased to a certain point, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
 
-\subsection{Experiment 3:Blocksize and diffence of block in n ciphers}
+\subsection{Experiment 3:Conditional Probability considering that we know X mod 2}
+In this experiment, we still consider the text from the previous part and sort block of letter in class of reduction modulo 2.
+For example the block ab will be in the class 01. From this sorting we can know which class has the best ratio of good matching.
 
 \begin{tabular}{|l|c|r|}
   \hline
-  blocksize & Probability that 2 blocks are different & \# maximal of ciphers for $\Pr > 0.95$\\
-	1 & (0.9367250929) & less than 1\\
-	2 & (0.99290120378) & 7\\
-	3 & (0.99868328054) & 38\\
-	4 & (0.99971599715) & 180\\
-	7 & (0.99998010694) & 2578\\
+  blocksize & Best Class & Ratio of good matching in this Class$\\
+	1 & 1 & 0.13225\\
+	2 & 11 & 0.062238\\
+	3 & 111 & 0.03407\\
+	4 & 1111 & 0.0814585\
+	5 & 11111 & 0.07864\\
+	6 & 111111 & 0.266435\\
+	7 & 01000 & 0.049085\\
 	10 & (0.99999683297) & 16195\\
 	12 & (0.99999899833) & 51207\\
 	14 & (0.99999959261) & 125907\\

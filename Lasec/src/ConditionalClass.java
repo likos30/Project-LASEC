@@ -9,7 +9,7 @@ public class ConditionalClass {
 
 		
 		public static void main(String[] args) throws IOException, IOException {
-			calculateBlocksConditional(9);
+			calculateBlocksConditional(17);
 
 	}
 		public static int binaryToInteger(String binary) {
@@ -71,7 +71,7 @@ public class ConditionalClass {
 			for(int i=0;i < Math.pow(2, blockSize);i++) {
 				ArrayList<String> init = new ArrayList<>();
 				classes.add(init);
-				int bufferCounter[] = new int[1024*10];
+				int bufferCounter[] = new int[1024];
 				buffersCounter.add(bufferCounter);
 			}
 			

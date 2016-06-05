@@ -1,14 +1,10 @@
-\contentsline {section}{Abstract}{2}
-\contentsline {section}{Introduction}{4}
-\contentsline {section}{Key recovery modulo 26}{4}
-\contentsline {section}{Study of Algorithm to get $K_{26}$}{5}
-\contentsline {section}{Study of Faster Fourier Transform for Algorithm 1}{7}
-\contentsline {subsection}{Simple and practical algorithm for sparse Fourier transform}{7}
-\contentsline {subsection}{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{7}
-\contentsline {subsection}{Nearly optimal Sparse Fourier Transform}{8}
-\contentsline {section}{Experiment}{8}
-\contentsline {subsection}{Experiment 1:Probability of independent English letters}{8}
-\contentsline {subsection}{Experiment 2:Probability considering blocks of size $d$}{8}
-\contentsline {subsection}{Experiment 3:Blocksize and diffence of block in n ciphers}{9}
-\contentsline {section}{Algorithm}{10}
-\contentsline {section}{References}{11}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}Key recovery modulo 26}{5}
+\contentsline {paragraph}{Assumption 1.}{5}
+\contentsline {paragraph}{Theorem 1.}{5}
+\contentsline {section}{\numberline {3}Study of Algorithm to get $K_{26}$}{6}
+\contentsline {section}{\numberline {4}Study of Faster Fourier Transform for Algorithm 1}{8}
+\contentsline {subsection}{\numberline {4.1}Simple and practical algorithm for sparse Fourier transform}{8}
+\contentsline {subsection}{\numberline {4.2}Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{8}
+\contentsline {subsection}{\numberline {4.3}Nearly optimal Sparse Fourier Transform}{9}
+\contentsline {subsection}{\numberline {4.4}Experiment 1:Probability of independent English letters}{9}

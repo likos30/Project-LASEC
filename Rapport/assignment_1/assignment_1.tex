@@ -105,6 +105,7 @@
 
 \newpage
 \section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
 The author takes the previous paper about a new Ciphertext-only Attacks on Cipher Hill, and try to improve it's complexity to get a better result than $O(d13^d)$.\\
 ${}$\hspace{1em}The goal of this project is to actually study the algorithm to get the key matrix modulo 2 and then to improve the algorithm to get the key matrix modulo 26.\\
 ${}$\hspace{1em}The project report is organized as follows:Section 1 presents the Hill cipher and the work done in the previous report. In Section 2, the author studies the complexity and try to improve the algorithm to get the key matrix modulo 26. Section 3 presents the possible enhancement of the FFT of Algorithm 1. Experimental results and algorithms are presented at the end.
@@ -173,13 +174,13 @@ Then we define good matching:segments are equal before and after modulo 2; and b
 ${}$\hspace{1em}For good matching, we have $E(\# good matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the R\'enyi entropy of this segment (which represents the rate of collision for a given block X).\\
 Then the same is done for  $E(\# all matching)$, the difference is that it must be taken into account that we are in $\mathbb{Z}/2\mathbb{Z}$:$E(\# all matching) = (\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$ . And indeed it is understandable that if 2 words modulo 2 are equals, these words are not always equals modulo 26.\\
 \\
-As we consider independent letters in segment, the probability to find two of the same segment with following ocurence of letters:$p(A)=0.082, p(B)=0.015,...$etc:$\Pr(a=b)=((0.082)^{2} +(0.015)^{2} + ...)^{n} = -log_{2}0.062^{n}$. The frequencies given in [8] are used as reference.\\
+As we consider independent letters in segment, the probability to find two of the same segment with following ocurence of letters:$p(A)=0.0808, p(B)=0.0167,...$etc:$\Pr(a=b)=((0.0808)^{2} +(0.0167)^{2} + ...)^{n} =0.06609^{n}$. Then $H_{2}(X) = -log_{2}0.06609^{n}$. The frequencies given in [8] are used as reference.\\
 \\
 ${}$\hspace{1em}Now let's consider $E(\# all matching)$. As we only 2 values are possible it's easier than the previous, indeed $E(\# all matching) =(\# segments in reference) \times (\#segment in plaintext) \times 2^{-H_{2}(X \bmod 2)}$.\\
 $H_{2}(X \bmod 2) = -\log_2(\sum_{i=0}^{1}{\Pr(X \bmod 2 =i)^2})$, where $\Pr(X \bmod 2=i)$ declined in $\Pr(X \bmod 2=0)$ and $\Pr(X \bmod 2 =1)$\\
 From the experiment, we always get $0.5^n$ for $X \bmod 2$ so E(\# all matching) is never supposed to be different than $(\# segments in reference) \times (\#segment in plaintext) \times 0.5^n$.\\
 \\
-Then to have an idea of the distribution of good matching and bad matching, the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ is computed: $\frac{E(\# good matchings)}{E(\# all matchings)} = \frac{|segments in reference| \times |segment in plaintext| \times 2^{-H_{2}(X)}}{|segments in reference| \times |segment in plaintext| \times 2^{-H_{2}(X \bmod 2)}}  = \frac{0.062^n}{0.5^n} = \frac{1}{8^n}$\\
+Then to have an idea of the distribution of good matching and bad matching, the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ is computed: $\frac{E(\# good matchings)}{E(\# all matchings)} = \frac{|segments in reference| \times |segment in plaintext| \times 2^{-H_{2}(X)}}{|segments in reference| \times |segment in plaintext| \times 2^{-H_{2}(X \bmod 2)}}  = \frac{0.06609^n}{0.5^n} = \frac{1}{7.56^n} \cong \frac{1}{8} $\\
 \\
 To decrease the actual complexity, we need to increase the ratio of good matching as $E(\# all matchings)$ can't be changed. So the only solution left is to try different assumptions and calculations for $E(\# good matchings)$.\\
 \\
@@ -192,31 +193,22 @@ Eventually, the following parts focus on other way to implement this key matrix 
 We are going to try to improve the complexity of algorithm 2 to find another complexity than $O(8^{nd})$ with $n$ the segment size and $d \times d$ the matrix size.\\
 We want to turn the problem in another way, meaning instead of looking at all possible matching and do all the decryption possible with $d$ matching, try to find  the number of good matching we need so that an algorithm can find the key matrix by solving equations.\\
 So the problem can be turned like this:find the number $y$ of matching needed to have a set of linear equation of the first order, to find the matrix coefficient in $\mathbb{Z}/26\mathbb{Z}$.\\
-To be clear, let's recall what we are given. We got cipher $Y_1 , Y_2 , ... , Y_n$ in $\mathbb{Z}/26\mathbb{Z}$ but also in $\mathbb{Z}/2\mathbb{Z}$ , the matrix $K_2$ thanks to algorithm 1 , and from these two we get the plaintext in $\mathbb{Z}/2\mathbb{Z}$ , $X_1,X_2,...,X_n$. We now create a matrix $K_{26}^{-1}$ of the same size and with element $x_1 , x_2 , ... , x_{d^2} \in \mathbb{Z}^{13}$.\\
-Let's say we want to find $2d$ good matching so good equation in this. Thanks to previous study , it is known that we need $2d8^d$ matching to have this number of good matching. Thus the probability that there are $2d$ good equation in the matrix, if coefficient are chosen randomly among the 13 possible values, is : $$ {2d8^d \choose 2d} \frac{1}{13^d}^{2d} (1-\frac{1}{13^d})^{2d8^d - 2d}$$\\
-$d$ is considered big enough so that $(1-\frac{1}{13^d})^{2d8^d - 2d}$ is close to 1.
-From ${2d8^d \choose 2d}$ it can be said:$\frac{8^d 2d!}{2d!(8^d 2d-2d)!} = \frac{(8^d 2d)^{2d}}{2d!} \approx \frac{(8^d 2d)^{2d}}{2d^{d}}$\\
-The previous result was obtain using Striling's approximation, $n! \simeq \sqrt{2\pi n}(\frac{n}{e})^n$.\\
-From here we multiply with other terms and find this:$(\frac{8}{13})^{2d^2} 2^{2d-1} d^d$.\\
-Now by theorem from theory of information , we multiply this value by the possible number and matrix and it should be inferior to 1.\\
-$13^{d^2} * (\frac{8}{13})^{2d^2} 2^{2d-1} d^d$ is not inferior to 1 for a blocksize inferior to 1.
-Let's go back to $K_{26}$ and let's take a plaintext block $X$. From the linearity of Hill, $Y$ = $K_{26} \times X$. If we pick a $Y$, we actually know from $K_{2}$ the value of plaintext in $\mathbb{Z}/2\mathbb{Z}$ with $Y = K_2 \times Y_i$. We can pick one of the given cipher in the list $ Y_1 , Y_2 , ... , Y_n$ called from now on $Y_i= (a_0,a_1,...,a_d)$  and multiply it by $K_{26}^{-1}$ and get a vector $X_i$ constituted of $d$ equations with $d^2$ unknown, $x_1, ...,x_d^{2}$ of this form:\\
-$$
-\begin{pmatrix}
-x_1 a_1 + x_2 a_2 + x_3 a_3 + ... + x_{d} a_{d} \equiv y \mod 2 \\
-...\\
-x_{d^2 - d} a_{d^2 - d} + x_{d^2 - d +1}  a_{d^2 - d+1}  + ... + x_{d^2} a_{d^2} \equiv y \mod 2\\
-\end{pmatrix}
-$$
-Brought back to our equation, the number of distinct solutions is $c.|2|^{d-1}$ with $c \in  \mathbb{Z}/26\mathbb{Z}$ it will generally be 1.\\
-We actually know the solution modulo 2 for $x_1 ,x_2 ,... , x_d^{2}$ thanks to the recovery of the matrix modulo 2.So there is only one solution modulo 2 for each equations. The classic interpretation would be to say that all equation get $13^d$ solutions so the whole matrix would have $13^{d^2}$, but we want to avoid this $13^x$ factor. To get solution in $\mathbb{Z}/26\mathbb{Z}$, we need to use another method to calculate the matchings.\\
-\\
-If the previous part is considered, it is simple to say that we can calculate entropy in another way. What one can do, is simply take the conditional entropy:$$H_{\alpha}(X \mid X \bmod = y) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i \mid X \bmod = y )^{\alpha}}) , y \in \{0,1\} $$\\
-For $\alpha = 2$, $-\log_{2}(\sum_{i=1}^{n}{(\Pr (X=i \mid X mod2 = y))^{2}}$\\
-In the case of single independent letter, the entropy declines into 2 possibilities, $H_{2}(X \mid X \bmod = 0) $ and $H_{2}(X \mid X \bmod = 1)$. The conditional probability is as following:
-$$\Pr (X=i \mid X \bmod 2 = 0 ) = \frac{\Pr(X mod 2 = 0 \mid X = i) \Pr(X=i)}{\Pr(X mod 2 =0)} $$ and of course the same for 1.\\
-Therefore, $\sum_{i=1}^{n}{(\Pr (X=i \mid X mod2 = 0))^{2}} = ((\frac{\Pr(X=A)}{Pr(X \bmod 2 = 0}))^{2} + (\frac{\Pr(X=X)}{Pr(X \bmod 2 = 0}))^{2} + ... )^{n}= 0.112^{n}$\\
-$\Pr (X=i \mid X \bmod 2 = 1) = 0.128^{n}$\\
+\subsection{Computation with conditional entropy}
+If the previous part is considered, it is simple to say that we can calculate entropy in another way. What one can do, is simply take the conditional entropy.\\
+\paragraph{Theorem 2.}\textit{Conditional R\'enyi entropy of order $\alpha$ where $\alpha \geq 0$ and $\alpha \neq 1$}:
+$$H_{\alpha}(X \mid X \bmod 2 = y) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i \mid X \bmod 2= y )^{\alpha}}) , y \in \{0,1\} $$\\
+For $\alpha = 2$, $-\log_{2}(\sum_{i=1}^{n}{\Pr (X=i \mid X mod2 = y)^{2}})$\\
+In the case of single independent letter, the entropy declines into 2 possibilities, $H_{2}(X \mid X \bmod 2 = 0) $ and $H_{2}(X \mid X \bmod 2 = 1)$. The conditional probability is as following:
+$$\Pr (X=i \mid X \bmod 2 = 0 ) = \frac{\Pr(X \bmod 2 = 0 \mid X = i) \Pr(X=i)}{\Pr(X \bmod 2 =0)} = $$
+\[ \begin{cases}
+      \frac{\Pr(X=i)}{\Pr(X \bmod 2 =0)} $$ & if \Pr(X \bmod 2 =0| X=i) \neq 0 \\
+      0 & else
+   \end{cases}
+\]
+and of course the same for 1.\\
+
+Therefore, $\sum_{i=1}^{n}{(\Pr (X=i \mid X \bmod 2 = 0))^{2}} = ((\frac{\Pr(X=A)}{\Pr(X \bmod 2 = 0}))^{2} + (\frac{\Pr(X=C)}{\Pr(X \bmod 2 = 0}))^{2} + ... )= 0.112$ , where $p(A)=0.0808 , p(B)=0.0318 , ...$  we get the probability from [8] exactly like the previous section.
+And $\Pr(X=i \mid X \bmod 2 = 1) = 0.128$\\
 We can now estimate the good matching by "class" of reduction modulo 2
 Experiment 3 gives more details about the consideration of blocks instead of independent letters.
 We can now get the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$ in class of modulo 2 reduction, so conditional Expected value with the following : $\frac{E(\# good matchings \mid X \bmod 2 = y)}{E(\# all matchings \bmod 2 = y)}$ or more clearly $\frac{E(\# good matchings \mid X in class y)}{E(\# all matchings in class y)}$. But in one class all the blocks are matching modulo 2 so it just gives $E(\# good matchings \mid X in class y)  = \Pr (X=i \mid X \bmod 2 = y) $\\
@@ -284,8 +276,9 @@ This algorithm has a better performance if and only if $ k < O(\frac{2^d}{\log(2
 
 
 \section*{Experiment}
-
-\subsection{Experiment 1:Probability of independent English letters}
+\addcontentsline{toc}{section}{Experiment}
+\subsection*{Experiment 1:Probability of independent English letters}
+\addcontentsline{toc}{subsection}{Experiment 1:Probability of independent English letters}
 From the frequency letter given by Wikip\'edia, in english we got the following result :\\
 Proba sum = 0.9999999999999999
 \\
@@ -306,7 +299,7 @@ Ration of good matching and all matching=$0.12996168115565054^n$\\
 So $\frac{1}{7,69457^n}$.
 
 \subsection*{Experiment 2:Probability considering blocks of size $d$}
-
+\addcontentsline{toc}{subsection}{Experiment 2:Probability considering blocks of size $d$}
 So calculation are done on a text of approximately $860000$ characters to see the evolution of the ratio good matching/bad matching.\\
 A program is ran to see the evolution for a block size between 1 and 25, and give the ratio, thanks to the probability that a block appears. It is completely heuristic as it's just counting the number of block that appears and do some manipulation with it.
 So the basic is to choose a block size, then it'll count every different blocks that appears modulo 26 and modulo 2.
@@ -319,31 +312,35 @@ So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15, then
 Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if the blocksize is increased to a certain point, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
 
 \subsection*{Experiment 3:Conditional Probability considering that we know X mod 2}
+\addcontentsline{toc}{subsection}{Experiment 3:Conditional Probability considering that we know X mod 2}
 In this experiment, we still consider the text from the previous part and sort block of letter in class of reduction modulo 2.
-For example the block ab will be in the class 01. From this sorting we can know which class has the best ratio of good matching.
-
-\begin{tabular}{|l|c|r|}
+For example the block $ab$ will be in the class $01$. From this sorting we can know which class has the best ratio of good matching.
+We know select the best class as following\\
+The best class is not the class that have the best ratio of good matching over all matching, as we can have a class where there is only 3 matching and 2 are equals. So to avoid classes like this we just take the class with the highest number of good matching.
+To have an idea of the number of block, it is almost 847400.\\
+\begin{tabular}{c|c|c|c|c}
   \hline
-  blocksize & Best Class & Ratio of good matching in this Class\\
-	1 & 1 & 0.13225\\
-	2 & 11 & 0.062238\\
-	3 & 111 & 0.03407\\
-	4 & 1111 & 0.0814585\\
-	5 & 11111 & 0.07864\\
-	6 & 111111 & 0.266435\\
-	7 & 0111111 & 0.2664359\\
-	8 & 00111111 & 0.26643\\
-	9 & 111101111 & 0.27777777\\
-	10 & 0111101111 & 0.5625\\
-	12 & 011110111100 & 0.5625\\
-	14 & 01010100111110 & 0.5625\\
-	16 & 1100010111001100 & 0.7901234567901234\\
+  blocksize & Best Class & Ratio of good matching & \# block from this class & Bigger blocksize\\
+	1 & 0 & 0.119870 & 478261 & 478261\\
+	2 & 11 & 0.062238 & 122847 & 246310\\
+	3 & 110 & 0.033030 & 94719 & 151590\\
+	4 & 1110 & 0.02486952 & 24273 & 81141\\
+	5 & 10110 & 0.0098346 & 36098 & 48807\\
+	6 & 011110 & 0.0360992 & 3300 & 25434\\
+	7 & 1010001 & 0.00833618 & 10022 & 15094\\
+	8 & 10100010 & 0.0199979 & 6219 & 8132\\
+	9 & 100110101 & 0.03706977 & 3127 & 4544\\
+	10 & 1001101010 & 0.075711852 & 2183 & 2514\\
+	12 & 000110100010 & 0.1072417 & 654 & 784\\
+	14 & 10101110100010 & 0.332720389 & 215 & 287\\
+	16 & 1000010000100011 & 0.6810255 & 103 & 122\\
 	\hline
 \end{tabular}
 
 \appendix
 \newpage
 \section*{Algorithm}
+\addcontentsline{toc}{section}{Algorithm}
 You hash a reference text.\\
 You take the key matrix that you get from algorithm 1, find plain text in $\mathbb{Z}/2\mathbb{Z}$, and create an array.\\
 find the list of all matching: find all pairs $(seg,str)$ such that $seg$ is a segment of plaintext modulo 2 and $str$ $\in hash(seg)$ and save it in a list.\\
@@ -391,6 +388,7 @@ But it seems with some other techniques we could do better.
 
 
 \section*{References}
+\addcontentsline{toc}{section}{References}
 
 [1] S. Shazaei, S. Ahmadi. \textit{Ciphertext- only attack on} $d \times d$ \textit{Hill in} $O(d13^d)$.\\
 \\[0pt]

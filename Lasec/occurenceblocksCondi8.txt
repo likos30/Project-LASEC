@@ -1,513 +1,513 @@
-proba conditional is= 3.958467734324073E-4
+proba conditional is= 3.958467734324073E-4 blocksize 1898
 nextclass
-proba conditional is= 0.0010881478746312132
+proba conditional is= 0.0010881478746312132 blocksize 2615
 nextclass
-proba conditional is= 0.001276310692148772
+proba conditional is= 0.001276310692148772 blocksize 3520
 nextclass
-proba conditional is= 0.0013045633996342906
+proba conditional is= 0.0013045633996342906 blocksize 2222
 nextclass
-proba conditional is= 0.0026955423887780037
+proba conditional is= 0.0026955423887780037 blocksize 3533
 nextclass
-proba conditional is= 0.001140239089046986
+proba conditional is= 0.001140239089046986 blocksize 3838
 nextclass
-proba conditional is= 0.0021284621360891215
+proba conditional is= 0.0021284621360891215 blocksize 3741
 nextclass
-proba conditional is= 0.001257947289929306
+proba conditional is= 0.001257947289929306 blocksize 1387
 nextclass
-proba conditional is= 0.0025059151796071127
+proba conditional is= 0.0025059151796071127 blocksize 4489
 nextclass
-proba conditional is= 9.135572276355306E-4
+proba conditional is= 9.135572276355306E-4 blocksize 4147
 nextclass
-proba conditional is= 7.17861704674193E-4
+proba conditional is= 7.17861704674193E-4 blocksize 5927
 nextclass
-proba conditional is= 0.0013452250289137215
+proba conditional is= 0.0013452250289137215 blocksize 3289
 nextclass
-proba conditional is= 0.0012447986080095037
+proba conditional is= 0.0012447986080095037 blocksize 4228
 nextclass
-proba conditional is= 0.0028006417121644164
+proba conditional is= 0.0028006417121644164 blocksize 4949
 nextclass
-proba conditional is= 0.0012770354797349863
+proba conditional is= 0.0012770354797349863 blocksize 2998
 nextclass
-proba conditional is= 0.017083333333333367
+proba conditional is= 0.017083333333333367 blocksize 600
 nextclass
-proba conditional is= 9.894886473887417E-4
+proba conditional is= 9.894886473887417E-4 blocksize 4463
 nextclass
-proba conditional is= 0.0014291839924171009
+proba conditional is= 0.0014291839924171009 blocksize 4210
 nextclass
-proba conditional is= 4.936754854317776E-4
+proba conditional is= 4.936754854317776E-4 blocksize 4928
 nextclass
-proba conditional is= 0.0017866831186880935
+proba conditional is= 0.0017866831186880935 blocksize 3352
 nextclass
-proba conditional is= 6.791130024119503E-4
+proba conditional is= 6.791130024119503E-4 blocksize 5774
 nextclass
-proba conditional is= 4.966699943807804E-4
+proba conditional is= 4.966699943807804E-4 blocksize 5982
 nextclass
-proba conditional is= 6.691375528016842E-4
+proba conditional is= 6.691375528016842E-4 blocksize 4968
 nextclass
-proba conditional is= 0.003434020962078831
+proba conditional is= 0.003434020962078831 blocksize 1658
 nextclass
-proba conditional is= 9.90049100164208E-4
+proba conditional is= 9.90049100164208E-4 blocksize 4286
 nextclass
-proba conditional is= 0.0019571127413696462
+proba conditional is= 0.0019571127413696462 blocksize 3791
 nextclass
-proba conditional is= 0.0030665467561969703
+proba conditional is= 0.0030665467561969703 blocksize 6387
 nextclass
-proba conditional is= 0.014378234153683214
+proba conditional is= 0.014378234153683214 blocksize 3651
 nextclass
-proba conditional is= 0.0011903448237852287
+proba conditional is= 0.0011903448237852287 blocksize 2889
 nextclass
-proba conditional is= 0.0021394587246663086
+proba conditional is= 0.0021394587246663086 blocksize 2856
 nextclass
-proba conditional is= 0.01706394557823138
+proba conditional is= 0.01706394557823138 blocksize 1050
 nextclass
-proba conditional is= 0.06429058051561545
+proba conditional is= 0.06429058051561545 blocksize 167
 nextclass
-proba conditional is= 0.001116608549388965
+proba conditional is= 0.001116608549388965 blocksize 3635
 nextclass
-proba conditional is= 9.199065746731304E-4
+proba conditional is= 9.199065746731304E-4 blocksize 4825
 nextclass
-proba conditional is= 5.622650435123444E-4
+proba conditional is= 5.622650435123444E-4 blocksize 4643
 nextclass
-proba conditional is= 0.0025897555881076563
+proba conditional is= 0.0025897555881076563 blocksize 3072
 nextclass
-proba conditional is= 7.984579949630097E-4
+proba conditional is= 7.984579949630097E-4 blocksize 4542
 nextclass
-proba conditional is= 0.0012131518178919599
+proba conditional is= 0.0012131518178919599 blocksize 5335
 nextclass
-proba conditional is= 0.0014140147488267063
+proba conditional is= 0.0014140147488267063 blocksize 4766
 nextclass
-proba conditional is= 0.0021097409354370487
+proba conditional is= 0.0021097409354370487 blocksize 2074
 nextclass
-proba conditional is= 5.490986729300693E-4
+proba conditional is= 5.490986729300693E-4 blocksize 5703
 nextclass
-proba conditional is= 9.77825395476471E-4
+proba conditional is= 9.77825395476471E-4 blocksize 5740
 nextclass
-proba conditional is= 3.9828133265553425E-4
+proba conditional is= 3.9828133265553425E-4 blocksize 7431
 nextclass
-proba conditional is= 4.28733737032076E-4
+proba conditional is= 4.28733737032076E-4 blocksize 4499
 nextclass
-proba conditional is= 4.5881412292844947E-4
+proba conditional is= 4.5881412292844947E-4 blocksize 4715
 nextclass
-proba conditional is= 6.691786833204649E-4
+proba conditional is= 6.691786833204649E-4 blocksize 5805
 nextclass
-proba conditional is= 0.0036017263932457367
+proba conditional is= 0.0036017263932457367 blocksize 3232
 nextclass
-proba conditional is= 0.0018968621399176968
+proba conditional is= 0.0018968621399176968 blocksize 432
 nextclass
-proba conditional is= 5.596395352228406E-4
+proba conditional is= 5.596395352228406E-4 blocksize 4124
 nextclass
-proba conditional is= 0.0051781062561626744
+proba conditional is= 0.0051781062561626744 blocksize 4011
 nextclass
-proba conditional is= 0.0010328612220214908
+proba conditional is= 0.0010328612220214908 blocksize 4722
 nextclass
-proba conditional is= 0.003098305694711523
+proba conditional is= 0.003098305694711523 blocksize 2692
 nextclass
-proba conditional is= 0.0018865167618222715
+proba conditional is= 0.0018865167618222715 blocksize 5692
 nextclass
-proba conditional is= 0.009850801442116206
+proba conditional is= 0.009850801442116206 blocksize 6333
 nextclass
-proba conditional is= 0.007543362425885508
+proba conditional is= 0.007543362425885508 blocksize 5302
 nextclass
-proba conditional is= 0.0016143741138941465
+proba conditional is= 0.0016143741138941465 blocksize 1472
 nextclass
-proba conditional is= 0.0010050663150714062
+proba conditional is= 0.0010050663150714062 blocksize 3045
 nextclass
-proba conditional is= 0.0014189371653662477
+proba conditional is= 0.0014189371653662477 blocksize 2635
 nextclass
-proba conditional is= 0.0019916334721496068
+proba conditional is= 0.0019916334721496068 blocksize 3649
 nextclass
-proba conditional is= 0.0016669370311739621
+proba conditional is= 0.0016669370311739621 blocksize 1843
 nextclass
-proba conditional is= 0.0048494840335181425
+proba conditional is= 0.0048494840335181425 blocksize 1087
 nextclass
-proba conditional is= 0.005043520291122203
+proba conditional is= 0.005043520291122203 blocksize 889
 nextclass
-proba conditional is= 0.055679925031237004
+proba conditional is= 0.055679925031237004 blocksize 196
 nextclass
-proba conditional is= 0.2664359861591695
+proba conditional is= 0.2664359861591695 blocksize 17
 nextclass
-proba conditional is= 5.821927172079881E-4
+proba conditional is= 5.821927172079881E-4 blocksize 3588
 nextclass
-proba conditional is= 0.002320263877046488
+proba conditional is= 0.002320263877046488 blocksize 4207
 nextclass
-proba conditional is= 0.0022125002052020715
+proba conditional is= 0.0022125002052020715 blocksize 6530
 nextclass
-proba conditional is= 9.342729357985963E-4
+proba conditional is= 9.342729357985963E-4 blocksize 4323
 nextclass
-proba conditional is= 0.00271948438810292
+proba conditional is= 0.00271948438810292 blocksize 5259
 nextclass
-proba conditional is= 8.237663914333648E-4
+proba conditional is= 8.237663914333648E-4 blocksize 5603
 nextclass
-proba conditional is= 9.373491855482892E-4
+proba conditional is= 9.373491855482892E-4 blocksize 5108
 nextclass
-proba conditional is= 0.0016481498029170293
+proba conditional is= 0.0016481498029170293 blocksize 1767
 nextclass
-proba conditional is= 6.883339152717317E-4
+proba conditional is= 6.883339152717317E-4 blocksize 4617
 nextclass
-proba conditional is= 0.002071777252294668
+proba conditional is= 0.002071777252294668 blocksize 5331
 nextclass
-proba conditional is= 4.4030295116457527E-4
+proba conditional is= 4.4030295116457527E-4 blocksize 7241
 nextclass
-proba conditional is= 0.0018738129154795805
+proba conditional is= 0.0018738129154795805 blocksize 4680
 nextclass
-proba conditional is= 8.345219538975359E-4
+proba conditional is= 8.345219538975359E-4 blocksize 4727
 nextclass
-proba conditional is= 0.0011478059412884597
+proba conditional is= 0.0011478059412884597 blocksize 5485
 nextclass
-proba conditional is= 0.0038579200184012995
+proba conditional is= 0.0038579200184012995 blocksize 3767
 nextclass
-proba conditional is= 0.049925167646268295
+proba conditional is= 0.049925167646268295 blocksize 742
 nextclass
-proba conditional is= 7.008624013998186E-4
+proba conditional is= 7.008624013998186E-4 blocksize 5955
 nextclass
-proba conditional is= 0.0013815390565987014
+proba conditional is= 0.0013815390565987014 blocksize 6033
 nextclass
-proba conditional is= 5.109505201944805E-4
+proba conditional is= 5.109505201944805E-4 blocksize 7281
 nextclass
-proba conditional is= 0.0013797165212260023
+proba conditional is= 0.0013797165212260023 blocksize 4849
 nextclass
-proba conditional is= 3.4740422538047E-4
+proba conditional is= 3.4740422538047E-4 blocksize 7483
 nextclass
-proba conditional is= 3.5396078475646153E-4
+proba conditional is= 3.5396078475646153E-4 blocksize 7611
 nextclass
-proba conditional is= 0.0010576380795395512
+proba conditional is= 0.0010576380795395512 blocksize 7272
 nextclass
-proba conditional is= 0.00174729895082381
+proba conditional is= 0.00174729895082381 blocksize 2323
 nextclass
-proba conditional is= 6.348044039997928E-4
+proba conditional is= 6.348044039997928E-4 blocksize 5288
 nextclass
-proba conditional is= 8.677259067003533E-4
+proba conditional is= 8.677259067003533E-4 blocksize 4840
 nextclass
-proba conditional is= 9.732864231754481E-4
+proba conditional is= 9.732864231754481E-4 blocksize 7769
 nextclass
-proba conditional is= 0.0014543071317592413
+proba conditional is= 0.0014543071317592413 blocksize 4342
 nextclass
-proba conditional is= 0.0013291481720378556
+proba conditional is= 0.0013291481720378556 blocksize 3529
 nextclass
-proba conditional is= 0.0024004189838355895
+proba conditional is= 0.0024004189838355895 blocksize 3003
 nextclass
-proba conditional is= 0.00932587129492797
+proba conditional is= 0.00932587129492797 blocksize 997
 nextclass
-proba conditional is= 0.014464168310322158
+proba conditional is= 0.014464168310322158 blocksize 39
 nextclass
-proba conditional is= 4.5683305273899863E-4
+proba conditional is= 4.5683305273899863E-4 blocksize 3335
 nextclass
-proba conditional is= 0.0018240179275881014
+proba conditional is= 0.0018240179275881014 blocksize 5301
 nextclass
-proba conditional is= 0.001089026282708429
+proba conditional is= 0.001089026282708429 blocksize 4654
 nextclass
-proba conditional is= 0.007182530021812508
+proba conditional is= 0.007182530021812508 blocksize 3753
 nextclass
-proba conditional is= 6.215229375070846E-4
+proba conditional is= 6.215229375070846E-4 blocksize 4303
 nextclass
-proba conditional is= 0.0011146517135748877
+proba conditional is= 0.0011146517135748877 blocksize 5252
 nextclass
-proba conditional is= 0.0018500802377529495
+proba conditional is= 0.0018500802377529495 blocksize 4317
 nextclass
-proba conditional is= 0.0033004812517026566
+proba conditional is= 0.0033004812517026566 blocksize 1417
 nextclass
-proba conditional is= 0.002011516587961923
+proba conditional is= 0.002011516587961923 blocksize 5946
 nextclass
-proba conditional is= 5.947597440883185E-4
+proba conditional is= 5.947597440883185E-4 blocksize 5758
 nextclass
-proba conditional is= 0.005936177517590227
+proba conditional is= 0.005936177517590227 blocksize 8132
 nextclass
-proba conditional is= 0.0014403085931629664
+proba conditional is= 0.0014403085931629664 blocksize 4671
 nextclass
-proba conditional is= 0.0011675925135907555
+proba conditional is= 0.0011675925135907555 blocksize 5247
 nextclass
-proba conditional is= 8.616411573706377E-4
+proba conditional is= 8.616411573706377E-4 blocksize 5606
 nextclass
-proba conditional is= 0.0019590020342977964
+proba conditional is= 0.0019590020342977964 blocksize 2469
 nextclass
-proba conditional is= 0.005145308470541552
+proba conditional is= 0.005145308470541552 blocksize 284
 nextclass
-proba conditional is= 0.0012805837301143538
+proba conditional is= 0.0012805837301143538 blocksize 2867
 nextclass
-proba conditional is= 0.0016338488688139572
+proba conditional is= 0.0016338488688139572 blocksize 3009
 nextclass
-proba conditional is= 8.650262981911464E-4
+proba conditional is= 8.650262981911464E-4 blocksize 3103
 nextclass
-proba conditional is= 0.0038335836208282675
+proba conditional is= 0.0038335836208282675 blocksize 1871
 nextclass
-proba conditional is= 0.0032398057262120958
+proba conditional is= 0.0032398057262120958 blocksize 3570
 nextclass
-proba conditional is= 0.0011164780567137706
+proba conditional is= 0.0011164780567137706 blocksize 3083
 nextclass
-proba conditional is= 0.0054055772353028015
+proba conditional is= 0.0054055772353028015 blocksize 2684
 nextclass
-proba conditional is= 0.003475638728118249
+proba conditional is= 0.003475638728118249 blocksize 517
 nextclass
-proba conditional is= 0.003653217676899078
+proba conditional is= 0.003653217676899078 blocksize 992
 nextclass
-proba conditional is= 0.0028177096046213927
+proba conditional is= 0.0028177096046213927 blocksize 837
 nextclass
-proba conditional is= 0.004711040974465188
+proba conditional is= 0.004711040974465188 blocksize 1099
 nextclass
-proba conditional is= 0.009011157359232282
+proba conditional is= 0.009011157359232282 blocksize 372
 nextclass
-proba conditional is= 0.024539877300613498
+proba conditional is= 0.024539877300613498 blocksize 163
 nextclass
-proba conditional is= 0.09165509405378111
+proba conditional is= 0.09165509405378111 blocksize 89
 nextclass
-proba conditional is= 0.10380622837370243
+proba conditional is= 0.10380622837370243 blocksize 17
 nextclass
-proba conditional is= 0.0
+proba conditional is= 0.0 blocksize 0
 nextclass
-proba conditional is= 7.569215695593581E-4
+proba conditional is= 7.569215695593581E-4 blocksize 2615
 nextclass
-proba conditional is= 0.001037826357169158
+proba conditional is= 0.001037826357169158 blocksize 3127
 nextclass
-proba conditional is= 0.002576768851615729
+proba conditional is= 0.002576768851615729 blocksize 3851
 nextclass
-proba conditional is= 0.0019288710876090237
+proba conditional is= 0.0019288710876090237 blocksize 2906
 nextclass
-proba conditional is= 0.003339361226152556
+proba conditional is= 0.003339361226152556 blocksize 5103
 nextclass
-proba conditional is= 8.967985350285302E-4
+proba conditional is= 8.967985350285302E-4 blocksize 5378
 nextclass
-proba conditional is= 0.002350347694301858
+proba conditional is= 0.002350347694301858 blocksize 5436
 nextclass
-proba conditional is= 0.0028550557520362315
+proba conditional is= 0.0028550557520362315 blocksize 2211
 nextclass
-proba conditional is= 7.672861012909068E-4
+proba conditional is= 7.672861012909068E-4 blocksize 4184
 nextclass
-proba conditional is= 0.0013663168788519647
+proba conditional is= 0.0013663168788519647 blocksize 4133
 nextclass
-proba conditional is= 5.784460250907318E-4
+proba conditional is= 5.784460250907318E-4 blocksize 5829
 nextclass
-proba conditional is= 0.0014353105799982057
+proba conditional is= 0.0014353105799982057 blocksize 3337
 nextclass
-proba conditional is= 9.168533549657545E-4
+proba conditional is= 9.168533549657545E-4 blocksize 3849
 nextclass
-proba conditional is= 0.0015430196114970054
+proba conditional is= 0.0015430196114970054 blocksize 5089
 nextclass
-proba conditional is= 0.005467128385349099
+proba conditional is= 0.005467128385349099 blocksize 2747
 nextclass
-proba conditional is= 0.042273351738558326
+proba conditional is= 0.042273351738558326 blocksize 617
 nextclass
-proba conditional is= 7.461187584458617E-4
+proba conditional is= 7.461187584458617E-4 blocksize 3997
 nextclass
-proba conditional is= 5.319484494333569E-4
+proba conditional is= 5.319484494333569E-4 blocksize 3505
 nextclass
-proba conditional is= 9.751108099952383E-4
+proba conditional is= 9.751108099952383E-4 blocksize 4949
 nextclass
-proba conditional is= 0.0035289735186432004
+proba conditional is= 0.0035289735186432004 blocksize 3488
 nextclass
-proba conditional is= 4.6434762115271796E-4
+proba conditional is= 4.6434762115271796E-4 blocksize 5669
 nextclass
-proba conditional is= 5.641812091251158E-4
+proba conditional is= 5.641812091251158E-4 blocksize 5948
 nextclass
-proba conditional is= 7.717835668430049E-4
+proba conditional is= 7.717835668430049E-4 blocksize 5552
 nextclass
-proba conditional is= 0.0022077337280282886
+proba conditional is= 0.0022077337280282886 blocksize 2006
 nextclass
-proba conditional is= 0.0017456191277898418
+proba conditional is= 0.0017456191277898418 blocksize 3849
 nextclass
-proba conditional is= 0.001139711486912845
+proba conditional is= 0.001139711486912845 blocksize 3623
 nextclass
-proba conditional is= 0.011882860199268675
+proba conditional is= 0.011882860199268675 blocksize 5638
 nextclass
-proba conditional is= 0.001548836276029989
+proba conditional is= 0.001548836276029989 blocksize 3123
 nextclass
-proba conditional is= 0.0012601286240091153
+proba conditional is= 0.0012601286240091153 blocksize 2791
 nextclass
-proba conditional is= 0.0018415495957686465
+proba conditional is= 0.0018415495957686465 blocksize 2636
 nextclass
-proba conditional is= 0.0342586847911779
+proba conditional is= 0.0342586847911779 blocksize 926
 nextclass
-proba conditional is= 0.04206049149338374
+proba conditional is= 0.04206049149338374 blocksize 46
 nextclass
-proba conditional is= 0.0013805935650887775
+proba conditional is= 0.0013805935650887775 blocksize 4160
 nextclass
-proba conditional is= 0.003780191444570336
+proba conditional is= 0.003780191444570336 blocksize 6028
 nextclass
-proba conditional is= 0.0199979516992477
+proba conditional is= 0.0199979516992477 blocksize 6219
 nextclass
-proba conditional is= 8.800503415346227E-4
+proba conditional is= 8.800503415346227E-4 blocksize 3803
 nextclass
-proba conditional is= 6.708335335055536E-4
+proba conditional is= 6.708335335055536E-4 blocksize 5406
 nextclass
-proba conditional is= 5.166753981911818E-4
+proba conditional is= 5.166753981911818E-4 blocksize 6586
 nextclass
-proba conditional is= 6.313110027352286E-4
+proba conditional is= 6.313110027352286E-4 blocksize 5446
 nextclass
-proba conditional is= 0.001909524431945174
+proba conditional is= 0.001909524431945174 blocksize 2435
 nextclass
-proba conditional is= 5.538815568378019E-4
+proba conditional is= 5.538815568378019E-4 blocksize 6285
 nextclass
-proba conditional is= 6.811797580824747E-4
+proba conditional is= 6.811797580824747E-4 blocksize 6390
 nextclass
-proba conditional is= 3.190991030910584E-4
+proba conditional is= 3.190991030910584E-4 blocksize 7663
 nextclass
-proba conditional is= 0.0010416563980984181
+proba conditional is= 0.0010416563980984181 blocksize 5096
 nextclass
-proba conditional is= 7.881075620067387E-4
+proba conditional is= 7.881075620067387E-4 blocksize 5413
 nextclass
-proba conditional is= 0.0011134728429097347
+proba conditional is= 0.0011134728429097347 blocksize 6307
 nextclass
-proba conditional is= 0.0028776859504132182
+proba conditional is= 0.0028776859504132182 blocksize 3300
 nextclass
-proba conditional is= 0.016586443577036064
+proba conditional is= 0.016586443577036064 blocksize 604
 nextclass
-proba conditional is= 0.002517911259493945
+proba conditional is= 0.002517911259493945 blocksize 4512
 nextclass
-proba conditional is= 0.004256288908520566
+proba conditional is= 0.004256288908520566 blocksize 4396
 nextclass
-proba conditional is= 7.313588997704306E-4
+proba conditional is= 7.313588997704306E-4 blocksize 4833
 nextclass
-proba conditional is= 0.003675477351702527
+proba conditional is= 0.003675477351702527 blocksize 3042
 nextclass
-proba conditional is= 5.654857948773211E-4
+proba conditional is= 5.654857948773211E-4 blocksize 6012
 nextclass
-proba conditional is= 0.0017849353453939154
+proba conditional is= 0.0017849353453939154 blocksize 6470
 nextclass
-proba conditional is= 0.001789599339590301
+proba conditional is= 0.001789599339590301 blocksize 5551
 nextclass
-proba conditional is= 0.002833095972421025
+proba conditional is= 0.002833095972421025 blocksize 1281
 nextclass
-proba conditional is= 9.864545294495902E-4
+proba conditional is= 9.864545294495902E-4 blocksize 2831
 nextclass
-proba conditional is= 0.0014511267846858014
+proba conditional is= 0.0014511267846858014 blocksize 2339
 nextclass
-proba conditional is= 0.0025301373579124566
+proba conditional is= 0.0025301373579124566 blocksize 3004
 nextclass
-proba conditional is= 0.002020969935428735
+proba conditional is= 0.002020969935428735 blocksize 1358
 nextclass
-proba conditional is= 0.005708691450948506
+proba conditional is= 0.005708691450948506 blocksize 742
 nextclass
-proba conditional is= 0.006580578878378864
+proba conditional is= 0.006580578878378864 blocksize 582
 nextclass
-proba conditional is= 0.022002551020408163
+proba conditional is= 0.022002551020408163 blocksize 56
 nextclass
-proba conditional is= 0.0
+proba conditional is= 0.0 blocksize 0
 nextclass
-proba conditional is= 0.0012114965657380626
+proba conditional is= 0.0012114965657380626 blocksize 2154
 nextclass
-proba conditional is= 0.0018786620530564992
+proba conditional is= 0.0018786620530564992 blocksize 2550
 nextclass
-proba conditional is= 0.0028592474978701562
+proba conditional is= 0.0028592474978701562 blocksize 3951
 nextclass
-proba conditional is= 0.003906063331117759
+proba conditional is= 0.003906063331117759 blocksize 3324
 nextclass
-proba conditional is= 0.002014679355867221
+proba conditional is= 0.002014679355867221 blocksize 3058
 nextclass
-proba conditional is= 0.0016359236481790478
+proba conditional is= 0.0016359236481790478 blocksize 3563
 nextclass
-proba conditional is= 0.002791211338273487
+proba conditional is= 0.002791211338273487 blocksize 3830
 nextclass
-proba conditional is= 0.017457984189986932
+proba conditional is= 0.017457984189986932 blocksize 1597
 nextclass
-proba conditional is= 0.001310429551045414
+proba conditional is= 0.001310429551045414 blocksize 2885
 nextclass
-proba conditional is= 0.00381446043198278
+proba conditional is= 0.00381446043198278 blocksize 3106
 nextclass
-proba conditional is= 0.0014377491987206414
+proba conditional is= 0.0014377491987206414 blocksize 4376
 nextclass
-proba conditional is= 0.0013101716745037057
+proba conditional is= 0.0013101716745037057 blocksize 2878
 nextclass
-proba conditional is= 0.0015061662038281132
+proba conditional is= 0.0015061662038281132 blocksize 2745
 nextclass
-proba conditional is= 0.006209551539221853
+proba conditional is= 0.006209551539221853 blocksize 3276
 nextclass
-proba conditional is= 0.004305777326172152
+proba conditional is= 0.004305777326172152 blocksize 1660
 nextclass
-proba conditional is= 0.00689981096408318
+proba conditional is= 0.00689981096408318 blocksize 230
 nextclass
-proba conditional is= 0.007448423228356286
+proba conditional is= 0.007448423228356286 blocksize 4233
 nextclass
-proba conditional is= 0.014115591504111766
+proba conditional is= 0.014115591504111766 blocksize 3989
 nextclass
-proba conditional is= 0.0010022294344372022
+proba conditional is= 0.0010022294344372022 blocksize 4711
 nextclass
-proba conditional is= 0.0017496962914488373
+proba conditional is= 0.0017496962914488373 blocksize 3032
 nextclass
-proba conditional is= 0.0017635211573571587
+proba conditional is= 0.0017635211573571587 blocksize 5192
 nextclass
-proba conditional is= 0.0012996424709711242
+proba conditional is= 0.0012996424709711242 blocksize 5148
 nextclass
-proba conditional is= 0.0017854196858340854
+proba conditional is= 0.0017854196858340854 blocksize 4448
 nextclass
-proba conditional is= 0.0029437169166905653
+proba conditional is= 0.0029437169166905653 blocksize 1581
 nextclass
-proba conditional is= 0.002285949757333438
+proba conditional is= 0.002285949757333438 blocksize 3620
 nextclass
-proba conditional is= 0.001668290591099457
+proba conditional is= 0.001668290591099457 blocksize 3035
 nextclass
-proba conditional is= 8.420955347182844E-4
+proba conditional is= 8.420955347182844E-4 blocksize 4712
 nextclass
-proba conditional is= 0.002429154368477923
+proba conditional is= 0.002429154368477923 blocksize 2490
 nextclass
-proba conditional is= 0.002458333658264146
+proba conditional is= 0.002458333658264146 blocksize 1641
 nextclass
-proba conditional is= 0.001045005065296571
+proba conditional is= 0.001045005065296571 blocksize 1359
 nextclass
-proba conditional is= 0.006499639948002876
+proba conditional is= 0.006499639948002876 blocksize 327
 nextclass
-proba conditional is= 0.010380622837370242
+proba conditional is= 0.010380622837370242 blocksize 17
 nextclass
-proba conditional is= 0.0019763510178687897
+proba conditional is= 0.0019763510178687897 blocksize 1369
 nextclass
-proba conditional is= 0.0020802345383603847
+proba conditional is= 0.0020802345383603847 blocksize 1974
 nextclass
-proba conditional is= 0.00161976113757012
+proba conditional is= 0.00161976113757012 blocksize 1967
 nextclass
-proba conditional is= 0.011838948055080973
+proba conditional is= 0.011838948055080973 blocksize 1674
 nextclass
-proba conditional is= 0.001917283416814544
+proba conditional is= 0.001917283416814544 blocksize 1688
 nextclass
-proba conditional is= 8.737516230023683E-4
+proba conditional is= 8.737516230023683E-4 blocksize 2002
 nextclass
-proba conditional is= 0.003111292953338172
+proba conditional is= 0.003111292953338172 blocksize 1704
 nextclass
-proba conditional is= 0.00791582673681106
+proba conditional is= 0.00791582673681106 blocksize 473
 nextclass
-proba conditional is= 0.008175204857904394
+proba conditional is= 0.008175204857904394 blocksize 2276
 nextclass
-proba conditional is= 0.002132873122727759
+proba conditional is= 0.002132873122727759 blocksize 1985
 nextclass
-proba conditional is= 0.0016458595883217745
+proba conditional is= 0.0016458595883217745 blocksize 2208
 nextclass
-proba conditional is= 0.0021500257027032353
+proba conditional is= 0.0021500257027032353 blocksize 1358
 nextclass
-proba conditional is= 0.003084040870351249
+proba conditional is= 0.003084040870351249 blocksize 1408
 nextclass
-proba conditional is= 0.004581079892714264
+proba conditional is= 0.004581079892714264 blocksize 1596
 nextclass
-proba conditional is= 0.006075308287316323
+proba conditional is= 0.006075308287316323 blocksize 531
 nextclass
-proba conditional is= 0.02111111111111111
+proba conditional is= 0.02111111111111111 blocksize 60
 nextclass
-proba conditional is= 0.0024583362756867484
+proba conditional is= 0.0024583362756867484 blocksize 476
 nextclass
-proba conditional is= 0.012958660471078357
+proba conditional is= 0.012958660471078357 blocksize 632
 nextclass
-proba conditional is= 0.0016542405149621718
+proba conditional is= 0.0016542405149621718 blocksize 587
 nextclass
-proba conditional is= 0.004966038703062922
+proba conditional is= 0.004966038703062922 blocksize 306
 nextclass
-proba conditional is= 0.0047059464146217275
+proba conditional is= 0.0047059464146217275 blocksize 691
 nextclass
-proba conditional is= 0.0018646399958849333
+proba conditional is= 0.0018646399958849333 blocksize 483
 nextclass
-proba conditional is= 0.004521484374999994
+proba conditional is= 0.004521484374999994 blocksize 320
 nextclass
-proba conditional is= 0.0472972972972973
+proba conditional is= 0.0472972972972973 blocksize 74
 nextclass
-proba conditional is= 0.03470570749108206
+proba conditional is= 0.03470570749108206 blocksize 116
 nextclass
-proba conditional is= 0.029655612244897964
+proba conditional is= 0.029655612244897964 blocksize 56
 nextclass
-proba conditional is= 0.1278222222222222
+proba conditional is= 0.1278222222222222 blocksize 75
 nextclass
-proba conditional is= 0.045454545454545456
+proba conditional is= 0.045454545454545456 blocksize 22
 nextclass
-proba conditional is= 0.24691358024691357
+proba conditional is= 0.24691358024691357 blocksize 9
 nextclass
-proba conditional is= 0.15625
+proba conditional is= 0.15625 blocksize 8
 nextclass
-proba conditional is= 0.0
+proba conditional is= 0.0 blocksize 0
 nextclass
-proba conditional is= 0.0
+proba conditional is= 0.0 blocksize 0
 nextclass
-best is : 0.2664359861591695 at 63
+best is : 0.0199979516992477 at 163 where there is 847412 and the biggest is 8132

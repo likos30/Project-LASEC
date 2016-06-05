@@ -9,8 +9,7 @@ public class ConditionalClass {
 
 		
 		public static void main(String[] args) throws IOException, IOException {
-			calculateBlocksConditional(17);
-
+			calculateBlocksConditional(16);
 	}
 		public static int binaryToInteger(String binary) {
 		    char[] numbers = binary.toCharArray();
@@ -108,27 +107,32 @@ public class ConditionalClass {
 			System.out.println("finish to fill");
 			double bestProba = 0;
 			int index = 0;
+			double temp = 0;
+			int maxBlock = 0;
 			PrintWriter writer = new PrintWriter("occurenceblocksCondi"+blockSize+".txt","UTF-8");
 			for(int i=0;i<classes.size();i++) {
 				double probaCondi = 0;
 				double probaClass = 0;
-				int numOfBlockInClass =0;
+				int numOfBlockInClass[] =new int[classes.size()];
 				for(int j=0;j<classes.get(i).size();j++) {
-					numOfBlockInClass = calcublock(buffersCounter.get(i));
-					probaClass = ((buffersCounter.get(i)[j] - 1 )/(double)numOfBlockInClass);
+					numOfBlockInClass[i] = calcublock(buffersCounter.get(i));
+					probaClass = ((buffersCounter.get(i)[j] - 1 )/(double)numOfBlockInClass[i]);
 					probaCondi += Math.pow(probaClass,2);
 					//writer.println(numOfBlockInClass + " before to see " + classes.get(i).get(j) +", "+buffersCounter.get(i)[j] + " and has a proba to be equal to another of same class " + probaClass);
-					
 					//System.out.println(classes.get(i).get(j) +", "+buffersCounter.get(i)[j]);
 				}
-				if(probaCondi>bestProba) {
-					bestProba = probaCondi;
-					index = i;
+				if((probaCondi*numOfBlockInClass[i])>bestProba) {
+					bestProba=probaCondi*numOfBlockInClass[i];
+					temp = probaCondi;
+					index = i+1;
 				}
-				writer.println("proba conditional is= " + probaCondi);
+				if(numOfBlockInClass[i]>maxBlock) {
+					maxBlock = numOfBlockInClass[i];
+				}
+				writer.println("proba conditional is= " + probaCondi + " blocksize " + numOfBlockInClass[i]);
 				writer.println("nextclass");
 			}
-			writer.println("best is : " + bestProba + " at " + index);
+			writer.println("best is : " + temp + " at " + index +" where there is "+ numberOfBlock +" and the biggest is " + maxBlock);
 			writer.close();
 			System.out.println("FINISH");
 			}

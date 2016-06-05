@@ -1,0 +1,3 @@
+proba conditional is= 0.9999976398966038 number of block is 847420
+nextclass
+best is : 0.9999976398966038 at 0

@@ -1,17 +1,17 @@
-proba conditional is= 0.005134162120786388 blocksize 113793
+proba conditional is= 0.005134252358846739 blocksize 113793
 nextclass
-proba conditional is= 0.005321053914596578 blocksize 118158
+proba conditional is= 0.005321143982496575 blocksize 118158
 nextclass
-proba conditional is= 0.007047506906810687 blocksize 151590
+proba conditional is= 0.007047599888889205 blocksize 151590
 nextclass
-proba conditional is= 0.014056990556429477 blocksize 94719
+proba conditional is= 0.014057287375719667 blocksize 94719
 nextclass
-proba conditional is= 0.005199039387424772 blocksize 118158
+proba conditional is= 0.0051991273900211035 blocksize 118158
 nextclass
-proba conditional is= 0.007363042247579024 blocksize 128152
+proba conditional is= 0.007363157160002216 blocksize 128152
 nextclass
-proba conditional is= 0.03303078152711274 blocksize 94719
+proba conditional is= 0.033031478986009416 blocksize 94719
 nextclass
-proba conditional is= 0.0340764890526454 blocksize 28128
+proba conditional is= 0.034078912140412546 blocksize 28128
 nextclass
-best is : 0.03303078152711274 at 7 where there is 847417 and the biggest is 151590
+best is : 0.033031478986009416 at 7 where there is 847417 and the biggest is 151590

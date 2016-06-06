@@ -6,13 +6,13 @@
 \contentsline {section}{\numberline {3}Study of Algorithm to get $K_{26}$}{6}
 \contentsline {subsection}{\numberline {3.1}Computation with conditional entropy}{6}
 \contentsline {paragraph}{Theorem 2.}{6}
-\contentsline {section}{\numberline {4}Study of Faster Fourier Transform for Algorithm 1}{7}
-\contentsline {subsection}{\numberline {4.1}Simple and practical algorithm for sparse Fourier transform}{7}
+\contentsline {section}{\numberline {4}Study of Faster Fourier Transform for Algorithm 1}{8}
+\contentsline {subsection}{\numberline {4.1}Simple and practical algorithm for sparse Fourier transform}{8}
 \contentsline {subsection}{\numberline {4.2}Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}{8}
-\contentsline {subsection}{\numberline {4.3}Nearly optimal Sparse Fourier Transform}{8}
+\contentsline {subsection}{\numberline {4.3}Nearly optimal Sparse Fourier Transform}{9}
 \contentsline {section}{Experiment}{9}
 \contentsline {subsection}{Experiment 1:Probability of independent English letters}{9}
-\contentsline {subsection}{Experiment 2:Probability considering blocks of size $d$}{9}
+\contentsline {subsection}{Experiment 2:Probability considering blocks of size $d$}{10}
 \contentsline {subsection}{Experiment 3:Conditional Probability considering that we know X mod 2}{10}
-\contentsline {section}{Algorithm}{11}
-\contentsline {section}{References}{12}
+\contentsline {section}{Algorithm}{12}
+\contentsline {section}{References}{13}

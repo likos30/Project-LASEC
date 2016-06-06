@@ -9,7 +9,7 @@ public class ConditionalClass {
 
 		
 		public static void main(String[] args) throws IOException, IOException {
-			calculateBlocksConditional(16);
+			calculateBlocksConditional(15);
 	}
 		public static int binaryToInteger(String binary) {
 		    char[] numbers = binary.toCharArray();
@@ -116,7 +116,7 @@ public class ConditionalClass {
 				int numOfBlockInClass[] =new int[classes.size()];
 				for(int j=0;j<classes.get(i).size();j++) {
 					numOfBlockInClass[i] = calcublock(buffersCounter.get(i));
-					probaClass = ((buffersCounter.get(i)[j] - 1 )/(double)numOfBlockInClass[i]);
+					probaClass = ((buffersCounter.get(i)[j] - 1 )/((double)numOfBlockInClass[i]-1));
 					probaCondi += Math.pow(probaClass,2);
 					//writer.println(numOfBlockInClass + " before to see " + classes.get(i).get(j) +", "+buffersCounter.get(i)[j] + " and has a proba to be equal to another of same class " + probaClass);
 					//System.out.println(classes.get(i).get(j) +", "+buffersCounter.get(i)[j]);

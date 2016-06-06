@@ -1,9 +1,9 @@
-proba conditional is= 0.016265258246481264 blocksize 231951
+proba conditional is= 0.01626539849475293 blocksize 231951
 nextclass
-proba conditional is= 0.02631044547594353 blocksize 246310
+proba conditional is= 0.02631065911408818 blocksize 246310
 nextclass
-proba conditional is= 0.02781767026329121 blocksize 246310
+proba conditional is= 0.027817896139948024 blocksize 246310
 nextclass
-proba conditional is= 0.062238364639462126 blocksize 122847
+proba conditional is= 0.0622393779181681 blocksize 122847
 nextclass
-best is : 0.062238364639462126 at 4 where there is 847418 and the biggest is 246310
+best is : 0.0622393779181681 at 4 where there is 847418 and the biggest is 246310

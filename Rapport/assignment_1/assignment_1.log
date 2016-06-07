@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  6 JUN 2016 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  7 JUN 2016 10:18
 entering extended mode
 **./assignment_1.tex
 (assignment_1.tex
@@ -194,21 +194,21 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (assignment_1.aux)
 \openout1 = `assignment_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 115.
+(lastpage)             ! on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -226,241 +226,291 @@ Package lastpage Info: Please have a look at the pageslts package at
 ) <epfl.jpg, id=1, 319.1925pt x 158.5925pt>
 File: epfl.jpg Graphic file (type jpg)
  <use epfl.jpg>
-Package pdftex.def Info: epfl.jpg used on input line 117.
+Package pdftex.def Info: epfl.jpg used on input line 93.
 (pdftex.def)             Requested size: 113.81102pt x 56.54634pt.
  <logo_lasec.jpg, id=2, 332.24126pt x 71.26625pt>
 File: logo_lasec.jpg Graphic file (type jpg)
 
 <use logo_lasec.jpg>
-Package pdftex.def Info: logo_lasec.jpg used on input line 117.
+Package pdftex.def Info: logo_lasec.jpg used on input line 93.
 (pdftex.def)             Requested size: 128.0374pt x 27.46422pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 117.
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
  ("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 117.
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
 ("C:\Users\Max-Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Max-Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./epfl.jpg> <./logo_lasec.jpg>] [2] (assignment_1.t
-oc)
+{C:/Users/Max-Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./epfl.jpg> <./logo_lasec.jpg>]
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 105.
+
+[2] (assignment_1.toc)
 \tf@toc=\write3
 \openout3 = `assignment_1.toc'.
 
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 107.
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
 
  []
 
 
-Overfull \hbox (1.46458pt too wide) in paragraph at lines 150--167
+Overfull \hbox (1.46458pt too wide) in paragraph at lines 126--143
 \OT1/cmr/m/n/10 Indeed, it is known that a brute force at-tack can be done on this ci-pher, by in-ter-cept-ing $\OML/cmm
 /m/it/10 d[]$ \OT1/cmr/m/n/10 plain-text/ciphertext
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--167
+Underfull \hbox (badness 10000) in paragraph at lines 126--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--167
+Underfull \hbox (badness 10000) in paragraph at lines 126--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--177
+Underfull \hbox (badness 10000) in paragraph at lines 146--153
 
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 153.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--204
+Underfull \hbox (badness 10000) in paragraph at lines 159--180
 
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 180.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--254
+Underfull \hbox (badness 10000) in paragraph at lines 199--230
 
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 230.
 
 [6]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 255.
+(amsmath)                 on input line 231.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--262
+Underfull \hbox (badness 10000) in paragraph at lines 234--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--274
+Underfull \hbox (badness 10000) in paragraph at lines 234--238
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--250
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 250.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 282--294
+Underfull \hbox (badness 10000) in paragraph at lines 258--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--294
+Underfull \hbox (badness 10000) in paragraph at lines 258--270
 
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 270.
 
 [8]
-Overfull \hbox (1.47964pt too wide) in paragraph at lines 308--328
+Overfull \hbox (1.47964pt too wide) in paragraph at lines 284--304
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity squared = 0.06549717159999999, which cor-re-sponds to $([][] [])[]\OML/cmm/m/it/10
  ; y \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 alphabet\OMS/cmsy/m/n/10 g$ 
  []
 
 
-Overfull \hbox (39.63092pt too wide) in paragraph at lines 308--328
+Overfull \hbox (39.63092pt too wide) in paragraph at lines 284--304
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity that gives 0 mod-ulo 2 squared = 0.32298762240000006 which cor-re-sponds to $([][]
  [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (39.63092pt too wide) in paragraph at lines 308--328
+Overfull \hbox (39.63092pt too wide) in paragraph at lines 284--304
 \OT1/cmr/m/n/10 Sum of prob-a-bil-ity that gives 1 mod-ulo 2 squared = 0.18634762239999997 which cor-re-sponds to $([][]
  [])[]\OML/cmm/m/it/10 ; i \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (12.32202pt too wide) in paragraph at lines 308--328
+Overfull \hbox (12.32202pt too wide) in paragraph at lines 284--304
 \OT1/cmr/m/n/10 From the Renyi en-tropy seen pre-vi-ously we get, $[] = [] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--328
+Underfull \hbox (badness 10000) in paragraph at lines 284--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--328
+Underfull \hbox (badness 10000) in paragraph at lines 284--304
 
  []
 
 
-Overfull \hbox (12.32202pt too wide) in paragraph at lines 308--328
+Overfull \hbox (12.32202pt too wide) in paragraph at lines 284--304
 \OT1/cmr/m/n/10 From the Renyi en-tropy seen pre-vi-ously we get, $[] = [] =
  []
 
 <ratio.jpg, id=47, 423.83344pt x 382.42876pt>
 File: ratio.jpg Graphic file (type jpg)
  <use ratio.jpg>
-Package pdftex.def Info: ratio.jpg used on input line 338.
+Package pdftex.def Info: ratio.jpg used on input line 314.
 (pdftex.def)             Requested size: 256.0748pt x 231.06375pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--341
-
- []
-
-[9] [10 <./ratio.jpg>] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 372--375
+Underfull \hbox (badness 10000) in paragraph at lines 307--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--390
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 317.
+
+[9]
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 345.
+
+[10 <./ratio.jpg>]
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 345.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--390
+Underfull \hbox (badness 10000) in paragraph at lines 362--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--435
+Underfull \hbox (badness 10000) in paragraph at lines 362--366
 
  []
 
-[12] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--411
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 411.
+
+[12]
+
+Package lastpage Warning: Rerun to get the references right on input line 414.
+
+
 AED: lastpage setting LastPage
-[13] (assignment_1.aux) ) 
+
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 414.
+
+[13] (assignment_1.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3078 strings out of 493634
- 41459 string characters out of 3134832
- 113936 words of memory out of 3000000
- 6414 multiletter control sequences out of 15000+200000
+ 3068 strings out of 493634
+ 41291 string characters out of 3134832
+ 113741 words of memory out of 3000000
+ 6404 multiletter control sequences out of 15000+200000
  19573 words of font info for 72 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  33i,10n,43p,584b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C
-:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-Pc/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/M
-ax-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr9.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
-sers/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12
-.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on assignment_1.pdf (13 pages, 341811 bytes).
+<C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Max-Pc/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Max
+-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Max-Pc/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max-Pc/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb><C:/Users/Max-Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Max-Pc/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on assignment_1.pdf (13 pages, 342378 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

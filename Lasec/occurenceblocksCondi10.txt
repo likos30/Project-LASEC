@@ -956,7 +956,7 @@ proba conditional is= 0.0021386005382545174 blocksize 205
 nextclass
 proba conditional is= 0.02071005917159763 blocksize 53
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0036385237989158686 blocksize 202
 nextclass
@@ -1524,7 +1524,7 @@ proba conditional is= 0.0 blocksize 18
 nextclass
 proba conditional is= 0.25 blocksize 5
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -1852,7 +1852,7 @@ proba conditional is= 0.006501682653785399 blocksize 210
 nextclass
 proba conditional is= 0.01580246913580247 blocksize 46
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0029143586749635735 blocksize 460
 nextclass
@@ -1914,7 +1914,7 @@ proba conditional is= 0.011446409989594173 blocksize 32
 nextclass
 proba conditional is= 0.07840236686390532 blocksize 27
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -2018,17 +2018,17 @@ proba conditional is= 0.1111111111111111 blocksize 4
 nextclass
 proba conditional is= 1.0 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
-proba conditional is= NaN blocksize 1
-nextclass
-proba conditional is= 0.25 blocksize 3
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.25 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.25 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
+nextclass
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -2047,3 +2047,24 @@ nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
 best is : 0.07578126509622501 at 619 where there is 847410 and the biggest is 2514
+0.07578126509622501
+0.07840236686390532
+0.07877551020408165
+0.08000000000000002
+0.08984375
+0.10339107287527483
+0.1111111111111111
+0.12802768166089967
+0.1388888888888889
+0.16000000000000003
+0.17157974300831436
+0.2040816326530612
+0.25
+0.25
+0.25
+0.3125
+0.4
+0.4
+1.0
+1.0
+1.0

@@ -4,12 +4,13 @@
 	import java.io.IOException;
 	import java.io.PrintWriter;
 	import java.util.ArrayList;
+import java.util.Collections;
 	
 public class ConditionalClass {
 
 		
 		public static void main(String[] args) throws IOException, IOException {
-			calculateBlocksConditional(15);
+			calculateBlocksConditional(18);
 	}
 		public static int binaryToInteger(String binary) {
 		    char[] numbers = binary.toCharArray();
@@ -70,7 +71,7 @@ public class ConditionalClass {
 			for(int i=0;i < Math.pow(2, blockSize);i++) {
 				ArrayList<String> init = new ArrayList<>();
 				classes.add(init);
-				int bufferCounter[] = new int[1024];
+				int bufferCounter[] = new int[512];
 				buffersCounter.add(bufferCounter);
 			}
 			
@@ -99,13 +100,9 @@ public class ConditionalClass {
 				System.out.println((double)i/(textNoSpace.length()-blockSize+1)+  "% " + i + " block");
 				}
 			}
-			for(int i=0;i<classes.size();i++) {
-				for(int j=0;j<classes.get(i).size();j++) {
-					
-				}
-			}
 			System.out.println("finish to fill");
 			double bestProba = 0;
+			ArrayList<Double> bestProbaD = new ArrayList<>();
 			int index = 0;
 			double temp = 0;
 			int maxBlock = 0;
@@ -116,7 +113,11 @@ public class ConditionalClass {
 				int numOfBlockInClass[] =new int[classes.size()];
 				for(int j=0;j<classes.get(i).size();j++) {
 					numOfBlockInClass[i] = calcublock(buffersCounter.get(i));
+					if(numOfBlockInClass[i]>1){
 					probaClass = ((buffersCounter.get(i)[j] - 1 )/((double)numOfBlockInClass[i]-1));
+					}else {
+						probaClass=0;
+					}
 					probaCondi += Math.pow(probaClass,2);
 					//writer.println(numOfBlockInClass + " before to see " + classes.get(i).get(j) +", "+buffersCounter.get(i)[j] + " and has a proba to be equal to another of same class " + probaClass);
 					//System.out.println(classes.get(i).get(j) +", "+buffersCounter.get(i)[j]);
@@ -129,10 +130,21 @@ public class ConditionalClass {
 				if(numOfBlockInClass[i]>maxBlock) {
 					maxBlock = numOfBlockInClass[i];
 				}
+				if(bestProbaD.size()<2*blockSize+1) {
+				bestProbaD.add(probaCondi);
+				} else {
+					Collections.sort(bestProbaD);
+					if(bestProbaD.get(0)< probaCondi){
+							bestProbaD.set(0,probaCondi);
+				}
+				}
 				writer.println("proba conditional is= " + probaCondi + " blocksize " + numOfBlockInClass[i]);
 				writer.println("nextclass");
 			}
 			writer.println("best is : " + temp + " at " + index +" where there is "+ numberOfBlock +" and the biggest is " + maxBlock);
+			for(int i=0;i<bestProbaD.size();i++){
+				writer.println(bestProbaD.get(i));
+			}
 			writer.close();
 			System.out.println("FINISH");
 			}

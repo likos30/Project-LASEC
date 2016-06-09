@@ -828,7 +828,7 @@ proba conditional is= 4.2392769004829747E-4 blocksize 258
 nextclass
 proba conditional is= 0.001981405273586343 blocksize 82
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 6.049527646341344E-4 blocksize 554
 nextclass
@@ -956,7 +956,7 @@ proba conditional is= 0.00378698224852071 blocksize 131
 nextclass
 proba conditional is= 0.05202913631633714 blocksize 32
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 8.188460569412947E-4 blocksize 127
 nextclass
@@ -988,7 +988,7 @@ proba conditional is= 0.001358080579447714 blocksize 95
 nextclass
 proba conditional is= 0.021415823914336704 blocksize 42
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.05263157894736842 blocksize 20
 nextclass
@@ -1212,7 +1212,7 @@ proba conditional is= 6.240275921389387E-4 blocksize 488
 nextclass
 proba conditional is= 0.0023283418553688836 blocksize 149
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 2.2199098161637193E-4 blocksize 466
 nextclass
@@ -1524,7 +1524,7 @@ proba conditional is= 0.0 blocksize 13
 nextclass
 proba conditional is= 0.25 blocksize 5
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -1852,7 +1852,7 @@ proba conditional is= 0.0075543232231779075 blocksize 189
 nextclass
 proba conditional is= 0.017006802721088433 blocksize 43
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 6.242609851572769E-4 blocksize 370
 nextclass
@@ -1914,7 +1914,7 @@ proba conditional is= 0.0027434842249657062 blocksize 28
 nextclass
 proba conditional is= 0.08506944444444446 blocksize 25
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -2018,17 +2018,17 @@ proba conditional is= 0.1111111111111111 blocksize 4
 nextclass
 proba conditional is= 1.0 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
-proba conditional is= NaN blocksize 1
-nextclass
-proba conditional is= 0.25 blocksize 3
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.25 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.25 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
+nextclass
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -2548,7 +2548,7 @@ proba conditional is= 0.0 blocksize 4
 nextclass
 proba conditional is= 0.010000000000000002 blocksize 11
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -3050,7 +3050,7 @@ proba conditional is= 0.0 blocksize 2
 nextclass
 proba conditional is= 0.0 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -3196,7 +3196,7 @@ proba conditional is= 0.00698060941828255 blocksize 96
 nextclass
 proba conditional is= 0.020761245674740487 blocksize 18
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 7.036967536123096E-4 blocksize 293
 nextclass
@@ -3706,7 +3706,7 @@ proba conditional is= 0.008264462809917356 blocksize 23
 nextclass
 proba conditional is= 0.022727272727272724 blocksize 23
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -3772,7 +3772,7 @@ proba conditional is= 0.005387755102040816 blocksize 176
 nextclass
 proba conditional is= 0.0024622960911049557 blocksize 58
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 5.327934359848685E-4 blocksize 138
 nextclass
@@ -3830,7 +3830,7 @@ proba conditional is= 0.011080332409972297 blocksize 20
 nextclass
 proba conditional is= 0.25 blocksize 7
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -3996,7 +3996,7 @@ proba conditional is= 0.015625 blocksize 9
 nextclass
 proba conditional is= 0.0 blocksize 3
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 4
 nextclass
@@ -4004,7 +4004,7 @@ proba conditional is= 0.01652892561983471 blocksize 12
 nextclass
 proba conditional is= 0.14453125 blocksize 17
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.01730103806228374 blocksize 18
 nextclass
@@ -4014,7 +4014,7 @@ proba conditional is= 0.04000000000000001 blocksize 6
 nextclass
 proba conditional is= 0.0 blocksize 2
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 2
 nextclass
@@ -4040,9 +4040,9 @@ proba conditional is= 0.0 blocksize 0
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -4056,9 +4056,9 @@ proba conditional is= 0.0 blocksize 0
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
-proba conditional is= NaN blocksize 1
+proba conditional is= 0.0 blocksize 1
 nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
@@ -4095,3 +4095,26 @@ nextclass
 proba conditional is= 0.0 blocksize 0
 nextclass
 best is : 0.051669442417140846 at 210 where there is 847409 and the biggest is 1409
+0.14453125
+0.158203125
+0.18367346938775508
+0.203125
+0.2040816326530612
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.25
+0.4
+0.4444444444444444
+0.4444444444444444
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0

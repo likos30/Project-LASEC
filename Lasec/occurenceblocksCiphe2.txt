@@ -1,0 +1,2 @@
+For Block Size 2, we have 847419 blocks, thus the probabilty that 2 blocks are equals mod 2 is 0.2515185977256541 and modulo 26 is 0.00301798452067156
+The ratio is 0.0119990511555072

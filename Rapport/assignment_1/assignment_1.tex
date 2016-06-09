@@ -80,8 +80,8 @@
 \vspace{2in}
 \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
 \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\author{\textbf{\hmwkAuthorName}}
 \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\author{\textbf{\hmwkAuthorName}}
 \vspace{3in}
 \logolasec
 }
@@ -95,9 +95,9 @@
 \newpage
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-The author takes the previous paper about a new Ciphertext-only Attacks on Hill Cipher, and try to improve it's complexity to get a better result than $O(d13^d)$.\\
+The author takes the previous paper about a new Ciphertext-only Attack on Hill Cipher, and try to improve it's complexity to get a better result than $O(d13^d)$.\\
 ${}$\hspace{1em}The goal of this project is to actually study the algorithm to recover the key matrix modulo 2 and then to improve the algorithm to get the key matrix modulo 26.\\
-${}$\hspace{1em}The project report is organized as follows:Section 1 presents the Hill Cipher and the work done in the previous report. In Section 2, the author studies the the algorithm and try to improve the complexity to get the key matrix modulo 26. Section 3 presents the possible enhancement of the FFT of Algorithm 1. Experimental results and algorithms are presented at the end.
+${}$\hspace{1em}The project report is organized as follows:Section 1 presents the Hill Cipher and the work done in the previous report. In Section 2, the author studies the algorithm and try to improve the complexity to get the key matrix modulo 26. Section 3 presents the possible enhancement of the FFT of Algorithm 1. Experimental results and algorithms are presented at the end.
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ ${}$\hspace{1em}The project report is organized as follows:Section 1 presents th
 \section{Introduction}
 The motivation of this project is, first and foremost, to improve the Linear Cipher only attack on the Hill Cipher, by changing the recovering of the key modulo 26 and then look at the possible algorithm to improve the FFT in the recovery algorithm of matrix key modulo 2.\\
 \\
-Hill is a polygraphic substitution cipher based on linear algebra, invented by Lester S. in 1929. Each letter is represented by a number modulo 26, from $A=0$ to $Z=25$. The algorithm breaks the plaintext into blocks of size $d$ and then applies a key matrix $d \times d $ to these blocks to yield ciphertext blocks.\\
+Hill is a polygraphic substitution cipher based on Linear Algebra, invented by Lester S. in 1929. Each letter is represented by a number modulo 26, from $A=0$ to $Z=25$. The algorithm breaks the plaintext into blocks of size $d$ and then applies a key matrix $d \times d $ to these blocks to yield ciphertext blocks.\\
 In order to encrypt a message, the ciphertext is calculated as a matrix product of the key and plaintext:
 
 $$Y=K \times X$$
@@ -125,11 +125,11 @@ $$X = K^{-1} \times Y$$
 
 As it's a linear encryption, it can be simply broken with Known PlainText Attacks.\\
 Indeed, it is known that a brute force attack can be done on this cipher, by intercepting $d^2$ plaintext/ciphertext character pairs, however to have a better complexity and less restrictive resources, improvement have been made to this simple brute force attack.\\
-The attack described previously can determine the secret key almost uniquely if the length of ciphertext is at least $n =1.27d^2 [1].$\\ 
-Later, it has been proved that it is possible to get the key matrix K, with minimum length of ciphertext required $n =8.96d^2 -O(\log d)$ [1].\\
+The attack described previously can determine the secret key almost uniquely if the length of ciphertext is at least $n =1.27d^2 [1]$, in time $O(26^{d^2})$.\\ 
+Later, it has been proved that it is possible to get the key matrix K, with minimum length of ciphertext required $n =8.96d^2 -O(\log d)$ [1] and the complexity has been reduced to $O(d26^d)$.\\
 This method has been then enhanced [1] using the divide-and-conquer technique, by eliminating repeated calculation while doing matrix multiplication, and have led to a ciphertext required length of $n=8,96d^2$. Eventually, using the Chinese Remainder Theorem [1], the length has been brought to $n=12.5d^2$, and the complexity to $O(d13^d)$.\\
 By this same Chinese Remainder theorem, it is believed that we can find the key matrix modulo 2 first and then recover the matrix modulo 26 with a lower complexity [2].\\
-It is shown in the previous paper that this matrix modulo 2 can be found in $O(d2^d)$, and the key matrix modulo 26 in $O(8^{nd})$.\\
+It is shown in the previous paper that this matrix modulo 2 can be found in $O(d2^d)$, and the key matrix modulo 26 in $O(8^{nd})$, where $n$ is the segment size.\\
 \\
 Let's briefly recall how this attack works:\\
 If we consider $X$ a random vector constituted of $d$ letters, then we can pick a fixed vector $\lambda \in \{0,1\}^*$ and do the dot-product $\lambda \cdot X$ in $\mathbb{Z}/2\mathbb{Z}$.\\
@@ -139,7 +139,7 @@ With this result and the approximation of all vectors $\mu$ via $S_n = \sum_{k=1
 An algorithm using the correlation between vectors is used to identify the last one and first one easily, and then recursively sort all the vectors in the correct order.\\
 All this process is described by algorithm 1 in the Appendix, and is done in time $O(d 2^d)$\\
 \\
-This project will present possible improvements of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. However, we first need to deal with the improvement for translation of key matrix from $\mathbb{Z}/2\mathbb{Z}$ to $\mathbb{Z}/26\mathbb{Z}$
+This project will present possible improvements of this algorithm to get a lower complexity than the one mentioned before, with the help of Sparse Fourier Transform. However, we first need to deal with the improvement for translation of key matrix from $\mathbb{Z}/2\mathbb{Z}$ to $\mathbb{Z}/26\mathbb{Z}$.
 
 
 \section{Key recovery modulo 26}
@@ -153,7 +153,7 @@ It's the same idea for \#(seg in plain) $= len(plain text) - n +1$, with $n$ the
 \paragraph{Assumption 1.}\textit{All segments of length $n$ are independent with the same distribution}
 \paragraph{Theorem 1.}\textit{R\'enyi entropy of order $\alpha$ where $\alpha \geq 0$ and $\alpha \neq 1$}:
 \\
-Let $a$, $b$ be random segment of length $n$ and $X$ the plaintext. We use R\'enyi entropy, with the following formula:\\
+Let $a$, $b$ be random segments of length $n$ and $X$ the plaintext. We use R\'enyi entropy, with the following formula:\\
 $$H_{\alpha}(X) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{\alpha}})$$ 
 When $\alpha = 2$, the following result is obtained:
 $$H_{2}(X) = -\log_{2}(\sum_{i=1}^{n}{\Pr(X=i)^{2}})$$ that gives us the probability that a segment equals another one as $\sum_{i=1}^{n}{\Pr(X=i)^{2}} =\Pr(a=b)$.\\
@@ -161,9 +161,9 @@ The R\'enyi entropy represents more generally the quantity of information in the
 \\
 Then we define good matching:segments are equal before and after modulo 2; and bad matching:segment which are not equal but equal modulo 2.\\
 ${}$\hspace{1em}For good matching, we have $E(\#$ good matching$) = (\# $segments in reference$) \times (\#$segment in plaintext$) \times 2^{-H_{2}(X)}$, as the number of good matching is actually the collision between segment in plaintext and segment in reference text multiplied by the R\'enyi entropy of this segment (which represents the rate of collision for a given block X).\\
-Then the same is done for  $E(\# all matching)$, the difference is that we are in $\mathbb{Z}/2\mathbb{Z}$:$E(\#$ all matching$) = (\# $segments in reference$) \times (\#$segment in plaintext$) \times 2^{-H_{2b}(X \bmod 2)}$. And indeed it is understandable that if 2 words modulo 2 are equal, these words are not always equal modulo 26.\\
+Then the same is done for  $E(\# all matching)$, the difference is that we are in $\mathbb{Z}/2\mathbb{Z}$:$E(\#$ all matching$) = (\# $segments in reference$) \times (\#$segment in plaintext$) \times 2^{-H_{2}(X \bmod 2)}$. And indeed it is understandable that if 2 words modulo 2 are equal, these words are not always equal modulo 26.\\
 \\
-As we consider independent letters in segment, the probability to find two of the same segment, with following occurrence of letters:$p(A)=0.0808$, $p(B)=0.0167$, ...etc, is:$\Pr(a=b)=((0.0808)^{2} +(0.0167)^{2} + ...)^{n} =0.06609^{n}$. Then $H_{2}(X) = -log_{2}0.06609^{n}$. The frequencies given in [8] are used as reference.\\
+As we consider independent letters in segment, the probability to find two of the same segment, with following occurrence of letters:$p(A)=0.0808$, $p(B)=0.0167$,...etc, is:$\Pr(a=b)=((0.0808)^{2} +(0.0167)^{2} +...)^{n} =0.06609^{n}$. Then $H_{2}(X) = -\log_{2}0.06609^{n}$. The frequencies given in [8] are used as reference.\\
 \\
 ${}$\hspace{1em}Now let's consider $E(\#$ all matching). As only 2 values are possible it's easier than the previous, indeed $E(\#$ all matching$) =(\# $segments in reference$) \times (\#$segment in plaintext$) \times 2^{-H_{2}(X \bmod 2)}$.\\
 $H_{2}(X \bmod 2) = -\log_2(\sum_{i=0}^{1}{\Pr(X \bmod 2 =i)^2})$, where $\Pr(X \bmod 2=i)$ declined in $\Pr(X \bmod 2=0)$ and $\Pr(X \bmod 2 =1)$\\
@@ -185,28 +185,30 @@ So the problem can be turned like this:find the number $y$ of matching needed to
 \subsection{Computation with conditional entropy}
 What one can do, is taking the conditional entropy on the result of $X \bmod 2$.\\
 \paragraph{Theorem 2.}\textit{Conditional R\'enyi entropy of order $\alpha$ where $\alpha \geq 0$ and $\alpha \neq 1$}:
-$$H_{\alpha}(X \mid X \bmod 2 = y) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i \mid X \bmod 2= y )^{\alpha}}) , y \in \{0,1\} $$\\
+$$H_{\alpha}(X \mid X \bmod 2 = y) = \frac{1}{1-\alpha}\log_{2}(\sum_{i=1}^{n}{\Pr(X=i \mid X \bmod 2= y )^{\alpha}}), y \in \{0,1\} $$\\
 For $\alpha = 2$, $H_{1}(X \mid X \bmod 2 = y) = -\log_{2}(\sum_{i=1}^{n}{\Pr (X=i \mid X mod2 = y)^{2}})$\\
 In the case of single independent letter, the entropy declines into 2 possibilities, $H_{2}(X \mid X \bmod 2 = 0) $ and $H_{2}(X \mid X \bmod 2 = 1)$. The conditional probability is as following:
 $$\Pr (X=i \mid X \bmod 2 = 0 ) = \frac{\Pr(X \bmod 2 = 0 \mid X = i) \Pr(X=i)}{\Pr(X \bmod 2 =0)} = $$
 \[ \begin{cases}
-      \frac{\Pr(X=i)}{\Pr(X \bmod 2 =0)} $$ & if \Pr(X \bmod 2 =0| X=i) \neq 0 \\
+      \frac{\Pr(X=i)}{\Pr(X \bmod 2 =0)} $$ & if X \bmod 2 =0  \\
       0 & else
    \end{cases}
 \]
 and of course the same goes for 1.\\
 
-Therefore, $\sum_{i=1}^{n}{(\Pr (X=i \mid X \bmod 2 = 0))^{2}} = ((\frac{\Pr(X=A)}{\Pr(X \bmod 2 = 0)})^{2} + (\frac{\Pr(X=C)}{\Pr(X \bmod 2) = 0})^{2} + ... )= 0.112$ , where $p(A)=0.0808 , p(B)=0.0318 , ...$  we get the probability from [8] exactly like the previous section.
+Therefore, $\sum_{i=1}^{n}{(\Pr (X=i \mid X \bmod 2 = 0))^{2}} = ((\frac{\Pr(X=A)}{\Pr(X \bmod 2 = 0)})^{2} + (\frac{\Pr(X=C)}{\Pr(X \bmod 2) = 0})^{2} +... )= 0.112$, where $p(A)=0.0808, p(B)=0.0318,...$  we get the probability from [8] exactly like the previous section.
 And $\Pr(X=i \mid X \bmod 2 = 1) = 0.128$\\
 We can now estimate the good matching by "class" of reduction modulo 2
 Experiment 3 gives more details about the consideration of blocks instead of independent letters.
 We can now get the ratio $\frac{E(\# \text{good matchings})}{E(\# \text{all matchings})}$ in class of modulo 2 reduction, so the conditional Expected value is as followed: $\frac{E(\# \text{good matchings} \mid X \bmod 2 = y)}{E(\# \text{all matchings} \bmod 2 = y)}$ or more clearly $\frac{E(\# \text{good matchings} \mid X \text{in class y})}{E(\# \text{all matchings in class y})}$. But in one class all the blocks are matching modulo 2 so it just gives $\Pr(\# \text{good matchings} \mid \text{X in class y})  = \Pr (X=i \mid X \bmod 2 = y) $\\
-\\
+These result do not improve the ratio for low block size, but the thing that is interesting is that for blocksize $d>10$, some blocks are alone in their classes reduction modulo 2, and we will use this property in the next part.
+
+\subsection{Computation with matching by class of reduction modulo 2}
 Let's now try to resolve the number of equations needed so that we can resolve the key matrix modulo 26.\\
-We get the cipher with the formula $ K \times X = Y$ , if we get $n$ good matching , $ K \times $  $\begin{pmatrix}
+We get the cipher with the formula $ K \times X = Y$, if we get $n$ good matching, $ K \times $  $\begin{pmatrix}
   - \\
   - \\
-  ... \\
+ ... \\
   a \\
 	b\\
 	c\\
@@ -215,48 +217,76 @@ We get the cipher with the formula $ K \times X = Y$ , if we get $n$ good matchi
  = $\begin{pmatrix}
   u \\
   v \\
-  ... \\
+ ... \\
   - \\
 	-\\
 	-\\
 	-\\
  \end{pmatrix}$
-where $ u , v , ... $ represent the $n$ good matching and the $d-n $ others are not.\\
+where $ u, v,... $ represent the $n$ good matching and the $d-n $ others are not.\\
 For this to work we need $d-n < n $ meaning $n > \frac{d}{2}$\\
 If we call $N$ the number of matching, and $N_{good}$ the number of good matching.\\
 We get $2n-d$ equations in $d^2$ unknowns.
 What is the require number $N$ of matching to be sure that we can compute the matrix?\\
-If $ \frac{d}{2} < n \leq d $ then we got the following:
+\paragraph{Case $\frac{d}{2} < n < d $}:\\
 
-$${N \choose N_{good}} \frac{13^{d^{2}}}{13^{2n-d N_{good}}} <  N^{N_{good}} \frac{13^{d^{2}}}{13^{2n-d N_{good}}}$$
+If $ \frac{d}{2} < n < d $ then we got the following:
+
+$${N \choose N_{good}} \frac{13^{d^{2}}}{13^{2n-d N_{good}}} <  N^{N_{good}} \frac{13^{d^{2}}}{13^{2n-d N_{good}}} < 1$$
 That gives, considering that $N = r N_{good}$: $N_{good} > \frac{d^{2} \ln(13)}{(2n-d)\ln 13 - \ln r - \ln N_{good}}$\\
-Now if $n>d$ then: 
-$${N \choose N_{good}} \frac{13^{d^{2}}}{13^{d N_{good}}} <  N^{N_{good}} \frac{13^{d^{2}}}{13^{d N_{good}}}$$
+The number of good matching needed is $N_{good} > 2d$ which is not exploitable with the current implementation.\\
+
+\paragraph{Case $n \geq d$}:\\
+
+Now if $n \geq d$ then: 
+$${N \choose N_{good}} \frac{13^{d^{2}}}{13^{d N_{good}}} <  N^{N_{good}} \frac{13^{d^{2}}}{13^{d N_{good}}} < 1$$
 Again as $N = r N_{good}$ we get: $N_{good} > \frac{d}{1-\frac{\ln r}{d \ln 13}}$\\
 \\
-From this we can say that $N_{good}$ must be bigger than $d$ , so we will take for simplification $N_{good} > 2d$\\
-
-Thanks to the conditional entropy, we now know that some classes have a really good ratio of good matching/all matching. For example if $d=16$, we can try the following:\\ 
-From the previous computation we need $N_{good} > 2d $, for blocksize 16. The ratio is 0.68 and so the number $N$ of matching will be : $ \frac{(2d+1)100}{68}$. If we apply the algorithm from the previous paper, which is in the Appendix, we can have correct result. IT takes $d$ matching from the list, here the class whith the better ratio, and would itterate =$\frac{1}{ratio^d} = 1.47^d = 1.47^{16}$ times. But is this class of matching enough to make the number of iteration needed to decrypt? Also this only works for $d>12$.
-
+From this we can say that $N_{good}$ must be bigger than $d$, so $N_{good} > d$.\\
+\subsubsection{Method used to recover $K_{26}$}
+Thanks to the conditional entropy, we now know that some classes have a really good ratio of good matching/all matching. Indeed in a class of reduction modulo 2, a higher probability means that a lot of blocks are equal modulo 26.\\
+Let's call the block modulo 2 \textit{segment}, and block modulo 26 \textit{string}.\\
+We need to create a class table, with classification of blocks in classes of reduction modulo 2.\\
+Let's assume we take one of the ciphers $Y_i$ given, we compute, with the help of $ K_{2} $, the plaintext modulo 2 $X^{2}_i$ and look to which class it belongs. We get $C_k$ the class to which $X^{2}_i$ belongs.\\
+We'll try to find a class where the ratio is 1, because if it's the case, it means that $X^{2}_i$ can only be equals to the string in the class $C_k$. From this we get in the class the string corresponding to the segment $X^{2}_i$, and we get a first equation : $K \times X_{26} = Y_{i}$, where $X_{26}$ is the string found in $C_k$.\\
+\\
+From the previous computations we know we need $d+1$ equations, the perfect case would be to take the $d+1$ classes where the probability that blocks are equals is the highest. We know from Experiment 3 that if $d \geq 12$ we have $ d+1$ classes with Probability 1, meaning that there is only 1 block that can correspond to the mapping modulo 2.\\
+We can resolve the $d+1$ equations by Gaussian reduction. It take will $d^4$ time to solve the matrix Experiment 4 gives details about this.\\
+\\
+\paragraph{Condition on the number of blocks:}
+Now the previous paper had a function to determine the minimum number $n$ of cipher needed, in function of the size $d$ of the matrix :
+$$n = \frac{8}{\epsilon (1- \epsilon)^2} \times (d +log_2 d - log_2 p) $$\\
+Where epsilon is the bias, and $p=p_1-p_2$ where $p_i$ is the probability that pair of letter with same position difference $l$ from a random text is $(0,0)$.\\
+For $d=12$ we need approximately $8050$ ciphers to be sure that the algorithm of key recovery modulo 2 will work.\\
+$8050 \times 0.0004043642104 = 3.22$ is the number of block expected to be equal to another in a class, for this size.\\
+And indeed if we have 8050 ciphers, there a $2^{12}$ possibilities and $\frac{8050}{2^{12}} = 1.953$. It means that if all blocks are equally distributed , there would be approximately 2 blocks by class of reduction modulo 2, but as it's not an equal distribution , we say that the average number of blocks in a class is: $$n \times \Pr(\text{Collision modulo 2}) $$\\
+\\
+An algorithm is implemented in the Appendix to find the key matrix modulo 26 with a complexity of $O(d^{3.8 k})$ where $k$ is the number of block estimated in the classes. We expect in our algorithm to have only 1 block in the best classes as Experiment 3 shows it. Else, we do it for the first string $k$ that appears with the highest probability.\\
+We need $d^{3.8k} < 13^d$ for our algorithm to be efficient, $k<\frac{d \log 13}{\log d 3.8}$\\
+For the minimal blocksize were this works, we need $k \leq 3$, and as the number $k$ of block by classes decrease much faster (in function of $2^d$) than $\frac{d \log 13}{\log d 3.8}$, we have no problem with higher blocksize.\\
 
 
 \section{Study of Faster Fourier Transform for Algorithm 1}
+What we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times where each cipher $Y$ appears. So it is a table containing numbers $\in \mathbb{N}$ of size $N=2^d$.\\
+In this section, we will study possible algorithm that can enhance the complexity of the FFT, with the help of Sparse Fourier Transform.\\
 When a fast Fourier Transform (FFT) is applied to a signal of size $N$, the complexity in time is $O(N\log N)$.\\
 A general algorithm for computing a DFT must take time proportional to its output size N. However, in some cases, most of the Fourier coefficients of a signal are small or equal to zero, meaning, the output of the DFT is sparse.\\
 For sparse signals, the $n$ lower bound for the complexity of DFT no longer applies. If a signal has a small number $k$ of non-zero Fourier coefficients the output of the Fourier transform can be represented succinctly using only $k$ coefficients.\\
 Hence, we can find Fourier Transform algorithm whose run time is sub-linear in the signal size $N$.\\
-What we want is to enhance the possible FFT on a table called $n_y$ which contains the number of times $k$ where each cipher $Y$ appears. So it is a table containing numbers $\in \mathbb{N}$ of size $N=2^d$.\\
+
 
 \subsection{Simple and practical algorithm for sparse Fourier transform}
 This algorithm considers a complex vector $x$ of length $l$.\\
-It computes the $k$-sparse Fourier transform in $O(\sqrt{kl}\log^{3/2}l)$, if $x$ is sparse then to find it takes exactly $O(klog^{2}l)$, but in general to estimate $x$ takes approximately $O(\sqrt{lk})$\\
+It computes the $k$-sparse Fourier transform in $O(\sqrt{kl}\log^{3/2}l)$, if $x$ is sparse then it takes exactly $O(klog^{2}l)$, but in general to estimate $x$ takes approximately $O(\sqrt{lk})$\\
+This algorithm perform better if:
+$$\sqrt{2^d k}(\log2^d)^\frac{3}{2} < 2^d \log2^d$$
+Meaning $k<\frac{2^d}{\log 2^d}$
 So this algorithm is better if the ratio $\frac{l}{k} \in [2 \times 10^3, 10^6]$, but it's clearly not the best one as recently found are supposed to find it in a lower complexity ($k\log(l)$).\\
 Now let's consider the input of this DFT to be $n_y$ with size $2^d$. This table contains integer whose sum is equal to the number of cipher given. As a result, we can't say that the resulting DFT of this vector will be sparse or not.
 
 \subsection{Deterministic Sparse Fourier Approximation via Fooling Arithmetic Progressions}
 This is also an SFT algorithm, meaning that it'll output the $k$-non null coefficient of the matrix. To do so you need to give it a threshold $\tau \in (0,1]$ and an oracle access to a function f, it outputs the $\tau$-significant Fourier Coefficient. It runs in $\log(N),\frac{1}{\tau}$.\\
-An oracle access to a function take as input $x$ and return the $f(x)$ of the function $f$. A $\tau$-significant Fourier Coefficient is a coefficient whose magnitude is at least a $\tau$-fraction of the sum of squared Fourrier Coefficient
+An oracle access to a function take as input $x$ and return the $f(x)$ of the function $f$. A $\tau$-significant Fourier Coefficient is a coefficient whose magnitude is at least a $\tau$-fraction of the sum of squared Fourier Coefficient
 This algorithm is robust to random noise and local (meaning it runs in polynomial time).\\
 \\
 It's based on partition of set by binary search, we have at the beginning 4 intervals, an we're testing for the first two if the norm of $\hat{f}$ the Fourier Transform squared is equals to the $set_i$ oracle output squared.\\
@@ -264,9 +294,10 @@ Meaning more explicitly : $\hat{f}(J_i)^2 = \sum_{\alpha \in J_i}{|\hat{f}(\alph
 The heart of the code is actually to decide which intervals potentially contain a significant Fourier coefficient. Yes if weight on $J$, exceeds significant threshold $\tau$, NO if J larger.\\
 The threshold $\tau$ can be chosen, with the fact that a $\alpha$ is a $\tau -significant$ Fourier coefficient iff $|\hat{f}|^2 \geq \tau||f||^{2}_2$\\ where $\hat{f} = \langle f,X_{\alpha} \rangle$ and $X_{\alpha} = e^{2\pi i \alpha x/N}$.\\
 Considering the table $n_y$ of size $2^d$, we get $\tau||f||^{2}_2 < \tau \times n^2$ as there are $n$ ciphers were $2^d <n$. So the semi-norm will be the smallest if they are all distributed equally in the "buckets". That gives approximately ${\lfloor \frac{n}{2^d} \rfloor}^{2}$ ciphers by buckets, and the worst case where the semi norm is the bigger is when all ciphers are in one place meaning $n^2$.\\
-Let's take the value from the example of the previous paper: 6200 ciphers and blocksize =10. There for the best case, i.e, all equally distributed each bucket contains ${\lfloor \frac{6200}{2^{10}} \rfloor} = 6$, we get $|\hat{f}|^2 \geq \tau||f||^{2}_2 =  6144^2 \geq \tau 36864$ , where 6024 is the biggest Fourier coefficient and all the others are 0 so $ 1 = \tau$ that will be a good result but the probability that it arrives is clearly too small to be considerate.\\
+Let's take the value from the example of the previous paper: 6200 ciphers and blocksize =10. There for the best case, i.e, all equally distributed each bucket contains ${\lfloor \frac{6200}{2^{10}} \rfloor} = 6$, we get $|\hat{f}|^2 \geq \tau||f||^{2}_2 =  6144^2 \geq \tau 36864$, where 6024 is the biggest Fourier coefficient and all the others are 0 so $ 1 = \tau$ that will be a good result but the probability that it arrives is clearly too small to be considerate.\\
 For the worst case we would get:$|\hat{f}|^2 \geq \tau||f||^{2}_2 =  \alpha \geq \tau 6200^2$ where $\alpha$ is one of the smallest coefficient but still bigger the order $10^1$  
 The problem is that $\tau$ will need to be very big to match the previous inequality. So the complexity will depends on $\frac{1}{\tau}$ and it'll clearly be too important to be considered.\\
+
 
 \subsection{Nearly optimal Sparse Fourier Transform}
 
@@ -311,9 +342,28 @@ Then it'll compute the probability that a good matching appears with the followi
 The exact same thing is done with X in modulo 2, to get the probability of all matching, and then we compute the ratio $\frac{E(\# good matchings)}{E(\# all matchings)}$\\
 With this, the evolution of the ratio in function of the block size looks like this:\\
 \\
-\includegraphics[width=90mm]{ratio.jpg}
+\includegraphics[width=90mm]{ratio.jpg}\\
 So we can see that the ratio follow the $\frac{1}{8^n}$ until blocksize 15, then it goes up again to almost match 1/8 for blocksize 24. With the current algorithm and this size of block the number of iteration would be $8^d$ and as $d = 24$ is really large it's still not effective.\\
-Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if the blocksize is increased to a certain point, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.
+Even if the ratio do not behave as previously thought, the complexity stay too high for reasonable blocksize between 8 and 14, and if the blocksize is increased to a certain point, the ratio is good but the complexity depends on a ratio power the blocksize, so it will not be good enough to be taken in account.\\
+\\
+We also have the probability of collision modulo 2 that are used to estimate the number of blocks in a class modulo 2.\\
+\begin{tabular}{|c|c|}
+  \hline
+  blocksize & Probability of collision modulo 2\\
+	1 & 0.50828\\
+	2 & 0.264899\\
+	6 & 0.0196614\\
+	10 & 0.0014748\\
+	11 & 0.00072321\\ 
+	12 & 0.000404364\\
+	13 & 0.0002116537\\
+	14 & 0.0001106218\\
+	15 & 0.00005764109\\
+	16 & 0.00002986585\\
+	\hline
+\end{tabular}\\
+\\
+This represents the probability that a block is equal to another modulo 2.\\
 
 \subsection*{Experiment 3:Conditional Probability considering that we know X mod 2}
 \addcontentsline{toc}{subsection}{Experiment 3:Conditional Probability considering that we know X mod 2}
@@ -322,7 +372,7 @@ For example the block $ab$ will be in the class $01$. From this sorting we can k
 We know select the best class as following\\
 The best class is not the class that have the best ratio of good matching over all matching, as we can have a class where there is only 3 matching and 2 are equals. So to avoid classes like this we just take the class with the highest number of good matching.
 To have an idea of the number of block, it is almost 847400.\\
-\begin{tabular}{c|c|c|c|c}
+\begin{tabular}{|c|c|c|c|c|}
   \hline
   blocksize & Best Class & Ratio of good matching & \# block from this class & Bigger blocksize\\
 	1 & 0 & 0.119870 & 478261 & 478261\\
@@ -339,7 +389,84 @@ To have an idea of the number of block, it is almost 847400.\\
 	14 & 10101110100010 & 0.332720389 & 215 & 287\\
 	16 & 1000010000100011 & 0.6810255 & 103 & 122\\
 	\hline
+\end{tabular}\\
+\\
+We now count the number of classes where the probability that blocks are equal = 1, or more formally, classes where there are only 1 block in it.\\
+\begin{tabular}{|c|c|}
+  \hline
+  blocksize & Number of classes where Probability of good matching =1\\
+	1 & 0\\
+	10 & 3\\
+	11 & 8\\
+	12 & \text{more than} 25\\
+	13 & \text{more than} 27\\
+	14 & \text{more than} 29\\
+	15 & \text{more than} 31\\
+	16 & \text{more than} 33\\
+	\hline
 \end{tabular}
+
+\subsection*{Experiment 4:Example of the attack}
+So let's assume we take $d = 3$ (to simplify the calculations) and we find $d+1 =4$ pairs ciphers/plaintext modulo 26 with probability 1 for each.\\
+The pairs plaintext,ciphertext are :\\
+ $\begin{pmatrix}
+	1 \\
+	2\\
+	7\\
+ \end{pmatrix} $
+, $\begin{pmatrix}
+	15\\
+	24\\
+	24\\
+	\end{pmatrix}$\\
+	$\begin{pmatrix}
+	2 \\
+	4\\
+	8\\
+ \end{pmatrix} $
+, $\begin{pmatrix}
+	24\\
+	20\\
+	6\\
+	\end{pmatrix}$\\
+	$\begin{pmatrix}
+	3 \\
+	5\\
+	1\\
+ \end{pmatrix} $
+, $\begin{pmatrix}
+	22\\
+	18\\
+	10\\
+	\end{pmatrix}$\\
+	$\begin{pmatrix}
+	2\\
+	1\\
+	3\\
+ \end{pmatrix} $
+, $\begin{pmatrix}
+	10\\
+	15\\
+	23\\
+	\end{pmatrix}$\\
+If we call the key matrix modulo 26, $K_{26}$ it'll look like this:\\
+$ \begin{pmatrix}
+	x_1 & x_2 & x_3\\
+	x_4 & x_5 & x_6\\
+	x_7 & x_8 & x_9\\
+	\end{pmatrix}$\\
+From this we get $d$ system with $(d+1)$ equations which are the following for the first row:\\
+\[ \begin{cases}
+      x_1 +2x_2 + 7x_3 \text{mod} 26 =15\\
+      2x_1 +4x_2 +8x_3 \text{mod} 26 = 24\\
+			3x_1 + 5x_2 + x_3 \text{mod} 26 = 22\\
+			2x_1 + x_2 +3x_3 \text{mod} 26 =10
+   \end{cases}
+\]
+We can solve these systems by Gaussian reduction, it'll take $d^3$ for each system, so the total complexity will be $O(d \times d^{3})$ which is lower than $O(13^d)$.
+The problem is to find each time one cipher that match the block modulo 2.\\
+As we apply an invertible matrix, the distribution of segment ciphers should be identically independent, as the segment of the plaintext are considered identically independent. Therefore, we can take the probability that 2 segments are equals modulo 2 from the plaintext, it should be around the same for the cipher segments.
+
 
 \appendix
 \newpage
@@ -373,7 +500,7 @@ The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$
 \STATE set all $\mu$ to the d values of $\mu$ with largest $S_n(\mu)=bias(\mu.Y)$
 \STATE Part2:\\
 \FORALL{$(i,i')$}
-	\STATE compute $n_{00}(i,i')=\#\{k<n:(\mu_i .Y_k,\mu_i'.Y_{k+1})=(0,0)\}$
+	\STATE compute $n_{00}(i,i')=\#\{k<n:(\mu_i.Y_k,\mu_i'.Y_{k+1})=(0,0)\}$
 \ENDFOR
 \STATE set $(i_d,i_1)$ to the first pair with lowest $n_{00}$
 \\
@@ -388,9 +515,28 @@ The following algorithm is to recover the key matrix in $\mathbb{Z}/2\mathbb{Z}$
 \STATE output K
 \end{algorithmic}
 Here to be faster we store $n_y$ in a table and we do a FFT on this table to get $S_n$. With this operation the total complexity drop from $O(d^2 \times 2^d)$ to $O(d \times 2^d)$
-But it seems with some other techniques we could do better.
+But it seems with some other techniques we could do better.\\
 
+Algorithm to solve the matrix key modulo 26.\\
+\\
+\begin{algorithmic}[1]
+\REQUIRE{Ciphertext $Y_1,Y_2,...,Y_n$ and classification of ciphers and plaintext in classes $C_{i}$ of reduction modulo 2}\\
+\STATE Find the $d+1$ classes with the highest probability that a block appears.
+\FORALL{$d+1$ classes $C_{i}$ take the $block_{i}$ associated modulo 26 , $i \in \{0,1,...,d+1\}$}
+	\STATE find the cipher modulo 2 called $Y_{i}^2$ associated to the $block_{i}$
+\ENDFOR
+	\REPEAT
+	\STATE{ take one of the string $k \in C_{i}$ , called $X_{i_{k}}{26}$ that match with $Y_{i}^2$ ,$i \in \{0,1,...,d+1\}$}
+	\STATE resolve $ K \times X_{i_{k}}{26} =Y_{i}^2$, for all i.
+	\UNTIL it makes sense
+\end{algorithmic}
+\textit{complexity is $O(|ref| + |plain| + 2^{d} + d^{3.807 k})$}
 
+\newpage
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+\newpage
 \section*{References}
 \addcontentsline{toc}{section}{References}
 [1] S. Shazaei, S. Ahmadi. \textit{Ciphertext- only attack on} $d \times d$ \textit{Hill in} $O(d13^d)$.\\

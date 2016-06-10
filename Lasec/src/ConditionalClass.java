@@ -10,7 +10,7 @@ public class ConditionalClass {
 
 		
 		public static void main(String[] args) throws IOException, IOException {
-			calculateBlocksConditional(18);
+			calculateBlocksConditional(12);
 	}
 		public static int binaryToInteger(String binary) {
 		    char[] numbers = binary.toCharArray();
@@ -55,7 +55,7 @@ public class ConditionalClass {
 		public static void calculateBlocksConditional(int block) throws IOException {
 
 			//take a text with only lower case letters
-			String text = readDoc(new File("test")).toLowerCase();
+			String text = readDoc(new File("cipherpotterd2.txt")).toLowerCase();
 			
 			//delete all the spaces
 			String textNoSpace = text.replaceAll("\\s+","");
@@ -71,7 +71,7 @@ public class ConditionalClass {
 			for(int i=0;i < Math.pow(2, blockSize);i++) {
 				ArrayList<String> init = new ArrayList<>();
 				classes.add(init);
-				int bufferCounter[] = new int[512];
+				int bufferCounter[] = new int[1024];
 				buffersCounter.add(bufferCounter);
 			}
 			
@@ -106,7 +106,7 @@ public class ConditionalClass {
 			int index = 0;
 			double temp = 0;
 			int maxBlock = 0;
-			PrintWriter writer = new PrintWriter("occurenceblocksCondi"+blockSize+".txt","UTF-8");
+			PrintWriter writer = new PrintWriter("occurenceblocksCondipotter"+blockSize+".txt","UTF-8");
 			for(int i=0;i<classes.size();i++) {
 				double probaCondi = 0;
 				double probaClass = 0;
